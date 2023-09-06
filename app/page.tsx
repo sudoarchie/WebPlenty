@@ -15,8 +15,8 @@ export default function Home() {
     <>
     <Navbar></Navbar>
     <Hero></Hero>
-    <Writting></Writting>
     <Leadabout></Leadabout>
+    <Writting></Writting>
     <Footer></Footer>
 
     </>

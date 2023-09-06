@@ -1,19 +1,21 @@
 import React from 'react'
 import { Star, ChevronDown } from 'lucide-react'
-
+import Image from 'next/image'
+import leaderimage from '../../images/ketaki-singh.jpg'
 export const Leadabout = () => {
   return (
     <section className="overflow-hidden">
       <div className="mx-auto max-w-5xl px-5 py-24">
         <div className="mx-auto flex flex-wrap items-center lg:w-4/5">
-          <img
+          <Image
+          src={leaderimage}
             alt="Nike Air Max 21A"
             className="h-64 w-full rounded object-cover lg:h-96 lg:w-1/2"
-            src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            
           />
           <div className="mt-6 w-full lg:mt-0 lg:w-1/2 lg:pl-10">
-            {/* <h2 className="text-sm font-semibold tracking-widest text-gray-500">Nike</h2> */}
-            <h1 className="my-4 text-3xl font-semibold text-black">Nike Air Max 21A</h1>
+            <h1 className="my-4 text-3xl font-semibold text-black">नवनिर्वाचित विधायक 362 विधानसभा बांसडीह</h1>
+            <h2 className="text-sm font-semibold tracking-widest text-gray-500">केतकी सिंह</h2>
             {/* <div className="my-4 flex items-center">
               <span className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
@@ -23,8 +25,7 @@ export const Leadabout = () => {
               </span>
             </div> */}
             <p className="leading-relaxed">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur rem amet repudiandae
-              neque adipisci eum enim, natus illo inventore totam?
+            केतकी सिंह एक भारतीय राजनीतिज्ञ हैं। वह 2022 के उत्तर प्रदेश विधान सभा चुनाव में भारतीय जनता पार्टी के सदस्य के रूप में बांसडीह से चुनी गईं। केतकी सिंह ने नेता प्रतिपक्ष राम गोविंद चौधरी को हराया.
             </p>
             {/* <div className="mb-5 mt-6 flex items-center border-b-2 border-gray-100 pb-5">
               <div className="flex items-center">
@@ -47,15 +48,15 @@ export const Leadabout = () => {
                 </div>
               </div>
             </div> */}
-            {/* <div className="flex items-center justify-between">
-              <span className="title-font text-xl font-bold text-gray-900">₹47,199</span>
+            <div className="flex items-center justify-between">
+              {/* <span className="title-font text-xl font-bold text-gray-900">₹47,199</span> */}
               <button
                 type="button"
-                className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                className="rounded-md bg-orange-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
-                Add to Cart
+                Read More
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
