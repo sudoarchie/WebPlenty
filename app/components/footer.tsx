@@ -7,7 +7,7 @@ export function Footer() {
         <div className="-m-8 flex flex-wrap items-center justify-between">
           <div className="w-auto p-8">
             <a href="#">
-              <div className="inline-flex items-center">
+              {/* <div className="inline-flex items-center">
                 <svg
                   width="40"
                   height="46"
@@ -21,7 +21,7 @@ export function Footer() {
                   />
                 </svg>
                 <span className="ml-4 text-lg font-bold">DevUI</span>
-              </div>
+              </div> */}
             </a>
           </div>
           <div className="w-auto p-8">

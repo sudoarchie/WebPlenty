@@ -4,6 +4,8 @@ import image12 from "../../images/12.jpg";
 import image13 from "../../images/13.jpg";
 import image14 from "../../images/14.jpg";
 import image15 from "../../images/15.jpg";
+import image6 from "../../images/6.jpg"
+import image7 from "../../images/7.jpg"
 
 export function Writting() {
   return (
@@ -80,7 +82,7 @@ export function Writting() {
         {/* </div> */}
         <div className="relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]">
           <Image
-            src={image12}
+            src={image6}
             alt="Kanya Sumangla scheme"
             className="z-0 h-full w-full rounded-md object-cover"
           />
@@ -98,7 +100,7 @@ export function Writting() {
         {/* </div> */}
         <div className="relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]">
           <Image
-            src={image12}
+            src={image7}
             alt="Kanya Sumangla scheme"
             className="z-0 h-full w-full rounded-md object-cover"
           />
