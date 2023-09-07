@@ -89,7 +89,7 @@ export function Navbar() {
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
-                  <div className="inline-flex items-center space-x-2">
+                  {/* <div className="inline-flex items-center space-x-2">
                     <span>
                       <svg
                         width="30"
@@ -105,7 +105,7 @@ export function Navbar() {
                       </svg>
                     </span>
                     <span className="font-bold">DevUI</span>
-                  </div>
+                  </div> */}
                   <div className="-mr-2">
                     <button
                       type="button"
