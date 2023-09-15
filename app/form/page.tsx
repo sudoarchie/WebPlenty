@@ -11,7 +11,7 @@ function page() {
         <div className="w-[90vw] flex flex-wrap justify-center">
           <div className="w-[40%] border-2 border-orange-600 text-center hidden max-h-full rounded-lg object-cover lg:block">
             <h1 className="text-2xl text-center underline m-[30px] ">भारतीय जनता पार्टी</h1>
-            <Image src={bjpimg} className="m-auto"></Image>
+            <Image src={bjpimg} className="m-auto" alt="bjplogo"></Image>
             <h1 className="text-2xl text-center  m-[30px] ">हमसे जुड़ें</h1>
 
           </div>
