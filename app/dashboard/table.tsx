@@ -6,6 +6,7 @@ const data = [
     department: 'Engineering',
     employess: [
       {
+        id:1,
         name: 'John Doe',
         title: 'Front-end Developer',
         department: 'Engineering',
@@ -15,6 +16,7 @@ const data = [
           'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
       },
       {
+        id:2,
         name: 'Jane Doe',
         title: 'Back-end Developer',
         department: 'Engineering',
@@ -29,6 +31,7 @@ const data = [
     department: 'Marketing',
     employess: [
       {
+        id: 1,
         name: 'Mark Doe',
         title: 'Digital Marketing',
         department: 'Marketing',
@@ -38,6 +41,7 @@ const data = [
           'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
       },
       {
+        id: 2,
         name: 'Seb Cook',
         title: 'Social Media',
         department: 'Marketing',
