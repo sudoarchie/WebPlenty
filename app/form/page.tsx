@@ -7,47 +7,7 @@ import { Menu, X, MapPin } from 'lucide-react'
 import { NavbarLogout } from '../components/navbarlogout'
 import KarykartaForm from './karaykara'
 import { Sidebar } from '../components/sidebar'
-
-const menuItems = [
-  {
-    name: 'Home',
-    href: '#',
-  },
-  {
-    name: 'About',
-    href: '#',
-  },
-  {
-    name: 'Contact',
-    href: '#',
-  },
-]
-
-const locations = [
-  {
-    title: 'Bengaluru office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '100, Electronic City Phase-1, Bengaluru, Karnataka 560100 IN',
-  },
-  {
-    title: 'Head office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '12th Main Rd, Indiranagar, Bengaluru, Karnataka 560008 IN',
-  },
-  {
-    title: 'Karnataka office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '42, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025 IN',
-  },
-]
-
 function page() {
-  // const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
-  const toggleMenu = () => {
-    // setIsMenuOpen(!isMenuOpen)
-  }
-
   return (
     <div>
       <div className='w-[100vw] fixed z-10'>
