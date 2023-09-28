@@ -5,41 +5,11 @@ import Image from 'next/image'
 import modiyogi from '../../images/modiyogi.png'
 import { Menu, X, MapPin } from 'lucide-react'
 import { NavbarLogout } from '../components/navbarlogout'
-import KarykartaForm from './karaykara'
+import KarykartaForm from './KarykartaForm'
 import { Sidebar } from '../components/sidebar'
+import { KarykartaFormData } from './KarykartaForm'
 
-const menuItems = [
-  {
-    name: 'Home',
-    href: '#',
-  },
-  {
-    name: 'About',
-    href: '#',
-  },
-  {
-    name: 'Contact',
-    href: '#',
-  },
-]
 
-const locations = [
-  {
-    title: 'Bengaluru office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '100, Electronic City Phase-1, Bengaluru, Karnataka 560100 IN',
-  },
-  {
-    title: 'Head office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '12th Main Rd, Indiranagar, Bengaluru, Karnataka 560008 IN',
-  },
-  {
-    title: 'Karnataka office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '42, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025 IN',
-  },
-]
 
 function page() {
   // const [isMenuOpen, setIsMenuOpen] = React.useState(false)
@@ -47,6 +17,12 @@ function page() {
   const toggleMenu = () => {
     // setIsMenuOpen(!isMenuOpen)
   }
+ 
+
+  const handleFormSubmit = (formData: KarykartaFormData) => {
+    // Handle the form submission logic here
+    console.log(formData);
+  };
 
   return (
     <div>
@@ -59,7 +35,7 @@ function page() {
     <Sidebar></Sidebar>
       </div>
       </div>
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-4 ">
       
         <div className="mx-auto max-w-7xl py-12 md:py-24">
           <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
@@ -70,7 +46,7 @@ function page() {
                 <p className="text-2xl font-bold text-gray-900 md:text-4xl">कार्यकर्त्ता प्रपत्र</p>
                 
                 
-                <KarykartaForm></KarykartaForm>
+                <KarykartaForm onSubmit={handleFormSubmit}></KarykartaForm>
               </div>
             </div>
             <Image

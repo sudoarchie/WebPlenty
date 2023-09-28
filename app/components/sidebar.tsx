@@ -11,7 +11,10 @@
 
   export function Sidebar() {
     return (
-      <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8">
+      <>
+      shivam
+      
+      <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[1440px]:hidden">
        
         <div className="mt-8 flex flex-1 flex-col justify-between">
           <nav className="-mx-3 space-y-6 ">
@@ -96,25 +99,13 @@
                 <MapPin className="h-5 w-5" aria-hidden="true" />
                 <span className="mx-2 text-sm font-medium">सेक्टर मास्टर</span>
               </Link>
-              {/* <Link
-                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="#"
-              >
-                <Wallet className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">Sales</span>
-              </Link> */}
+  
             </div>
             <div className="space-y-3 ">
               <label className="px-3 text-xs font-semibold uppercase text-gray-900">
                 content
               </label>
-              {/* <Link
-                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="#"
-              >
-                <Newspaper className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">Blogs</span>
-              </Link> */}
+              
               <Link
                 className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
                 href="#"
@@ -135,13 +126,7 @@
               <label className="px-3 text-xs font-semibold uppercase text-gray-900">
                 Customization
               </label>
-              {/* <Link
-                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="#"
-              >
-                <Brush className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">Themes</span>
-              </Link> */}
+          
               <Link
                 className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
                 href="#"
@@ -153,5 +138,11 @@
           </nav>
         </div>
       </aside>
+
+
+
+
+     
+      </>
     );
   }

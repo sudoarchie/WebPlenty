@@ -6,7 +6,7 @@ interface KarykartaFormProps {
   onSubmit: (formData: KarykartaFormData) => void;
 }
 
-interface KarykartaFormData {
+export interface KarykartaFormData {
   name: string;
   address: string;
   mobileNumber: string;
@@ -44,8 +44,9 @@ const KarykartaForm: React.FC<KarykartaFormProps> = ({ onSubmit }) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onSubmit(formData);
+    onSubmit(formData); 
   };
+  
 
   return (
     <form
