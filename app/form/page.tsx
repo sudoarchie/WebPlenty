@@ -1,155 +1,92 @@
-import { NavbarLogout } from "../components/navbarlogout";
-import Image from "next/image";
-import bjpimg from "../../images/BJP-Logo-HD-PNG.png"
-import { Footer } from "../components/footer";
+'use client'
+
+import React from 'react'
+import Image from 'next/image'
+import modiyogi from '../../images/modiyogi.png'
+import { Menu, X, MapPin } from 'lucide-react'
+import { NavbarLogout } from '../components/navbarlogout'
+import KarykartaForm from './karaykara'
+import { Sidebar } from '../components/sidebar'
+
+const menuItems = [
+  {
+    name: 'Home',
+    href: '#',
+  },
+  {
+    name: 'About',
+    href: '#',
+  },
+  {
+    name: 'Contact',
+    href: '#',
+  },
+]
+
+const locations = [
+  {
+    title: 'Bengaluru office',
+    timings: 'Mon-Sat 9am to 5pm.',
+    address: '100, Electronic City Phase-1, Bengaluru, Karnataka 560100 IN',
+  },
+  {
+    title: 'Head office',
+    timings: 'Mon-Sat 9am to 5pm.',
+    address: '12th Main Rd, Indiranagar, Bengaluru, Karnataka 560008 IN',
+  },
+  {
+    title: 'Karnataka office',
+    timings: 'Mon-Sat 9am to 5pm.',
+    address: '42, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025 IN',
+  },
+]
 
 function page() {
+  // const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+
+  const toggleMenu = () => {
+    // setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
-    <>
-      <NavbarLogout></NavbarLogout>
-      <div className="w-full flex  justify-center mt-20">
-        <div className="w-[90vw] flex flex-wrap justify-center">
-          <div className="w-[40%] border-2 border-orange-600 text-center hidden max-h-full rounded-lg object-cover lg:block">
-            <h1 className="text-2xl text-center underline m-[30px] ">भारतीय जनता पार्टी</h1>
-            <Image src={bjpimg} className="m-auto" alt="bjplogo"></Image>
-            <h1 className="text-2xl text-center  m-[30px] ">हमसे जुड़ें</h1>
+    <div>
+      <div className='w-[100vw] fixed z-10'>
+    <NavbarLogout></NavbarLogout>  
+    </div>
+      <div className='flex'>
+      <div className='fixed'>
 
-          </div>
-          <div className=" overflow-auto mx-7 lg: w-[55%]">
-            <h1 className="text-2xl font-bold underline text-center m-[30px]">
-            सदस्य प्रपत्र
-            </h1>
-            <form action="" className="flex flex-wrap justify-center">
-              <div className="">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                ></input>
-              </div>
-              <div className="">
-                <input
-                  type="text"
-                  placeholder="Address"
-                  className="m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                ></input>
-              </div>
-              <div className="">
-                <input
-                  type="text"
-                  placeholder="Mobile Number"
-                  className="m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                ></input>
-              </div>
-              <div className="  ">
+    <Sidebar></Sidebar>
+      </div>
+      </div>
+      <div className="mx-auto max-w-7xl px-4">
+      
+        <div className="mx-auto max-w-7xl py-12 md:py-24">
+          <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
+          
+            {/* contact from */}
+            <div className="flex items-center justify-center">
+              <div className="px-2 md:px-12">
+                <p className="text-2xl font-bold text-gray-900 md:text-4xl">कार्यकर्त्ता प्रपत्र</p>
                 
-                <input
-                  type="date"
-                  placeholder="dd-mm-yyyy"
-                  className="w-[268px] m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                ></input>
+                
+                <KarykartaForm></KarykartaForm>
               </div>
-              <div className="  ">
-                <select
-                 
-                  className="w-[268px] m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                >
-                  <option>Hindu</option>
-                  <option>Muslim</option>
-                  <option>shikh</option>
-                  <option>christian</option>
-                </select>
-              </div>
-              <div className="  ">
-                <select
-                  placeholder="dd-mm-yyyy"
-                  className="w-[268px] m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                >
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Others</option>
-                  
-                </select>
-              </div>
-              <div className="">
-                <input
-                  type="text"
-                  placeholder="Previous Party"
-                  className="m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                ></input>
-              </div>
-              <div className="  ">
-                <select
-                  placeholder=""
-                  className="w-[268px] m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                >
-                  <option disabled selected>Mandal</option>
-                  <option>Bansdih</option>
-                  <option>Maniyar</option>
-                  <option>a</option>
-                  <option>b</option>
-                  <option>c</option>
-                  
-                </select>
-              </div>
-              <div className="  ">
-                <select
-                  placeholder=""
-                  className="w-[268px] m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                >
-                  <option disabled selected>Sector</option>
-                  <option>Bansdih</option>
-                  <option>Maniyar</option>
-                  <option>a</option>
-                  <option>b</option>
-                  <option>c</option>
-                  
-                </select>
-              </div>
-              <div className="  ">
-                <select
-                  placeholder=""
-                  className="w-[268px] m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                >
-                  <option disabled selected>PoolingBooth</option>
-                  <option>Bansdih</option>
-                  <option>Maniyar</option>
-                  <option>a</option>
-                  <option>b</option>
-                  <option>c</option>
-                  
-                </select>
-              </div>
-              <div className="  ">
-                <select
-                  placeholder=""
-                  className="w-[268px] m-5 placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600"
-                >
-                  <option disabled selected>Role</option>
-                  <option>Bansdih</option>
-                  <option>Maniyar</option>
-                  <option>a</option>
-                  <option>b</option>
-                  <option>c</option>
-                  
-                </select>
-                <div className="">
-                <input
-                  type="Submit"
-                  placeholder="Previous Party"
-                  className="m-5 w-[268px] placeholder-slate-600 font-semibold border-b-4 border-orange-600 text-center p-2 focus:border-b-4 focus:border-green-600 focus:outline-green-600 rounded-sm hover:bg-green-600 hover:text-white"
-                ></input>
-              </div>
-              </div>
-    
-
-            </form>
+            </div>
+            <Image
+              alt="Contact us"
+              className="hidden max-h-full w-full rounded-lg object-cover lg:block"
+              src={modiyogi}
+            />
           </div>
         </div>
       </div>
-      <Footer></Footer>
-    </>
-  );
+      {/* Address */}
+      
+      <hr className="mt-6" />
+      
+    </div>
+  )
 }
 
 export default page;
