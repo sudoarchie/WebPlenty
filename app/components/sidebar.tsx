@@ -12,8 +12,10 @@
   export function Sidebar() {
     return (
       <>
-      shivam
-      
+         
+
+
+     
       <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[1440px]:hidden">
        
         <div className="mt-8 flex flex-1 flex-col justify-between">
@@ -139,6 +141,8 @@
         </div>
       </aside>
 
+      {/* mobile */}
+     
 
 
 

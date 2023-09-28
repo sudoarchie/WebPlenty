@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Navbar } from '../components/navbar'
 import { NavbarLogout } from '../components/navbarlogout'
-import { TableData } from './table'
+import { TableData } from '../components/table'
 import { Sidebar } from '../components/sidebar'
 
 function page() {

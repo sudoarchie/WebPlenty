@@ -100,11 +100,24 @@ const KarykartaForm: React.FC<KarykartaFormProps> = ({ onSubmit }) => {
         onChange={handleChange}
         className="w-full p-2 mb-4 border rounded-md"
       >
-        <option value="hindu">Hindu</option>
-        <option value="muslim">Muslim</option>
-        <option value="christian">Christian</option>
-        <option value="other">Other</option>
+        <option value="Hindu">Hindu</option>
+        <option value="Muslim">Muslim</option>
+        <option value="Shikh">Shikh</option>
+        <option value="Jain">Jain</option>
+        <option value="Other">Other</option>
       </select>
+      <label className="block mb-2 font-bold text-gray-700">Gender:</label>
+      <select
+        name="Gender"
+        value={formData.religion}
+        onChange={handleChange}
+        className="w-full p-2 mb-4 border rounded-md"
+      >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Others">Others</option>
+      </select>
+
 
       <label className="block mb-2 font-bold text-gray-700">
         Previous Party:
