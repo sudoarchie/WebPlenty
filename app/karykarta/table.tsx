@@ -1,5 +1,7 @@
 import React from "react";
-import { Pencil, Trash2 } from "lucide-react";
+import {  Pencil, Trash2 } from "lucide-react";
+import Link from "next/link";
+
 import { api } from "../pages/api";
 import toast, { Toaster } from "react-hot-toast";
 export function TableData({ data }: any) {
@@ -36,7 +38,13 @@ export function TableData({ data }: any) {
           Excel
         </button>
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
-          Add new karyakarta{" "}
+        <Link
+                className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                href="../form"
+              >
+                Add New Karykarta
+              </Link>
+          
         </button>
       </div>
       <table className="min-w-full divide-y divide-gray-800">
@@ -80,50 +88,7 @@ export function TableData({ data }: any) {
               Delete
             </th>
           </tr>
-          <tr className="border-2 border-gray-500">
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              <select name="Religion" id="Religion" className="w-full p-2 mb-4 border rounded-md">
-                <option value="hindu">Hindu</option>
-                <option value="muslim">Muslim</option>
-                <option value="christian">Christian</option>
-                <option value="christian">Skih</option>
-                <option value="christian">Jain</option>
-                <option value="christian">Jews</option>
-                <option value="other">Other</option>
-              </select>
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-            <select
-        className="w-full p-2 mb-4 border rounded-md"
-      >
-        <option value="hindu">Male</option>
-        <option value="muslim">Female</option>
-        <option value="muslim">Other</option>
-      </select>
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Previous Party
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Mundal ID
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Role
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Edit
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Delete
-            </th>
-          </tr>
+          
         </thead>
         <tbody className="bg-white divide-y divide-gray-800">
           {data.map((info: any) => (
