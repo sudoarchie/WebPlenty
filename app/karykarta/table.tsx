@@ -52,7 +52,68 @@ export function TableData({ data }: any) {
               Edit
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Delet
+              Delete
+            </th>
+          </tr>
+          <tr className="border-2 border-gray-500">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <input
+                type="number"
+                placeholder="DD"
+                id="day"
+                name="day"
+                min="1"
+                max="31"
+                className="w-10 h-10"
+              />
+              <input
+                type="number"
+                placeholder="MM"
+                id="month"
+                name="month"
+                min="1"
+                max="12"
+                className="w-10 h-10"
+              />
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <select name="Religion" id="Religion" className="w-full p-2 mb-4 border rounded-md">
+                <option value="hindu">Hindu</option>
+                <option value="muslim">Muslim</option>
+                <option value="christian">Christian</option>
+                <option value="christian">Skih</option>
+                <option value="christian">Jain</option>
+                <option value="christian">Jews</option>
+                <option value="other">Other</option>
+              </select>
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <select
+        className="w-full p-2 mb-4 border rounded-md"
+      >
+        <option value="hindu">Male</option>
+        <option value="muslim">Female</option>
+        <option value="muslim">Other</option>
+      </select>
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Previous Party
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Mundal ID
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Role
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Edit
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Delete
             </th>
           </tr>
         </thead>
