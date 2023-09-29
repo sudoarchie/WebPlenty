@@ -1,5 +1,7 @@
 import React from "react";
-import { Pencil, Trash2 } from "lucide-react";
+import {  Pencil, Trash2 } from "lucide-react";
+import Link from "next/link";
+
 import { api } from "../pages/api";
 import toast, { Toaster } from "react-hot-toast";
 export function TableData({ data, url }: { data: any; url: string }){
@@ -37,7 +39,13 @@ export function TableData({ data, url }: { data: any; url: string }){
           Excel
         </button>
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
-          Add new karyakarta{" "}
+        <Link
+                className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                href="../form"
+              >
+                Add New Karykarta
+              </Link>
+          
         </button>
       </div>
       <table className="min-w-full divide-y divide-gray-800">

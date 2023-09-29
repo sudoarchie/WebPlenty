@@ -6,18 +6,20 @@ import { Sidebar } from "../components/sidebar";
 import axios from "axios";
 import { api, baseURL } from "../pages/api";
 import { ArrowLeft } from "lucide-react";
+import useSWR from "swr";
 
 const Page = () => {
-  const [data, setData] = useState();
+  const [madal, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [infoError, setInfoError] = useState(null);
-  const [url  , seturl] = useState()
+
   const fetchData = async () => {
     try {
       const response = await api.get("/karykarta");
       console.log("DSfds", response.config);
       seturl(response.config.url)
       setData(response.data.data);
+      seturl(response.config.url)
       setLoading(false);
     } catch (error: any) {
       console.log(error);
@@ -30,6 +32,9 @@ const Page = () => {
   useEffect(() => {
     fetchData();
   }, []);
+  const fetcher = (...args: any) => fetch(args).then((res) => res.json());
+  const { data, error, isLoading } = useSWR(`${baseURL}/karykarta/previous`, fetcher);
+  console.log(data)
   console.log(infoError);
   return (
     <>
@@ -68,35 +73,20 @@ const Page = () => {
             <>
               <div className="flex justify-center">
                 <h1 className="text-2xl font-extrabold mt-10">
-                  केतकी सिंह विधायक 362 विधान सभा बांसडीह
+                कार्यकर्ता विवरण
                 </h1>
               </div>
+              {/* <tr className="border-2 border-gray-500">
               {/* <tr className="border-2 border-gray-500">
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <select
-                    name="Religion"
-                    id="Religion"
-                    className="w-full p-2 mb-4 border rounded-md"
-                  >
-                    <option value="hindu">Hindu</option>
-                    <option value="muslim">Muslim</option>
-                    <option value="christian">Christian</option>
-                    <option value="christian">Skih</option>
-                    <option value="christian">Jain</option>
-                    <option value="christian">Jews</option>
-                    <option value="other">Other</option>
-                  </select>
+                  
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <select className="w-full p-2 mb-4 border rounded-md">
-                    <option value="hindu">Male</option>
-                    <option value="muslim">Female</option>
-                    <option value="muslim">Other</option>
-                  </select>
+                  
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Previous Party
@@ -114,7 +104,47 @@ const Page = () => {
                   Delete
                 </th>
               </tr> */}
-              <TableData data={data} url={url} />
+              <form className="w-full text-center">
+              <select
+                    name="Religion"
+                    id="Religion"
+                    className="w-auto  mx-5 my-2  bg-black text-white p-2  mb-4 border rounded-lg"
+                  >
+                    <option value="hindu">Religion</option>
+                    <option value="hindu">Hindu</option>
+                    <option value="muslim">Muslim</option>
+                    <option value="christian">Christian</option>
+                    <option value="christian">Skih</option>
+                    <option value="christian">Jain</option>
+                    <option value="christian">Jews</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <select className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">
+                    <option value="Gender">Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <select className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">
+                    <option value="PreviousParty">Previous Party</option>
+                    
+                    <option value="{{info.name}}"></option>
+                    
+                  </select>
+                  <select className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">
+                    <option value="PreviousParty">Mundal</option>
+                    
+                    <option value="{{info.name}}"></option>
+                    
+                  </select>
+                  <select className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">
+                    <option value="PreviousParty"></option>
+                    
+                    <option value="{{info.name}}"></option>
+                    
+                  </select>
+              </form>
+              <TableData data={madal} />
             </>
           )}
         </div>

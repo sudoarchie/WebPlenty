@@ -2,7 +2,6 @@ import React from "react";
 import {  Pencil, Trash2 } from "lucide-react";
 import Link from "next/link";
 
-
 import { api } from "../pages/api";
 import toast, { Toaster } from "react-hot-toast";
 export function TableData({ data }: any) {
