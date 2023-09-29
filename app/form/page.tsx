@@ -5,9 +5,25 @@ import Image from 'next/image'
 import modiyogi from '../../images/modiyogi.png'
 import { Menu, X, MapPin } from 'lucide-react'
 import { NavbarLogout } from '../components/navbarlogout'
-import KarykartaForm from './karaykara'
+import KarykartaForm from './KarykartaForm'
 import { Sidebar } from '../components/sidebar'
+import { KarykartaFormData } from './KarykartaForm'
+
+
+
 function page() {
+  // const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+
+  const toggleMenu = () => {
+    // setIsMenuOpen(!isMenuOpen)
+  }
+ 
+
+  const handleFormSubmit = (formData: KarykartaFormData) => {
+    // Handle the form submission logic here
+    console.log(formData);
+  };
+
   return (
     <div>
       <div className='w-[100vw] fixed z-10'>
@@ -19,7 +35,7 @@ function page() {
     <Sidebar></Sidebar>
       </div>
       </div>
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-4 ">
       
         <div className="mx-auto max-w-7xl py-12 md:py-24">
           <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
@@ -30,7 +46,7 @@ function page() {
                 <p className="text-2xl font-bold text-gray-900 md:text-4xl">कार्यकर्त्ता प्रपत्र</p>
                 
                 
-                <KarykartaForm></KarykartaForm>
+                <KarykartaForm onSubmit={handleFormSubmit}></KarykartaForm>
               </div>
             </div>
             <Image

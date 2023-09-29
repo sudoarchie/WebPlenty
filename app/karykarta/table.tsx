@@ -1,14 +1,19 @@
 import React from 'react'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { Pencil, Trash2 } from 'lucide-react'
 
 
 export function TableData({data}:any) {
  
   return (
     <>
+    <div>
+      <button className='p-3 border-4 border-black m-5 rounded-lg'>PDF</button>
+      <button className='p-3 border-4 border-black m-5 rounded-lg'>Excel</button>
+      <button className='p-3 border-4 border-black m-5 rounded-lg'>Add new karyakarta </button>
+    </div>
 <table className="min-w-full divide-y divide-gray-200">
       <thead>
-        <tr>
+        <tr className='border-4'>
           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
             ID
           </th>
@@ -39,9 +44,16 @@ export function TableData({data}:any) {
           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
             Role
           </th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Edit
+          </th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Delete
+          </th>
         </tr>
       </thead>
       <tbody className="bg-white divide-y divide-gray-200">
+<<<<<<< HEAD:app/karykarta/table.tsx
         {
           data.map((info:any)=>(
             <tr key={info.id}>
@@ -73,6 +85,25 @@ export function TableData({data}:any) {
             <td className="px-6 py-4 whitespace-nowrap">{person.sectorId}</td>
             <td className="px-6 py-4 whitespace-nowrap">{person.poolingBoothId}</td>
             <td className="px-6 py-4 whitespace-nowrap">{person.role}</td>
+=======
+      {data.map((department) =>
+            department.employees.map((person) => (
+          <tr key={person.id} className=''>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.id}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.name}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.address}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.mobileNumber}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.dob}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.religion}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.gender}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.previousParty}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.mundalId}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.sectorId}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.poolingBoothId}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4">{person.role}</td>
+            <td className="px-6 py-4 whitespace-nowrap border-4"><Pencil className="h-5 w-5" aria-hidden="true"></Pencil></td>
+            <td className="px-6 py-4 whitespace-nowrap border-4"><Trash2 className="h-5 w-5" aria-hidden="true"></Trash2></td>
+>>>>>>> origin2/main:app/components/table.tsx
           </tr>
         ))):""} */}
       </tbody>
