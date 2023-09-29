@@ -1,17 +1,41 @@
 import React from "react";
 import { Pencil, Trash2 } from "lucide-react";
-
+import { api } from "../pages/api";
+import toast, { Toaster } from "react-hot-toast";
 export function TableData({ data }: any) {
+  console.log(data);
+  function onClickDelete(id: number) {
+    const del = api
+      .delete(`karykarta/${id}`)
+      .then((response) => {
+        toast(response.data.message, {
+          icon: "👏",
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      })
+      .catch(function (error) {
+        toast.error(error.response.data.message);
+        console.log(error.response.data.message);
+      });
+    console.log(del);
+  }
   return (
     <>
       <div>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-black">
+        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           PDF
         </button>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-black">
+        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           Excel
         </button>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-black">
+        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           Add new karyakarta{" "}
         </button>
       </div>
@@ -52,7 +76,7 @@ export function TableData({ data }: any) {
               Edit
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Delet
+              Delete
             </th>
           </tr>
         </thead>
@@ -79,10 +103,10 @@ export function TableData({ data }: any) {
                 {info.gender}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-xs">
-                {info.previousParty}
+                {info.previousParty ? info.previousParty : "None"}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-xs">
-                {info.mundalId}
+                {info.mundal.name}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-xs">
                 {info.role}
@@ -93,10 +117,11 @@ export function TableData({ data }: any) {
                 </button>
               </td>
               <td className="px-6 py-4 whitespace-nowrap border-2 border-red-300">
-                <button>
+                <button onClick={() => onClickDelete(info.id)}>
                   <Trash2 className="h-5 w-5" aria-hidden="true"></Trash2>
                 </button>
               </td>
+              <Toaster />
             </tr>
           ))}
         </tbody>

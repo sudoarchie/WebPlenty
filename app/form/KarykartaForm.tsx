@@ -106,7 +106,7 @@ const KarykartaForm: React.FC<KarykartaFormProps> = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="max-w-md mx-auto mt-8 p-4 bg-gray-100 rounded-md"
+      className="max-w-md mx-auto mt-8 p-4 bg-gray-300 rounded-md"
     >
       <label className="block mb-2 font-bold text-gray-700">Name:</label>
       <input
