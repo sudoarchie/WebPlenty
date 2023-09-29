@@ -61,7 +61,7 @@ const Page = () => {
             <>
               <div className="flex justify-center">
                 <h1 className="text-2xl font-extrabold mt-10">
-                  केतकी सिंह विधायक 362 विधान सभा बांसडीह
+                कार्यकर्ता विवरण
                 </h1>
               </div>
               <TableData data={data} />

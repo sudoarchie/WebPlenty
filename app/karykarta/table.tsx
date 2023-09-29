@@ -86,24 +86,7 @@ export function TableData({ data }: any) {
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              <input
-                type="number"
-                placeholder="DD"
-                id="day"
-                name="day"
-                min="1"
-                max="31"
-                className="w-10 h-10"
-              />
-              <input
-                type="number"
-                placeholder="MM"
-                id="month"
-                name="month"
-                min="1"
-                max="12"
-                className="w-10 h-10"
-              />
+              
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               <select name="Religion" id="Religion" className="w-full p-2 mb-4 border rounded-md">
