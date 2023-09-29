@@ -29,16 +29,16 @@ const Page = () => {
 
   return (
     <>
-      <div className="w-[100vw] fixed z-10">
-        <NavbarLogout />
+    <div className="w-[100vw] fixed z-10">
+    <NavbarLogout />
       </div>
-      <div className="flex">
+    <div className="flex">
         <div className="fixed">
           <Sidebar />
         </div>
         <div className="w-[80vw] relative top-10 left-64">
           {loading ? (
-            <div className="text-center">
+    <div className="text-center">
               <p>Loading...</p>
             </div>
           ) : error ? (
