@@ -11,11 +11,12 @@ const Page = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [infoError, setInfoError] = useState(null);
-
+  const [url  , seturl] = useState()
   const fetchData = async () => {
     try {
       const response = await api.get("/karykarta");
-      console.log("DSfds", response.data.data);
+      console.log("DSfds", response.config);
+      seturl(response.config.url)
       setData(response.data.data);
       setLoading(false);
     } catch (error: any) {
@@ -70,7 +71,7 @@ const Page = () => {
                   केतकी सिंह विधायक 362 विधान सभा बांसडीह
                 </h1>
               </div>
-              <tr className="border-2 border-gray-500">
+              {/* <tr className="border-2 border-gray-500">
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
@@ -112,8 +113,8 @@ const Page = () => {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Delete
                 </th>
-              </tr>
-              <TableData data={data} />
+              </tr> */}
+              <TableData data={data} url={url} />
             </>
           )}
         </div>

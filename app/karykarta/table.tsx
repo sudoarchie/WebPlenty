@@ -2,8 +2,9 @@ import React from "react";
 import { Pencil, Trash2 } from "lucide-react";
 import { api } from "../pages/api";
 import toast, { Toaster } from "react-hot-toast";
-export function TableData({ data }: any) {
+export function TableData({ data, url }: { data: any; url: string }){
   console.log(data);
+  console.log(url)
   function onClickDelete(id: number) {
     const del = api
       .delete(`karykarta/${id}`)
