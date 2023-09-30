@@ -19,7 +19,7 @@ const Page = () => {
     try {
       const response = await api.get(url);
       console.log("DSfds", response.config);
-      seturl(response.config.url);
+      seturl(response?.config?.url || "");
       setData(response.data.data);
       setLoading(false);
     } catch (error: any) {

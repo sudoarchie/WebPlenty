@@ -1,8 +1,8 @@
-import test from "node:test";
+
 import { NavbarLogout } from "../components/navbarlogout";
 import { Sidebar } from "../components/sidebar";
 
-function page(){
+function Page(){
     return (
         <>
         <div className="w-[100vw] fixed z-10">
@@ -18,4 +18,4 @@ function page(){
     );
 
 }
-export default test;
+export default Page;

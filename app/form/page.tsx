@@ -7,7 +7,7 @@ import { Menu, X, MapPin } from 'lucide-react'
 import { NavbarLogout } from '../components/navbarlogout'
 import KarykartaForm from './KarykartaForm'
 import { Sidebar } from '../components/sidebar'
-import { KarykartaFormData } from './KarykartaForm'
+import  KarykartaFormData  from './KarykartaForm'
 
 
 
@@ -19,7 +19,7 @@ function page() {
   }
  
 
-  const handleFormSubmit = (formData: KarykartaFormData) => {
+  const handleFormSubmit = (formData: any) => {
     // Handle the form submission logic here
     console.log(formData);
   };
