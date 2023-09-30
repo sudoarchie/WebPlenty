@@ -26,232 +26,142 @@ export function Table() {
 
   return (
     <>
-      {/* <div>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
-          PDF
-        </button>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
-          Excel
-        </button>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
-          <Link
-            className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-            href="../sectormasterform"
-          >
-            Add New SectorMaster
-          </Link>
-        </button>
-      </div> */}
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <div className="overflow-x-auto">
-          <table className="table table-lg bg-gray-200 text-gray-800">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>company</th>
-                <th>location</th>
-                <th>Last Login</th>
-                <th>Favorite Color</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>Quality Control Specialist</td>
-                <td>Littel, Schaden and Vandervort</td>
-                <td>Canada</td>
-                <td>12/16/2020</td>
-                <td>Blue</td>
-              </tr>
-              <tr>
-                <th>2</th>
-                <td>Hart Hagerty</td>
-                <td>Desktop Support Technician</td>
-                <td>Zemlak, Daniel and Leannon</td>
-                <td>United States</td>
-                <td>12/5/2020</td>
-                <td>Purple</td>
-              </tr>
-              <tr>
-                <th>3</th>
-                <td>Brice Swyre</td>
-                <td>Tax Accountant</td>
-                <td>Carroll Group</td>
-                <td>China</td>
-                <td>8/15/2020</td>
-                <td>Red</td>
-              </tr>
-              <tr>
-                <th>4</th>
-                <td>Marjy Ferencz</td>
-                <td>Office Assistant I</td>
-                <td>Rowe-Schoen</td>
-                <td>Russia</td>
-                <td>3/25/2021</td>
-                <td>Crimson</td>
-              </tr>
-              <tr>
-                <th>5</th>
-                <td>Yancy Tear</td>
-                <td>Community Outreach Specialist</td>
-                <td>Wyman-Ledner</td>
-                <td>Brazil</td>
-                <td>5/22/2020</td>
-                <td>Indigo</td>
-              </tr>
-              <tr>
-                <th>6</th>
-                <td>Irma Vasilik</td>
-                <td>Editor</td>
-                <td>Wiza, Bins and Emard</td>
-                <td>Venezuela</td>
-                <td>12/8/2020</td>
-                <td>Purple</td>
-              </tr>
-              <tr>
-                <th>7</th>
-                <td>Meghann Durtnal</td>
-                <td>Staff Accountant IV</td>
-                <td>Schuster-Schimmel</td>
-                <td>Philippines</td>
-                <td>2/17/2021</td>
-                <td>Yellow</td>
-              </tr>
-              <tr>
-                <th>8</th>
-                <td>Sammy Seston</td>
-                <td>Accountant I</td>
-                <td>O'Hara, Welch and Keebler</td>
-                <td>Indonesia</td>
-                <td>5/23/2020</td>
-                <td>Crimson</td>
-              </tr>
-              <tr>
-                <th>9</th>
-                <td>Lesya Tinham</td>
-                <td>Safety Technician IV</td>
-                <td>Turner-Kuhlman</td>
-                <td>Philippines</td>
-                <td>2/21/2021</td>
-                <td>Maroon</td>
-              </tr>
-              <tr>
-                <th>10</th>
-                <td>Zaneta Tewkesbury</td>
-                <td>VP Marketing</td>
-                <td>Sauer LLC</td>
-                <td>Chad</td>
-                <td>6/23/2020</td>
-                <td>Green</td>
-              </tr>
-              <tr>
-                <th>11</th>
-                <td>Andy Tipple</td>
-                <td>Librarian</td>
-                <td>Hilpert Group</td>
-                <td>Poland</td>
-                <td>7/9/2020</td>
-                <td>Indigo</td>
-              </tr>
-              <tr>
-                <th>12</th>
-                <td>Sophi Biles</td>
-                <td>Recruiting Manager</td>
-                <td>Gutmann Inc</td>
-                <td>Indonesia</td>
-                <td>2/12/2021</td>
-                <td>Maroon</td>
-              </tr>
-              <tr>
-                <th>13</th>
-                <td>Florida Garces</td>
-                <td>Web Developer IV</td>
-                <td>Gaylord, Pacocha and Baumbach</td>
-                <td>Poland</td>
-                <td>5/31/2020</td>
-                <td>Purple</td>
-              </tr>
-              <tr>
-                <th>14</th>
-                <td>Maribeth Popping</td>
-                <td>Analyst Programmer</td>
-                <td>Deckow-Pouros</td>
-                <td>Portugal</td>
-                <td>4/27/2021</td>
-                <td>Aquamarine</td>
-              </tr>
-              <tr>
-                <th>15</th>
-                <td>Moritz Dryburgh</td>
-                <td>Dental Hygienist</td>
-                <td>Schiller, Cole and Hackett</td>
-                <td>Sri Lanka</td>
-                <td>8/8/2020</td>
-                <td>Crimson</td>
-              </tr>
-              <tr>
-                <th>16</th>
-                <td>Reid Semiras</td>
-                <td>Teacher</td>
-                <td>Sporer, Sipes and Rogahn</td>
-                <td>Poland</td>
-                <td>7/30/2020</td>
-                <td>Green</td>
-              </tr>
-              <tr>
-                <th>17</th>
-                <td>Alec Lethby</td>
-                <td>Teacher</td>
-                <td>Reichel, Glover and Hamill</td>
-                <td>China</td>
-                <td>2/28/2021</td>
-                <td>Khaki</td>
-              </tr>
-              <tr>
-                <th>18</th>
-                <td>Aland Wilber</td>
-                <td>Quality Control Specialist</td>
-                <td>Kshlerin, Rogahn and Swaniawski</td>
-                <td>Czech Republic</td>
-                <td>9/29/2020</td>
-                <td>Purple</td>
-              </tr>
-              <tr>
-                <th>19</th>
-                <td>Teddie Duerden</td>
-                <td>Staff Accountant III</td>
-                <td>Pouros, Ullrich and Windler</td>
-                <td>France</td>
-                <td>10/27/2020</td>
-                <td>Aquamarine</td>
-              </tr>
-              <tr>
-                <th>20</th>
-                <td>Lorelei Blackstone</td>
-                <td>Data Coordiator</td>
-                <td>Witting, Kutch and Greenfelder</td>
-                <td>Kazakhstan</td>
-                <td>6/3/2020</td>
-                <td>Red</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>company</th>
-                <th>location</th>
-                <th>Last Login</th>
-                <th>Favorite Color</th>
-              </tr>
-            </tfoot>
-          </table>
+        <div>
+          <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
+            PDF
+          </button>
+          <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
+            Excel
+          </button>
+          <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
+            <Link
+              className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+              href="../sectormasterform"
+            >
+              Add New SectorMaster
+            </Link>
+          </button>
         </div>
-      </div>
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col" className="px-6 py-3">
+          Product name
+        </th>
+        <th scope="col" className="px-6 py-3">
+          Color
+        </th>
+        <th scope="col" className="px-6 py-3">
+          Category
+        </th>
+        <th scope="col" className="px-6 py-3">
+          Price
+        </th>
+        <th scope="col" className="px-6 py-3">
+          Action
+        </th>
+        <th scope="col" className="px-6 py-3">
+          Delete
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          Apple MacBook Pro 17
+        </th>
+        <td className="px-6 py-4">
+          Silver
+        </td>
+        <td className="px-6 py-4">
+          Laptop
+        </td>
+        <td className="px-6 py-4">
+          $2999
+        </td>
+        <td className="px-6 py-4">
+          <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+        </td>
+        <td className="px-6 py-4">
+          <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+        </td>
+      </tr>
+      {/* <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          Microsoft Surface Pro
+        </th>
+        <td className="px-6 py-4">
+          White
+        </td>
+        <td className="px-6 py-4">
+          Laptop PC
+        </td>
+        <td className="px-6 py-4">
+          $1999
+        </td>
+        <td className="px-6 py-4">
+          <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+        </td>
+      </tr>
+      <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          Magic Mouse 2
+        </th>
+        <td className="px-6 py-4">
+          Black
+        </td>
+        <td className="px-6 py-4">
+          Accessories
+        </td>
+        <td className="px-6 py-4">
+          $99
+        </td>
+        <td className="px-6 py-4">
+          <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+        </td>
+      </tr> */}
+      {/* <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          Google Pixel Phone
+        </th>
+        <td className="px-6 py-4">
+          Gray
+        </td>
+        <td className="px-6 py-4">
+          Phone
+        </td>
+        <td className="px-6 py-4">
+          $799
+        </td>
+        <td className="px-6 py-4">
+          <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+        </td>
+      </tr> */}
+      <tr>
+        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          Apple Watch 5
+        </th>
+        <td className="px-6 py-4">
+          Red
+        </td>
+        <td className="px-6 py-4">
+          Wearables
+        </td>
+        <td className="px-6 py-4">
+          $999
+        </td>
+        <td className="px-6 py-4">
+          <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+        </td>
+        <td className="px-6 py-4">
+          <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
     </>
   );
 }
