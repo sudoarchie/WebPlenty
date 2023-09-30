@@ -117,12 +117,12 @@ const Page = () => {
       <div className="w-[100vw]  z-10">
         <NavbarLogout />
       </div>
-      <div className="flex">
-        <div >
+      <div className="flex max-[]:">
+        <div className="fixed">
           <Sidebar />
         </div>
         <Nav></Nav>
-        <div className="w-[80vw] relative top-10 left-64">
+        <div className="w-[80vw] relative top-10 min-[1440px]:left-64">
           {loading ? (
             <div className="text-center">
               <p>Loading...</p>
@@ -254,7 +254,9 @@ const Page = () => {
                   Submit
                 </button>
               </form>
+              <div className="">
               <TableData data={madal} url={url} />
+              </div>
             </>
           )}
         </div>
