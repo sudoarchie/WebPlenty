@@ -29,6 +29,8 @@ function Page() {
   if (loading) return <div>loading....</div>;
   return (
     <>
+
+
       <div className="w-[100vw]  z-10">
         <NavbarLogout />
       </div>
@@ -36,7 +38,10 @@ function Page() {
         <div >
           <Sidebar />
         </div>
-        
+     
+
+
+
           
           
         

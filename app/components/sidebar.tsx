@@ -13,10 +13,12 @@ import Link from "next/link";
 export function Sidebar() {
   return (
     <>
+    
       <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[1440px]:hidden">
         <div className="mt-8 flex flex-1 flex-col justify-between">
           <nav className="-mx-3 space-y-6 ">
             <div className="space-y-3 ">
+     
               <label className="px-3 text-xs font-semibold uppercase text-gray-900">
                 Navigate
               </label>
