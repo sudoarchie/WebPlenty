@@ -38,7 +38,7 @@ export function Table() {
             className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
             href="../sectormasterform"
           >
-            Add New SectorMaster
+            Add New Mundal
           </Link>
         </button>
       </div>
@@ -50,19 +50,19 @@ export function Table() {
           Sr.No.
         </th>
         <th scope="col" className="px-6 py-3">
-          Sector
-        </th>
-        <th scope="col" className="px-6 py-3">
           Mundal 
         </th>
         <th scope="col" className="px-6 py-3">
           Mundal Id 
         </th>
         <th scope="col" className="px-6 py-3">
-        Sector sanyojak
+        Total Sectors
         </th>
         <th scope="col" className="px-6 py-3">
-        Sector prabhari
+        Total Booths
+        </th>
+        <th scope="col" className="px-6 py-3">
+        Total Karykarta
         </th>
         <th scope="col" className="px-6 py-3">
           Action
@@ -75,7 +75,7 @@ export function Table() {
     <tbody>
       <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-          Apple MacBook Pro 17
+          Apple MacBook Pro
         </th>
         <td className="px-6 py-4">
           Silver

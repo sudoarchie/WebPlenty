@@ -38,6 +38,7 @@ const Page = () => {
     `${baseURL}/karykarta/previous`,
     fetcher
   );
+  console.log(data)
 
   const { handleSubmit, control } = useForm();
 

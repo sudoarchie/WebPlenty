@@ -18,7 +18,7 @@ function page() {
         
         <div className="w-full">
         <div className="flex justify-center">
-        <h1 className="text-2xl font-extrabold mt-10">Sector Master</h1>
+        <h1 className="text-2xl font-extrabold mt-10">Mundal Master</h1>
         </div>
           <Table></Table>
           </div>

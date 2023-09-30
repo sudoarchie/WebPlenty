@@ -12,6 +12,7 @@ function page(){
         <div className="fixed">
           <Sidebar />
         </div>
+        
         </div>
         </>
     );
