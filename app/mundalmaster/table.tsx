@@ -4,7 +4,7 @@ import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
 import { api } from "../pages/api";
 
-export function Table() {
+export function Table({ data }: any) {
   // function onClickDelete(id: number) {
   //   const del = api
   //     .delete(`karykarta/${id}`)
@@ -55,11 +55,10 @@ export function Table() {
               <th scope="col" className="px-6 py-3">
                 Mundal
               </th>
-              
+
               <th scope="col" className="px-6 py-3">
                 Total Sectors
               </th>
-              
               <th scope="col" className="px-6 py-3">
                 Total Karykarta
               </th>
@@ -72,63 +71,43 @@ export function Table() {
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            {data.map((info: any, index: number) => (
+              <tr
+                key={info.id}
+                className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
               >
-                Apple MacBook Pro
-              </th>
-              <td className="px-6 py-4">Silver</td>
-              <td className="px-6 py-4">Laptop</td>
-              <td className="px-6 py-4">$2999</td>
-              <td className="px-6 py-4">$2999</td>
-              
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Edit
-                </a>
-              </td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Delete
-                </a>
-              </td>
-            </tr>
-            <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Microsoft Surface Pro
-              </th>
-              <td className="px-6 py-4">White</td>
-              <td className="px-6 py-4">Laptop PC</td>
-              <td className="px-6 py-4">$1999</td>
-              <td className="px-6 py-4">$1999</td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Edit
-                </a>
-              </td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Delete
-                </a>
-              </td>
-            </tr>
+                  {index + 1}
+                </th>
+                <td className="px-6 py-4">{info.id}</td>
+                <td className="px-6 py-4">{info.name}</td>
+                <td className="px-6 py-4">
+                  {info.sector != null ? info.sector.length : "0"}
+                </td>
+                <td className="px-6 py-4">
+                  {info.karyakarta != null ? info.karyakarta.length : "0"}
+                </td>
+                <td className="px-6 py-4">
+                  <a
+                    href="#"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    Edit
+                  </a>
+                </td>
+                <td className="px-6 py-4">
+                  <a
+                    href="#"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    Delete
+                  </a>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
