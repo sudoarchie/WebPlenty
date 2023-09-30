@@ -4,6 +4,7 @@ import {
   BellRing,
   Users,
   MessageSquare,
+  User,
   MapPin,
   Wrench,
 } from "lucide-react";
@@ -28,44 +29,15 @@ export function Sidebar() {
               </Link>
               <Link
                 className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="../dashboard"
+                href="../form"
               >
-                <Users className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">बाँसडीह मंडल</span>
+                <User className="h-5 w-5" aria-hidden="true" />
+                <span className="mx-2 text-sm font-medium">Karyakarta</span>
               </Link>
+             
               <Link
                 className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="../dashboard"
-              >
-                <Users className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">
-                  बेरुआरबारी मंडल
-                </span>
-              </Link>
-              <Link
-                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="../dashboard"
-              >
-                <Users className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">मनियर मंडल</span>
-              </Link>
-              <Link
-                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="../dashboard"
-              >
-                <Users className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">सहतवार मंडल</span>
-              </Link>
-              <Link
-                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="../dashboard"
-              >
-                <Users className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">रेवती मंडल</span>
-              </Link>
-              <Link
-                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="../dashboard"
+                href="../sector"
               >
                 <MapPin className="h-5 w-5" aria-hidden="true" />
                 <span className="mx-2 text-sm font-medium">
@@ -74,7 +46,7 @@ export function Sidebar() {
               </Link>
               <Link
                 className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="#"
+                href="../villagemaster"
               >
                 <MapPin className="h-5 w-5" aria-hidden="true" />
                 <span className="mx-2 text-sm font-medium">ग्राम मास्टर</span>
