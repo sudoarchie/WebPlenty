@@ -51,6 +51,9 @@ export function TableData({ data, url }: { data: any; url: string }){
       <table className="min-w-full divide-y divide-gray-800">
         <thead>
           <tr className="border-2 border-gray-500">
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              S.no
+            </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               ID
             </th>
@@ -92,8 +95,9 @@ export function TableData({ data, url }: { data: any; url: string }){
           
         </thead>
         <tbody className="bg-white divide-y divide-gray-800">
-          {data.map((info: any) => (
+          {data.map((info: any,index:number ) => (
             <tr key={info.id}>
+               <td className="px-6 py-4 whitespace-nowrap text-xs">{index}</td>
               <td className="px-6 py-4 whitespace-nowrap text-xs">{info.id}</td>
               <td className="px-6 py-4 whitespace-nowrap text-xs">
                 {info.name}
