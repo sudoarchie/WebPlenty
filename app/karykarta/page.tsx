@@ -8,6 +8,7 @@ import { api, baseURL } from "../pages/api";
 import { ArrowLeft } from "lucide-react";
 import useSWR from "swr";
 import { useForm, Controller } from "react-hook-form";
+import Nav from "../components/sidebarTwo";
 
 const Page = () => {
   const [madal, setData] = useState();
@@ -113,13 +114,14 @@ const Page = () => {
   console.log(data.data);
   return (
     <>
-      <div className="w-[100vw] fixed z-10">
+      <div className="w-[100vw]  z-10">
         <NavbarLogout />
       </div>
       <div className="flex">
-        <div className="fixed">
+        <div >
           <Sidebar />
         </div>
+        <Nav></Nav>
         <div className="w-[80vw] relative top-10 left-64">
           {loading ? (
             <div className="text-center">

@@ -59,9 +59,7 @@ export function Table() {
               <th scope="col" className="px-6 py-3">
                 Total Sectors
               </th>
-              <th scope="col" className="px-6 py-3">
-                Total Booths
-              </th>
+              
               <th scope="col" className="px-6 py-3">
                 Total Karykarta
               </th>
@@ -85,7 +83,7 @@ export function Table() {
               <td className="px-6 py-4">Laptop</td>
               <td className="px-6 py-4">$2999</td>
               <td className="px-6 py-4">$2999</td>
-              <td className="px-6 py-4">$2999</td>
+              
               <td className="px-6 py-4">
                 <a
                   href="#"
@@ -112,7 +110,6 @@ export function Table() {
               </th>
               <td className="px-6 py-4">White</td>
               <td className="px-6 py-4">Laptop PC</td>
-              <td className="px-6 py-4">$1999</td>
               <td className="px-6 py-4">$1999</td>
               <td className="px-6 py-4">$1999</td>
               <td className="px-6 py-4">

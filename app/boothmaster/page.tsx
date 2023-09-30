@@ -5,6 +5,8 @@ import { Table } from "./table";
 function page() {
   return (
     <>
+
+
       <div className="w-[100vw]  z-10">
         <NavbarLogout />
       </div>
@@ -12,7 +14,10 @@ function page() {
         <div >
           <Sidebar />
         </div>
-        
+     
+
+
+
           
           
         
