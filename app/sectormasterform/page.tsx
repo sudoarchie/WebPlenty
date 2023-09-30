@@ -38,13 +38,21 @@ function page(){
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
       SECTOR SANYOJAK
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-SECTOR-SANYOJAK" type="text" placeholder="SECTOR SANYOJAK" />
+      <select className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-SECTOR-SANYOJAK" type="text" placeholder="SECTOR SANYOJAK" >
+      <option>New Mexico</option>
+          <option>Missouri</option>
+          <option>Texas</option>
+        </select>
     </div>
     <div className="w-full px-3">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
       SECTOR PRABHARI
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-SECTOR-PRABHARI" type="text" placeholder="SECTOR PRABHARI" />
+      <select className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-SECTOR-PRABHARI" type="text" placeholder="SECTOR PRABHARI" >
+      <option>New Mexico</option>
+          <option>Missouri</option>
+          <option>Texas</option>
+        </select>
     </div>
   </div>
   {/* <div className="flex flex-wrap -mx-3 mb-2">
