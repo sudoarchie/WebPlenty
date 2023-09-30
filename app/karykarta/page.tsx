@@ -241,6 +241,10 @@ const Page = () => {
                     </select>
                   )}
                 />
+                <select className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg">
+                  <option>Role Select</option>
+                  <option></option>
+                </select>
                 <button
                   type="submit"
                   className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
