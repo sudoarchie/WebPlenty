@@ -29,9 +29,10 @@ export function TableData({ data, url }: { data: any; url: string }) {
       });
     console.log(del);
   }
-  function download(type) {
+  function download(type:string) {
+    console.log(type)
     const apiUrl =
-      url === "/karykarta" ? `${url}?download=true` : `${url}&&download=true`;
+      url === "/karykarta" ? `${url}?download=true&&type=${type}` : `${url}&&download=true&&type=${type}`;
   
     api
       .get(apiUrl, { responseType: "blob" })
@@ -67,7 +68,7 @@ export function TableData({ data, url }: { data: any; url: string }) {
     <>
       <div>
         <button
-          onClick={() => download("Excel")}
+          onClick={() => download("pdf")}
           className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400"
         >
           PDF

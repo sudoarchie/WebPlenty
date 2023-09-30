@@ -62,7 +62,11 @@ export function Sidebar() {
               </Link>
               <Link
                 className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+<<<<<<< HEAD
                 href="../sectormaster"
+=======
+                href="/sectormaster"
+>>>>>>> refs/remotes/origin/main
               >
                 <MapPin className="h-5 w-5" aria-hidden="true" />
                 <span className="mx-2 text-sm font-medium">सेक्टर मास्टर</span>
