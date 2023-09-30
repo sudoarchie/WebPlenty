@@ -73,7 +73,6 @@ const KarykartaForm: React.FC<KarykartaFormProps> = () => {
       })
       .catch(function (error) {
         toast.error(error.response.data.message);
-        console.log(error.response.data.message);
       });
   }
   const { data, error, isLoading } = useSWR(`${baseURL}/mundal`, fetcher);
@@ -158,9 +157,9 @@ const KarykartaForm: React.FC<KarykartaFormProps> = () => {
         {...register("gender", { required: true })}
         className="w-full p-2 mb-4 border rounded-md"
       >
-        <option value="hindu">Male</option>
-        <option value="muslim">Female</option>
-        <option value="muslim">Other</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
       </select>
       <label className="block mb-2 font-bold text-gray-700">
         Previous Party:

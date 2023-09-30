@@ -1,12 +1,12 @@
 import React from "react";
-import {  Pencil, Trash2 } from "lucide-react";
+import { Pencil, Trash2 } from "lucide-react";
 import Link from "next/link";
-
+import { v4 as uuidv4 } from 'uuid';
 import { api } from "../pages/api";
 import toast, { Toaster } from "react-hot-toast";
-export function TableData({ data, url }: { data: any; url: string }){
+export function TableData({ data, url }: { data: any; url: string }) {
   console.log(data);
-  console.log(url)
+  console.log(url);
   function onClickDelete(id: number) {
     const del = api
       .delete(`karykarta/${id}`)
@@ -29,29 +29,68 @@ export function TableData({ data, url }: { data: any; url: string }){
       });
     console.log(del);
   }
+  function download(type) {
+    const apiUrl =
+      url === "/karykarta" ? `${url}?download=true` : `${url}&&download=true`;
+  
+    api
+      .get(apiUrl, { responseType: "blob" })
+      .then((response) => {
+        const disposition = response.headers["content-disposition"];
+        let filename = `bjp__karykarta__${uuidv4()}`; // Default filename if not found in response headers
+  
+        if (disposition && disposition.indexOf("attachment") !== -1) {
+          const matches = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/.exec(
+            disposition
+          );
+          if (matches != null && matches[1]) {
+            filename = matches[1].replace(/['"]/g, "");
+          }
+        }
+  
+        // Create a Blob object and initiate the download
+        const blob = new Blob([response.data], { type: response.headers["content-type"] });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a); // append the element to the DOM
+        a.click();
+        a.remove(); // afterwards, remove the element
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+  
   return (
     <>
       <div>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
+        <button
+          onClick={() => download("Excel")}
+          className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400"
+        >
           PDF
         </button>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
+        <button
+          onClick={() => download("Excel")}
+          className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400"
+        >
           Excel
         </button>
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
-        <Link
-                className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                href="../form"
-              >
-                Add New Karykarta
-              </Link>
-          
+          <Link
+            className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+            href="../form"
+          >
+            Add New Karykarta
+          </Link>
         </button>
       </div>
       <table className="min-w-full divide-y divide-gray-800">
         <thead>
           <tr className="border-2 border-gray-500">
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               S.no
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -88,16 +127,14 @@ export function TableData({ data, url }: { data: any; url: string }){
               Edit
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Delete
-              Delete
+              Delete Delete
             </th>
           </tr>
-          
         </thead>
         <tbody className="bg-white divide-y divide-gray-800">
-          {data.map((info: any,index:number ) => (
+          {data.map((info: any, index: number) => (
             <tr key={info.id}>
-               <td className="px-6 py-4 whitespace-nowrap text-xs">{index}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-xs">{index}</td>
               <td className="px-6 py-4 whitespace-nowrap text-xs">{info.id}</td>
               <td className="px-6 py-4 whitespace-nowrap text-xs">
                 {info.name}

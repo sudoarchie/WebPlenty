@@ -7,16 +7,17 @@ import axios from "axios";
 import { api, baseURL } from "../pages/api";
 import { ArrowLeft } from "lucide-react";
 import useSWR from "swr";
+import { useForm, Controller } from "react-hook-form";
 
 const Page = () => {
   const [madal, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [infoError, setInfoError] = useState(null);
-  const [url, seturl] = useState(null);
+  const [url, seturl] = useState("/karykarta");
 
   const fetchData = async () => {
     try {
-      const response = await api.get("/karykarta");
+      const response = await api.get(url);
       console.log("DSfds", response.config);
       seturl(response.config.url);
       setData(response.data.data);
@@ -31,12 +32,37 @@ const Page = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [url]);
   const fetcher = (...args: any) => fetch(args).then((res) => res.json());
   const { data, error, isLoading } = useSWR(
     `${baseURL}/karykarta/previous`,
     fetcher
   );
+
+  const { handleSubmit, control } = useForm();
+
+  const onSubmit = (data:any) => {
+    const objectToQueryString = (obj: Record<string, string>) => {
+      const keyValuePairs: string[] = [];
+      for (const key in obj) {
+        if ( obj[key] && obj[key]!=="None") { // Exclude keys with value "none"
+          keyValuePairs.push(`${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`);
+        }
+      }
+      console.log(keyValuePairs)
+      return keyValuePairs.join('&&');
+    };
+    
+    // Construct the query string
+    const queryString: string = objectToQueryString(data );
+    // Construct the final URL
+    const baseURL: string = '/karykarta'; // Replace with your base URL
+    const finalURL: string = `${baseURL}${queryString ? `?${queryString}` : ''}`;
+    seturl(finalURL)
+    
+    // Use finalURL as needed
+    console.log(finalURL);
+  };
 
   if (error)
     return (
@@ -92,7 +118,6 @@ const Page = () => {
       <div className="flex">
         <div className="fixed">
           <Sidebar />
-          
         </div>
         <div className="w-[80vw] relative top-10 left-64">
           {loading ? (
@@ -125,62 +150,102 @@ const Page = () => {
                   कार्यकर्ता विवरण
                 </h1>
               </div>
-              <form className="w-full text-center mt-12">
-                <select
-                  name="Religion"
-                  id="Religion"
-                  className="w-auto  mx-5 my-2  bg-black text-white p-2  mb-4 border rounded-lg"
-                >
-                  <option value="hindu">Religion</option>
-                  <option value="hindu">Hindu</option>
-                  <option value="muslim">Muslim</option>
-                  <option value="christian">Christian</option>
-                  <option value="christian">Skih</option>
-                  <option value="christian">Jain</option>
-                  <option value="christian">Jews</option>
-                  <option value="other">Other</option>
-                </select>
-                <select className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">
-                  <option value="Gender">Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
-                </select>
-                {!isLoading ? (
-                  data.data.length != 0 ? (
-                    <select className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">
-                      {!isLoading ? (
-                        data.data.map((info: any, index: string) => (
-                          <option key={index} value={info.previousParty}>
-                            {info.previousParty != " " &&
-                            info.previousParty != "None"
-                              ? info.previousParty
-                              : "No party found"}
-                          </option>
-                        ))
-                      ) : (
-                        <option value="" key="loading">
-                          Loading...
-                        </option>
-                      )}
-
-                      <option value="{{info.name}}"></option>
+              <form
+                className="w-full text-center mt-12"
+                onSubmit={handleSubmit(onSubmit)}
+              >
+                <Controller
+                  name="religion"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <select
+                      {...field}
+                      className="w-auto mx-5 my-2 bg-black text-white p-2 mb-4 border rounded-lg"
+                    >
+                      <option value="None">Religion select</option>
+                      <option value="hindu">Hindu</option>
+                      <option value="muslim">Muslim</option>
+                      <option value="christian">Christian</option>
+                      <option value="sikh">Sikh</option>
+                      <option value="jain">Jain</option>
+                      <option value="jews">Jews</option>
+                      <option value="Other">Other</option>
                     </select>
-                  ) : (
-                    <></>
-                  )
-                ) : (
-                  <></>
+                  )}
+                />
+                <Controller
+                  name="gender"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <select
+                      {...field}
+                      className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg"
+                    >
+                      <option value="None">Gender Select</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  )}
+                />
+                {!isLoading && data.data.length !== 0 && (
+                  <Controller
+                    name="previousParty"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <select
+                        {...field}
+                        className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg"
+                      >
+                        <option value="None">
+                                Choose Party 
+                              </option>
+                        {!isLoading ? (
+                          data.data.filteredData.map(
+                            (info: any, index: string) => (
+                              <option key={index} value={info.previousParty}>
+                                {info.previousParty}
+                              </option>
+                            )
+                          )
+                        ) : (
+                          <option value="" key="loading">
+                            Loading...
+                          </option>
+                        )}
+                      </select>
+                    )}
+                  />
                 )}
-
-                <select className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">
-                  <option value="PreviousParty">Mundal</option>
-                </select>
-                <select className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">
-                  <option value="PreviousParty"></option>
-
-                  <option value="{{info.name}}"></option>
-                </select>
+                <Controller
+                  name="mundalId"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <select
+                      {...field}
+                      className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg"
+                    >
+                       <option value="None">
+                                Mundal Select
+                              </option>
+                      {data.data.info.map((info: any) => (
+                        <option key={info.id} value={info.id}>
+                          {info.name}
+                        </option>
+                      ))}
+                    </select>
+                  )}
+                />
+                <button
+                  type="submit"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Submit
+                </button>
               </form>
               <TableData data={madal} url={url} />
             </>
