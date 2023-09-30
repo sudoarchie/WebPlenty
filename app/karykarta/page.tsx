@@ -181,6 +181,7 @@ const Page = () => {
 
                   <option value="{{info.name}}"></option>
                 </select>
+                <button className="w-auto mx-5  bg-black text-white p-2 mb-4 border rounded-lg">Filter</button>
               </form>
               <TableData data={madal} url={url} />
             </>
