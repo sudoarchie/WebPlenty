@@ -88,90 +88,88 @@ export function TableData({ data, url }: { data: any; url: string }) {
           </Link>
         </button>
       </div>
-      <table className="min-w-full divide-y divide-gray-800">
-        <thead>
-          <tr className="border-2 border-gray-500">
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th className="px-6 py-3">
               S.no
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               ID
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Name
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Address
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Mobile Number
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Date of Birth
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Religion
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Gender
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Previous Party
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Mundal ID
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Role
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3">
               Edit
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Delete Delete
+            <th className="px-6 py-3">
+              Delete
             </th>
           </tr>
         </thead>
-        <tbody className="bg-white divide-y divide-gray-800">
+        <tbody >
           {data.map((info: any, index: number) => (
-            <tr key={info.id}>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">{index}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">{info.id}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+            <tr key={info.id} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+              <td className="px-6 py-4">{index}</td>
+              <td className="px-6 py-4">{info.id}</td>
+              <td className="px-6 py-4">
                 {info.name}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+              <td className="px-6 py-4">
                 {info.address}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+              <td className="px-6 py-4">
                 {info.mobileNumber}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+              <td className="px-6 py-4">  
                 {info.dob}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+              <td className="px-6 py-4">
                 {info.religion}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+              <td className="px-6 py-4">
                 {info.gender}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+              <td className="px-6 py-4">
                 {info.previousParty ? info.previousParty : "None"}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+              <td className="px-6 py-4">
                 {info.mundal.name}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-xs">
+              <td className="px-6 py-4">
                 {info.role}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap border-2 border-red-300">
-                <button>
-                  <Pencil className="h-5 w-5" aria-hidden="true"></Pencil>
-                </button>
+              <td className="px-6 py-4 ">
+              <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
               </td>
-              <td className="px-6 py-4 whitespace-nowrap border-2 border-red-300">
-                <button onClick={() => onClickDelete(info.id)}>
-                  <Trash2 className="h-5 w-5" aria-hidden="true"></Trash2>
+              <td className="px-6 py-4 ">
+                <button onClick={() => onClickDelete(info.id)} className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                  Delete
                 </button>
               </td>
               <Toaster />
