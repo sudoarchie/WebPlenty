@@ -47,16 +47,19 @@ export function Table() {
     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
       <tr>
         <th scope="col" className="px-6 py-3">
-          Product name
+          Sr.No
         </th>
         <th scope="col" className="px-6 py-3">
-          Color
+          Sector Id
         </th>
         <th scope="col" className="px-6 py-3">
-          Category
+          Sector Master
         </th>
         <th scope="col" className="px-6 py-3">
-          Price
+        SECTOR SANYOJAK
+        </th>
+        <th scope="col" className="px-6 py-3">
+        SECTOR PRABHARI
         </th>
         <th scope="col" className="px-6 py-3">
           Action
@@ -81,6 +84,9 @@ export function Table() {
           $2999
         </td>
         <td className="px-6 py-4">
+          $2999
+        </td>
+        <td className="px-6 py-4">
           <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
         </td>
         <td className="px-6 py-4">
@@ -99,6 +105,9 @@ export function Table() {
         </td>
         <td className="px-6 py-4">
           $2999
+        </td>
+        <td className="px-6 py-4">
+          $999
         </td>
         <td className="px-6 py-4">
           <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>

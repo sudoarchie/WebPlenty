@@ -207,7 +207,7 @@ const KarykartaForm: React.FC<KarykartaFormProps> = () => {
 
       <button
         type="submit"
-        className="mt-4 p-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+        className="mt-4 p-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
       >
         Submit
       </button>
