@@ -39,29 +39,34 @@ const Page = () => {
     `${baseURL}/karykarta/previous`,
     fetcher
   );
-  console.log(data)
+  console.log(data);
 
   const { handleSubmit, control } = useForm();
 
-  const onSubmit = (data:any) => {
+  const onSubmit = (data: any) => {
     const objectToQueryString = (obj: Record<string, string>) => {
       const keyValuePairs: string[] = [];
       for (const key in obj) {
-        if ( obj[key] && obj[key]!=="None") { // Exclude keys with value "none"
-          keyValuePairs.push(`${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`);
+        if (obj[key] && obj[key] !== "None") {
+          // Exclude keys with value "none"
+          keyValuePairs.push(
+            `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`
+          );
         }
       }
-      console.log(keyValuePairs)
-      return keyValuePairs.join('&&');
+      console.log(keyValuePairs);
+      return keyValuePairs.join("&&");
     };
-    
+
     // Construct the query string
-    const queryString: string = objectToQueryString(data );
+    const queryString: string = objectToQueryString(data);
     // Construct the final URL
-    const baseURL: string = '/karykarta'; // Replace with your base URL
-    const finalURL: string = `${baseURL}${queryString ? `?${queryString}` : ''}`;
-    seturl(finalURL)
-    
+    const baseURL: string = "/karykarta"; // Replace with your base URL
+    const finalURL: string = `${baseURL}${
+      queryString ? `?${queryString}` : ""
+    }`;
+    seturl(finalURL);
+
     // Use finalURL as needed
     console.log(finalURL);
   };
@@ -117,11 +122,10 @@ const Page = () => {
       <div className="w-[100vw]  z-10">
         <NavbarLogout />
       </div>
-      <div className="flex max-[]:">
-        <div className="fixed">
+      <div className="flex">
+        <div className="min-[1440px]:fixed">
           <Sidebar />
         </div>
-        <Nav></Nav>
         <div className="w-[80vw] relative top-10 min-[1440px]:left-64">
           {loading ? (
             <div className="text-center">
@@ -203,9 +207,7 @@ const Page = () => {
                         {...field}
                         className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg"
                       >
-                        <option value="None">
-                                Choose Party 
-                              </option>
+                        <option value="None">Choose Party</option>
                         {!isLoading ? (
                           data.data.filteredData.map(
                             (info: any, index: string) => (
@@ -232,9 +234,7 @@ const Page = () => {
                       {...field}
                       className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg"
                     >
-                       <option value="None">
-                                Mundal Select
-                              </option>
+                      <option value="None">Mundal Select</option>
                       {data.data.info.map((info: any) => (
                         <option key={info.id} value={info.id}>
                           {info.name}
@@ -254,8 +254,13 @@ const Page = () => {
                   Submit
                 </button>
               </form>
-              <div className="">
-              <TableData data={madal} url={url} />
+              <div className="w-full">
+                <div className="">
+                  <h1 className="text-2xl font-extrabold mt-10">
+                    Mundal Master
+                  </h1>
+                  <TableData data={madal} url={url} />
+                </div>  
               </div>
             </>
           )}

@@ -130,6 +130,7 @@ export function Navbar() {
                         </span>
                       </a>
                     ))}
+                    
                   </nav>
                 </div>
                 <button  

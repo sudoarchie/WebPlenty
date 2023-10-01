@@ -1,16 +1,18 @@
 import React from "react";
 import {
   BarChart,
-  BellRing,
-  Users,
+  
   MessageSquare,
   User,
   MapPin,
-  Wrench,
+  MoreVertical
+  
 } from "lucide-react";
 import Link from "next/link";
 
 export function Sidebar() {
+  
+
   return (
     <>
     
@@ -95,6 +97,11 @@ export function Sidebar() {
       </aside>
 
       {/* mobile */}
+      {/* <div>
+        <button className="p-5 absolute top-[10%] left-5">
+                <MoreVertical></MoreVertical>
+        </button>
+      </div> */}
     </>
   );
 }
