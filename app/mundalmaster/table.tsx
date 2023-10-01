@@ -29,7 +29,7 @@ export function Table({ data }: any) {
 
   return (
     <>
-      <div>
+      <div className="flex justify-center">
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           PDF
         </button>
