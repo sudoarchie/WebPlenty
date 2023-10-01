@@ -108,12 +108,12 @@ export function Table({ data }: any) {
                     : "None"}
                 </td>
                 <td className="px-6 py-4">
-                  <a
-                    href="#"
+                  <Link
+                    href="../sectormasterformedit"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Edit
-                  </a>
+                  </Link>
                 </td>
                 <td className="px-6 py-4">
                   <button

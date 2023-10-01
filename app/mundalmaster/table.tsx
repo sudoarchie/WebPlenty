@@ -91,20 +91,20 @@ export function Table({ data }: any) {
                   {info.karyakarta != null ? info.karyakarta.length : "0"}
                 </td>
                 <td className="px-6 py-4">
-                  <a
-                    href="#"
+                  <Link
+                    href="../mundalmasterformedit"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Edit
-                  </a>
+                  </Link>
                 </td>
                 <td className="px-6 py-4">
-                  <a
+                  <Link
                     href="#"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
-                  </a>
+                  </Link>
                 </td>
               </tr>
             ))}
