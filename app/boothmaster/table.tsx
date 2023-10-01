@@ -94,12 +94,12 @@ export function Table({ data }: any) {
                   </a>
                 </td>
                 <td className="px-6 py-4">
-                  <a
+                  <button
                     href="#"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
-                  </a>
+                  </button>
                 </td>
               </tr>
             ))}

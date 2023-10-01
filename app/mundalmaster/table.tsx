@@ -6,24 +6,24 @@ import { api } from "../pages/api";
 
 export function Table({ data }: any) {
   function del(id: number) {
-    if(confirm('यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं')){
+  if(confirm('यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं')){
       const del = api
-      .delete(`mundal/${id}`)
-      .then((response) => {
-        toast(response.data.message, {
-          icon: "👏",
-          style: {
-            borderRadius: "10px",
-            background: "#333",
-            color: "#fff",
-          },
-        });
-      }) // Close the then block here
-      .catch((error) => {
-        // Handle errors here if needed
-        console.error(error);
-      });
-    }
+  .delete(`mundal/${id}`)
+  .then((response) => {
+  toast(response.data.message, {
+  icon: "👏",
+  style: {
+  borderRadius: "10px",
+  background: "#333",
+  color: "#fff",
+  },
+  });
+  }) // Close the then block here
+  .catch((error) => {
+  // Handle errors here if needed
+  console.error(error);
+  });
+  }
    
   }
 
@@ -102,21 +102,12 @@ export function Table({ data }: any) {
                   </Link>
                 </td>
                 <td className="px-6 py-4">
-<<<<<<< HEAD
-                  <Link
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Delete
-                  </Link>
-=======
                   <button
                     onClick={() => del(info.id)}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
-                  </button>
->>>>>>> refs/remotes/origin/main
+                  </button  >
                 </td>
               </tr>
             ))}
