@@ -125,6 +125,7 @@ function page() {
                 <Controller
                   name="mundalId"
                   control={control}
+                  rules={{ required: true }} 
                   render={({ field }) => (
                     <select
                       {...field}
@@ -153,6 +154,7 @@ function page() {
                 <Controller
                   name="sanyojakId"
                   control={control}
+                  rules={{ required: true }} 
                   render={({ field }) => (
                     <select
                       {...field}

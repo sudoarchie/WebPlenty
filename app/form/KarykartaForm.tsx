@@ -100,7 +100,7 @@ const KarykartaForm: React.FC<KarykartaFormProps> = () => {
         <span className="sr-only">Loading...</span>
       </div>
     );
-  console.log(data.data[0].name);
+  // console.log(data.data[0].name);
 
   return (
     <form
