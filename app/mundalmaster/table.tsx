@@ -5,24 +5,27 @@ import toast, { Toaster } from "react-hot-toast";
 import { api } from "../pages/api";
 
 export function Table({ data }: any) {
-  // function onClickDelete(id: number) {
-  //   const del = api
-  //     .delete(`karykarta/${id}`)
-  //     .then((response) => {
-  //       toast(response.data.message, {
-  //         icon: "👏",
-  //         style: {
-  //           borderRadius: "10px",
-  //           background: "#333",
-  //           color: "#fff",
-  //         },
-  //       });
-  //     }) // Close the then block here
-  //     .catch((error) => {
-  //       // Handle errors here if needed
-  //       console.error(error);
-  //     });
-  // }
+  function del(id: number) {
+    if(confirm('यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं')){
+      const del = api
+      .delete(`mundal/${id}`)
+      .then((response) => {
+        toast(response.data.message, {
+          icon: "👏",
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+      }) // Close the then block here
+      .catch((error) => {
+        // Handle errors here if needed
+        console.error(error);
+      });
+    }
+   
+  }
 
   return (
     <>
@@ -99,15 +102,16 @@ export function Table({ data }: any) {
                   </a>
                 </td>
                 <td className="px-6 py-4">
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => del(info.id)}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
-                  </a>
+                  </button>
                 </td>
               </tr>
             ))}
+            <Toaster />
           </tbody>
         </table>
       </div>

@@ -38,13 +38,6 @@ function Page() {
         <div >
           <Sidebar />
         </div>
-     
-
-
-
-          
-          
-        
         <div className="w-full">
         <div className="flex justify-center">
         <h1 className="text-2xl font-extrabold mt-10">Booth Master</h1>

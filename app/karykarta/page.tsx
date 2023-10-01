@@ -19,7 +19,7 @@ const Page = () => {
   const fetchData = async () => {
     try {
       const response = await api.get(url);
-      console.log("DSfds", response.config);
+      console.log("DSfds", response.data.data);
       seturl(response?.config?.url || "");
       setData(response.data.data);
       setLoading(false);
@@ -153,6 +153,9 @@ const Page = () => {
                   कार्यकर्ता विवरण
                 </h1>
               </div>
+              {
+
+              }
               <form
                 className="w-full text-center mt-12"
                 onSubmit={handleSubmit(onSubmit)}
