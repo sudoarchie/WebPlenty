@@ -8,7 +8,7 @@ import { api, baseURL } from "../pages/api";
 import { ArrowLeft } from "lucide-react";
 import useSWR from "swr";
 import { useForm, Controller } from "react-hook-form";
-import Nav from "../components/sidebarTwo";
+
 
 const Page = () => {
   const [madal, setData] = useState();

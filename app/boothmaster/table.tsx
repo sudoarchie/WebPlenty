@@ -27,12 +27,12 @@ export function Table({ data }: any) {
   return (
     <>
       <div>
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
+        {/* <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           PDF
         </button>
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           Excel
-        </button>
+        </button> */}
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           <Link
             className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
@@ -95,7 +95,6 @@ export function Table({ data }: any) {
                 </td>
                 <td className="px-6 py-4">
                   <button
-                    href="#"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
