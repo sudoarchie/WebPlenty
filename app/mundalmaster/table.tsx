@@ -6,36 +6,36 @@ import { api } from "../pages/api";
 
 export function Table({ data }: any) {
   function del(id: number) {
-    if(confirm('यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं')){
+  if(confirm('यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं')){
       const del = api
-      .delete(`mundal/${id}`)
-      .then((response) => {
-        toast(response.data.message, {
-          icon: "👏",
-          style: {
-            borderRadius: "10px",
-            background: "#333",
-            color: "#fff",
-          },
-        });
-      }) // Close the then block here
-      .catch((error) => {
-        // Handle errors here if needed
-        console.error(error);
-      });
-    }
+  .delete(`mundal/${id}`)
+  .then((response) => {
+  toast(response.data.message, {
+  icon: "👏",
+  style: {
+  borderRadius: "10px",
+  background: "#333",
+  color: "#fff",
+  },
+  });
+  }) // Close the then block here
+  .catch((error) => {
+  // Handle errors here if needed
+  console.error(error);
+  });
+  }
    
   }
 
   return (
     <>
       <div className="flex justify-center">
-        <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
+        {/* <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           PDF
         </button>
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           Excel
-        </button>
+        </button> */}
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           <Link
             className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
@@ -94,12 +94,12 @@ export function Table({ data }: any) {
                   {info.karyakarta != null ? info.karyakarta.length : "0"}
                 </td>
                 <td className="px-6 py-4">
-                  <a
-                    href="#"
+                  <Link
+                    href="../mundalmasterformedit"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Edit
-                  </a>
+                  </Link>
                 </td>
                 <td className="px-6 py-4">
                   <button
@@ -107,7 +107,7 @@ export function Table({ data }: any) {
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
-                  </button>
+                  </button  >
                 </td>
               </tr>
             ))}
