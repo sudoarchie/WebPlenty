@@ -1005,14 +1005,44 @@ const Page = ()=>{
                                                     ]
                                                 })
                                         }),
-                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("select", {
-                                            className: "w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg",
-                                            children: [
-                                                /*#__PURE__*/ jsx_runtime_.jsx("option", {
-                                                    children: "Role Select"
-                                                }),
-                                                /*#__PURE__*/ jsx_runtime_.jsx("option", {})
-                                            ]
+                                        /*#__PURE__*/ jsx_runtime_.jsx(index_esm/* Controller */.Qr, {
+                                            name: "role",
+                                            control: control,
+                                            defaultValue: "",
+                                            render: ({ field })=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)("select", {
+                                                    ...field,
+                                                    className: "w-auto mx-5 my-2 bg-black text-white p-2 mb-4 border rounded-lg",
+                                                    children: [
+                                                        /*#__PURE__*/ jsx_runtime_.jsx("option", {
+                                                            value: "None",
+                                                            children: "Select role"
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx("option", {
+                                                            value: "karyakarta",
+                                                            children: "karyakarta"
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx("option", {
+                                                            value: "adhyaksha",
+                                                            children: "adhyaksha"
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx("option", {
+                                                            value: "koshadhyaksha",
+                                                            children: "koshadhyaksha"
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx("option", {
+                                                            value: "mahamantri",
+                                                            children: "mahamantri"
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx("option", {
+                                                            value: "mantri",
+                                                            children: "mantri"
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx("option", {
+                                                            value: "upaadhyaksha",
+                                                            children: "upaadhyaksha"
+                                                        })
+                                                    ]
+                                                })
                                         }),
                                         /*#__PURE__*/ jsx_runtime_.jsx("button", {
                                             type: "submit",

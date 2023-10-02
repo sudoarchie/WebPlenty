@@ -79,7 +79,7 @@
       "static/chunks/75-ea68706384163343.js",
       "static/chunks/373-2358f6f3e2f1b11c.js",
       "static/chunks/234-8efd88bcff90f836.js",
-      "static/chunks/app/karykarta/page-4d9ed402beccaeba.js"
+      "static/chunks/app/karykarta/page-3e794028ddc41764.js"
     ],
     "/karykartaformedit/page": [
       "static/chunks/webpack-01d4de61dc67eadc.js",
@@ -100,7 +100,7 @@
       "static/chunks/265-08007e36bf8affd1.js",
       "static/chunks/695-307485800dd339c4.js",
       "static/chunks/75-ea68706384163343.js",
-      "static/chunks/app/login/page-aa54c1714540b81c.js"
+      "static/chunks/app/login/page-1fae8bd65e19bf44.js"
     ],
     "/message/page": [
       "static/chunks/webpack-01d4de61dc67eadc.js",
@@ -152,17 +152,6 @@
       "static/chunks/234-8efd88bcff90f836.js",
       "static/chunks/app/sectormaster/page-6d5804a68b1a4a5d.js"
     ],
-    "/sectormasterform/page": [
-      "static/chunks/webpack-01d4de61dc67eadc.js",
-      "static/chunks/e0f3dcf3-a089dbe4ad833597.js",
-      "static/chunks/431-27055b031d7f3d2d.js",
-      "static/chunks/main-app-44bd406aeb8c4858.js",
-      "static/chunks/265-08007e36bf8affd1.js",
-      "static/chunks/695-307485800dd339c4.js",
-      "static/chunks/75-ea68706384163343.js",
-      "static/chunks/234-8efd88bcff90f836.js",
-      "static/chunks/app/sectormasterform/page-2f75a0ed1da6bbed.js"
-    ],
     "/sectormasterformedit/page": [
       "static/chunks/webpack-01d4de61dc67eadc.js",
       "static/chunks/e0f3dcf3-a089dbe4ad833597.js",
@@ -173,6 +162,17 @@
       "static/chunks/75-ea68706384163343.js",
       "static/chunks/234-8efd88bcff90f836.js",
       "static/chunks/app/sectormasterformedit/page-5ed91f4ab7b671d5.js"
+    ],
+    "/sectormasterform/page": [
+      "static/chunks/webpack-01d4de61dc67eadc.js",
+      "static/chunks/e0f3dcf3-a089dbe4ad833597.js",
+      "static/chunks/431-27055b031d7f3d2d.js",
+      "static/chunks/main-app-44bd406aeb8c4858.js",
+      "static/chunks/265-08007e36bf8affd1.js",
+      "static/chunks/695-307485800dd339c4.js",
+      "static/chunks/75-ea68706384163343.js",
+      "static/chunks/234-8efd88bcff90f836.js",
+      "static/chunks/app/sectormasterform/page-2f75a0ed1da6bbed.js"
     ]
   }
 }

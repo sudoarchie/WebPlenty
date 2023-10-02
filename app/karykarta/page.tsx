@@ -246,10 +246,26 @@ const Page = () => {
                     </select>
                   )}
                 />
-                <select className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg">
-                  <option>Role Select</option>
-                  <option></option>
-                </select>
+                <Controller
+                  name="role"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <select
+                      {...field}
+                      className="w-auto mx-5 my-2 bg-black text-white p-2 mb-4 border rounded-lg"
+                    >
+                      <option value = "None">Select role</option>
+                      <option value="karyakarta">karyakarta</option>
+                      <option value="adhyaksha">adhyaksha</option>
+                      <option value="koshadhyaksha">koshadhyaksha</option>
+                      <option value="mahamantri">mahamantri</option>
+                      <option value="mantri">mantri</option>
+                      <option value="upaadhyaksha">upaadhyaksha</option>
+                     
+                    </select>
+                  )}
+                />
                 <button
                   type="submit"
                   className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"

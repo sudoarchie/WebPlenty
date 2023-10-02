@@ -14,6 +14,6 @@
   "/mundalmasterform/page": "/mundalmasterform",
   "/mundalmasterformedit/page": "/mundalmasterformedit",
   "/sectormaster/page": "/sectormaster",
-  "/sectormasterform/page": "/sectormasterform",
-  "/sectormasterformedit/page": "/sectormasterformedit"
+  "/sectormasterformedit/page": "/sectormasterformedit",
+  "/sectormasterform/page": "/sectormasterform"
 }

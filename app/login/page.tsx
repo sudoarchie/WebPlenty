@@ -13,7 +13,6 @@ export default function SignInOne() {
 
   const { handleSubmit, control } = useForm();
   const handleFormSubmit = async (data:any) => {
-    // You can access form data in the "data" object
     console.log(data);
     api.post('/user/login',{
       ...data
@@ -23,9 +22,6 @@ export default function SignInOne() {
     }).catch((error)=>{
       console.log(error)
     })
-    
-    // Add your form submission logic here
-    // For example, you can make an API request to authenticate the user
   };
 
   return (
