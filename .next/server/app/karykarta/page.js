@@ -483,7 +483,7 @@ function TableData({ data, url }) {
         postKarykarta(data);
     };
     async function postKarykarta(data) {
-        return api/* api */.h.post("/karykarta", {
+        return api/* api */.hi.post("/karykarta", {
             ...data
         }).then(function(response) {
             (0,dist/* default */.ZP)(response.data.message, {
@@ -499,7 +499,7 @@ function TableData({ data, url }) {
         });
     }
     function onClickDelete(id) {
-        const del = api/* api */.h.delete(`karykarta/${id}`).then((response)=>{
+        const del = api/* api */.hi.delete(`karykarta/${id}`).then((response)=>{
             (0,dist/* default */.ZP)(response.data.message, {
                 icon: "\uD83D\uDC4F",
                 style: {
@@ -520,7 +520,7 @@ function TableData({ data, url }) {
     function download(type) {
         console.log(type);
         const apiUrl = url === "/karykarta" ? `${url}?download=true&&type=${type}` : `${url}&&download=true&&type=${type}`;
-        api/* api */.h.get(apiUrl, {
+        api/* api */.hi.get(apiUrl, {
             responseType: "blob"
         }).then((response)=>{
             const disposition = response.headers["content-disposition"];
@@ -740,7 +740,7 @@ const Page = ()=>{
     const [url, seturl] = (0,react_.useState)("/karykarta");
     const fetchData = async ()=>{
         try {
-            const response = await api/* api */.h.get(url);
+            const response = await api/* api */.hi.get(url);
             console.log("DSfds", response.data.data);
             seturl(response?.config?.url || "");
             setData(response.data.data);
@@ -758,7 +758,7 @@ const Page = ()=>{
         url
     ]);
     const fetcher = (...args)=>fetch(args).then((res)=>res.json());
-    const { data, error, isLoading } = (0,core_dist/* default */.ZP)(`${api/* baseURL */.v}/karykarta/previous`, fetcher);
+    const { data, error, isLoading } = (0,core_dist/* default */.ZP)(`${api/* baseURL */.v2}/karykarta/previous`, fetcher);
     console.log(data);
     const { handleSubmit, control } = (0,index_esm/* useForm */.cI)();
     const onSubmit = (data)=>{

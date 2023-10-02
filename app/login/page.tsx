@@ -19,7 +19,7 @@ export default function SignInOne() {
       ...data
     },{ withCredentials: true,  })
     .then((info)=>{
-     console.log(info)
+      localStorage.setItem("accessToken", info.data.data);
     }).catch((error)=>{
       console.log(error)
     })

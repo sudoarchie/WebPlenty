@@ -1,9 +1,32 @@
 import axios from "axios";
-export const baseURL = "http://3.108.17.52:5000/api"
-// export const baseURL = "http://localhost:5555/api"
+
+export const baseURL = "http://3.108.17.52:5000/api"; 
+
 export const api = axios.create({
-    baseURL,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  baseURL,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+
+function getTokenFromLocalStorage() {
+  return localStorage.getItem("accessToken"); 
+}
+
+api.interceptors.request.use(
+  (config) => {
+    const token = getTokenFromLocalStorage();
+
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+export default api;

@@ -464,7 +464,7 @@ var api = __webpack_require__(6393);
 
 function Table({ data }) {
     function del(id) {
-        api/* api */.h.delete(`/sector/${id}`).then((info)=>{
+        api/* api */.hi.delete(`/sector/${id}`).then((info)=>{
             (0,dist/* default */.ZP)(info.data.message, {
                 icon: "\uD83D\uDC4F",
                 style: {
@@ -605,7 +605,7 @@ function Page() {
     const [error, setError] = (0,react_.useState)(false);
     const [loading, setLoading] = (0,react_.useState)(true);
     async function fetchData() {
-        await api/* api */.h.get("/sector").then((info)=>{
+        await api/* api */.hi.get("/sector").then((info)=>{
             setData(info.data.data);
             setLoading(false);
         }).catch((error)=>{

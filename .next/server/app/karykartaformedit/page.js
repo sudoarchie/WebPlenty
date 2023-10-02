@@ -493,7 +493,7 @@ const KarykartaForm = (props)=>{
     };
     async function postKarykarta(data) {
         console.log(data);
-        return pages_api/* api */.h.put(`/karykarta/${info ? info.id : ""}`, {
+        return pages_api/* api */.hi.put(`/karykarta/${info ? info.id : ""}`, {
             ...data
         }).then(function(response) {
             (0,dist/* default */.ZP)(response.data.message, {

@@ -463,7 +463,7 @@ function page() {
     const { control, handleSubmit, watch } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_6__/* .useForm */ .cI)();
     function onSubmit(data) {
         console.log(data);
-        return _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .h.post("/sector", {
+        return _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .hi.post("/sector", {
             ...data
         }).then(function(response) {
             (0,react_hot_toast__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .ZP)(response.data.message, {
@@ -483,7 +483,7 @@ function page() {
         async function fetchData() {
             try {
                 setLoading(true);
-                await _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .h.get("/mundal").then((info)=>{
+                await _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .hi.get("/mundal").then((info)=>{
                     console.log(info.data.data);
                     setData(info.data.data);
                     setLoading(false);
@@ -501,7 +501,7 @@ function page() {
         async function fetchData(id) {
             try {
                 setLoading(true);
-                await _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .h.get(`/karykarta?mundalId=${id}&&role=karyakarta`).then((info)=>{
+                await _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .hi.get(`/karykarta?mundalId=${id}&&role=karyakarta`).then((info)=>{
                     console.log(info.data.data);
                     setdataForKarykarta(info.data.data);
                     setsecondLoader(false);

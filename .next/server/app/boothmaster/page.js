@@ -598,7 +598,7 @@ function Page() {
     const [error, setError] = (0,react_.useState)(false);
     const [loading, setLoading] = (0,react_.useState)(true);
     async function fetchData() {
-        await api/* api */.h.get("/poolingBooth").then((info)=>{
+        await api/* api */.hi.get("/poolingBooth").then((info)=>{
             setData(info.data.data);
             setLoading(false);
         }).catch((error)=>{

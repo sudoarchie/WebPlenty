@@ -465,7 +465,7 @@ var api = __webpack_require__(6393);
 function Table({ data }) {
     function del(id) {
         if (confirm("यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं")) {
-            const del = api/* api */.h.delete(`mundal/${id}`).then((response)=>{
+            const del = api/* api */.hi.delete(`mundal/${id}`).then((response)=>{
                 (0,dist/* default */.ZP)(response.data.message, {
                     icon: "\uD83D\uDC4F",
                     style: {
@@ -607,7 +607,7 @@ function Page() {
     const [error, setError] = (0,react_.useState)(false);
     const [loading, setLoading] = (0,react_.useState)(true);
     async function fetchData() {
-        await api/* api */.h.get("/mundal").then((info)=>{
+        await api/* api */.hi.get("/mundal").then((info)=>{
             setData(info.data.data);
             setLoading(false);
         }).catch((error)=>{

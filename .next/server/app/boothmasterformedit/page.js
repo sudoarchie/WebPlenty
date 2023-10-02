@@ -464,7 +464,7 @@ function Page() {
     const [secondError, setsecondError] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const onSubmit = (data)=>{
         console.log(data);
-        return _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .h.post("/poolingBooth", {
+        return _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .hi.post("/poolingBooth", {
             ...data
         }).then(function(response) {
             (0,react_hot_toast__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .ZP)(response.data.message, {
@@ -484,7 +484,7 @@ function Page() {
         async function fetchData() {
             try {
                 setLoading(true);
-                const response = await _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .h.get("/sector");
+                const response = await _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .hi.get("/sector");
                 setData(response.data.data);
                 setLoading(false);
             } catch (err) {
@@ -496,8 +496,8 @@ function Page() {
     }, []);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         async function fetchData(id) {
-            _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .h.get(`/sector/${id}`).then((response)=>{
-                _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .h.get(`/karykarta?mundalId=${response.data.data.mundalId}&&role=karyakarta`).then((response)=>{
+            _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .hi.get(`/sector/${id}`).then((response)=>{
+                _pages_api__WEBPACK_IMPORTED_MODULE_4__/* .api */ .hi.get(`/karykarta?mundalId=${response.data.data.mundalId}&&role=karyakarta`).then((response)=>{
                     setdataForKarykarta(response.data.data);
                     setsecondLoader(false);
                     setLoading(false);

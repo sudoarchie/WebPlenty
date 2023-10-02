@@ -478,7 +478,7 @@ const KarykartaForm = ()=>{
         postKarykarta(data);
     };
     async function postKarykarta(data) {
-        return pages_api/* api */.h.post("/karykarta", {
+        return pages_api/* api */.hi.post("/karykarta", {
             ...data
         }).then(function(response) {
             (0,react_hot_toast_dist/* default */.ZP)(response.data.message, {
@@ -493,7 +493,7 @@ const KarykartaForm = ()=>{
             react_hot_toast_dist/* default */.ZP.error(error.response.data.message);
         });
     }
-    const { data, error, isLoading } = (0,dist/* default */.ZP)(`${pages_api/* baseURL */.v}/mundal`, fetcher);
+    const { data, error, isLoading } = (0,dist/* default */.ZP)(`${pages_api/* baseURL */.v2}/mundal`, fetcher);
     if (error) return /*#__PURE__*/ jsx_runtime_.jsx("div", {
         children: "failed to load"
     });

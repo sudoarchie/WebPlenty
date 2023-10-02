@@ -453,7 +453,7 @@ __webpack_require__.r(__webpack_exports__);
 function Page() {
     const { control, handleSubmit, formState: { errors } } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__/* .useForm */ .cI)();
     const onSubmit = (data)=>{
-        return _pages_api__WEBPACK_IMPORTED_MODULE_3__/* .api */ .h.post("/mundal", {
+        return _pages_api__WEBPACK_IMPORTED_MODULE_3__/* .api */ .hi.post("/mundal", {
             ...data
         }).then(function(response) {
             (0,react_hot_toast__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .ZP)(response.data.message, {
