@@ -361,7 +361,7 @@ const tree = {
         'form',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2970)), "/home/shivam/WebPlenty/app/form/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 687)), "/home/shivam/WebPlenty/app/form/page.tsx"],
           
         }]
       },
@@ -760,7 +760,7 @@ function page() {
                                 className: "px-2 md:px-12",
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                                        className: "text-2xl font-bold text-gray-900 md:text-4xl",
+                                        className: "text-2xl mt-2 font-bold text-gray-900 md:text-4xl",
                                         children: "कार्यकर्त्ता प्रपत्र"
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx(form_KarykartaForm, {
@@ -783,7 +783,7 @@ function page() {
 
 /***/ }),
 
-/***/ 2970:
+/***/ 687:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -816,7 +816,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,513,815,251,734,802,133,903], () => (__webpack_exec__(30)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,815,976,465,251,734,802,133,903], () => (__webpack_exec__(30)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,56 +1,7 @@
 "use strict";
-exports.id = 40;
-exports.ids = [40];
+exports.id = 498;
+exports.ids = [498];
 exports.modules = {
-
-/***/ 4869:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (/* binding */ Menu)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2419);
-/**
- * lucide-react v0.274.0 - ISC
- */
-
-
-
-const Menu = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)("Menu", [
-  ["line", { x1: "4", x2: "20", y1: "12", y2: "12", key: "1e0a9i" }],
-  ["line", { x1: "4", x2: "20", y1: "6", y2: "6", key: "1owob3" }],
-  ["line", { x1: "4", x2: "20", y1: "18", y2: "18", key: "yk5zj1" }]
-]);
-
-
-//# sourceMappingURL=menu.js.map
-
-
-/***/ }),
-
-/***/ 2759:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (/* binding */ X)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2419);
-/**
- * lucide-react v0.274.0 - ISC
- */
-
-
-
-const X = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)("X", [
-  ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
-  ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
-]);
-
-
-//# sourceMappingURL=x.js.map
-
-
-/***/ }),
 
 /***/ 157:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {

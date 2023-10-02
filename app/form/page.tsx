@@ -43,7 +43,7 @@ function page() {
             {/* contact from */}
             <div className="flex items-center justify-center">
               <div className="px-2 md:px-12">
-                <p className="text-2xl font-bold text-gray-900 md:text-4xl">कार्यकर्त्ता प्रपत्र</p>
+                <p className="text-2xl mt-2 font-bold text-gray-900 md:text-4xl">कार्यकर्त्ता प्रपत्र</p>
                 
                 
                 <KarykartaForm onSubmit={handleFormSubmit}></KarykartaForm>
