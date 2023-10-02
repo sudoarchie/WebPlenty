@@ -342,11 +342,11 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 7684:
+/***/ 5982:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9133));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 411, 23))
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 411, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9133))
 
 /***/ }),
 

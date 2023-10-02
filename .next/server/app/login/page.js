@@ -492,7 +492,6 @@ var api = __webpack_require__(6393);
 function SignInOne() {
     const { handleSubmit, control } = (0,index_esm/* useForm */.cI)();
     const handleFormSubmit = async (data)=>{
-        // You can access form data in the "data" object
         console.log(data);
         api/* api */.hi.post("/user/login", {
             ...data
@@ -519,8 +518,6 @@ function SignInOne() {
                 }
             });
         });
-    // Add your form submission logic here
-    // For example, you can make an API request to authenticate the user
     };
     return /*#__PURE__*/ jsx_runtime_.jsx("section", {
         children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
