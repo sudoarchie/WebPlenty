@@ -12,12 +12,12 @@ export default function SignInOne() {
  
 
   const { handleSubmit, control } = useForm();
-  const handleFormSubmit = async (data) => {
+  const handleFormSubmit = async (data:any) => {
     // You can access form data in the "data" object
     console.log(data);
     api.post('/user/login',{
       ...data
-    },{ withCredentials: true,})
+    },{ withCredentials: true,  })
     .then((info)=>{
      console.log(info)
     }).catch((error)=>{
