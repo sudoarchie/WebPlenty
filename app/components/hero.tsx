@@ -1,7 +1,7 @@
 import { url } from 'inspector'
 import React from 'react'
 import Image from 'next/image'
-import Heroimg from '../../images/h.png'
+// import Heroimg from 'https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png'
 
 export function Hero() {
   return (
@@ -52,8 +52,10 @@ export function Hero() {
             alt=""
           /> */}
           <Image
-                  src={Heroimg}
+                  src="https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png"
                   className="aspect-[3/2] w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[400px]"
+                  width={1026} // Replace 'yourWidth' with the actual width of your image
+        height={412} // Replace 'yourHeight' with the actual height of your image
                   alt="Go Back"
                 />
           

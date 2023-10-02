@@ -4,4 +4,11 @@ const nextConfig = {
       appDir: true,
     },
   }
-module.exports = nextConfig
+module.exports ={
+  nextConfig,
+  images: {
+    domains: ['shivam-practics-bucket.s3.ap-south-1.amazonaws.com'],
+  },
+
+
+} 

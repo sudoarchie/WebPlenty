@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 
-import bjplogo from '../../images/bjplogo.jpg'
+// import bjplogo from '../../images/bjplogo.jpg'
 
 const menuItems = [
   {
@@ -51,9 +51,11 @@ export function Navbar() {
           <span>
             
               <Image
-                  src={bjplogo} 
+                  src="https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/bjplogo.jpg"
                   className=" w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[50px] sm:h-[30px]"
                   alt="BJP"
+                  width={80}
+                  height={80}
                 />
           
           </span>
