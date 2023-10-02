@@ -172,7 +172,7 @@ module.exports = require("next/dist/shared/lib/router/utils/is-local-url");
 
 /***/ }),
 
-/***/ 8231:
+/***/ 162:
 /***/ ((module) => {
 
 "use strict";
@@ -244,7 +244,7 @@ module.exports = require("url");
 
 /***/ }),
 
-/***/ 6980:
+/***/ 864:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -281,7 +281,7 @@ const tree = {
         'blog',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2393)), "/home/krishna/projects/temp_new/WebPlenty/app/blog/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2393)), "/home/shivam/WebPlenty/app/blog/page.tsx"],
           
         }]
       },
@@ -298,7 +298,7 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3786)), "/home/krishna/projects/temp_new/WebPlenty/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3786)), "/home/shivam/WebPlenty/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5151, 23)), "next/dist/client/components/not-found-error"],
         metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 226))).default(props))],
@@ -310,7 +310,7 @@ const tree = {
       }
       ]
       }.children;
-const pages = ["/home/krishna/projects/temp_new/WebPlenty/app/blog/page.tsx"];
+const pages = ["/home/shivam/WebPlenty/app/blog/page.tsx"];
 
 // @ts-expect-error - replaced by webpack/turbopack loader
 
@@ -342,11 +342,11 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 9987:
+/***/ 2194:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2696, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1618));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 167));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1152))
 
 /***/ }),
@@ -441,7 +441,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,426,790,435], () => (__webpack_exec__(6980)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,426,802,435], () => (__webpack_exec__(864)));
 module.exports = __webpack_exports__;
 
 })();

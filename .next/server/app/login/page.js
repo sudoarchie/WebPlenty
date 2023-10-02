@@ -172,7 +172,7 @@ module.exports = require("next/dist/shared/lib/router/utils/is-local-url");
 
 /***/ }),
 
-/***/ 8231:
+/***/ 162:
 /***/ ((module) => {
 
 "use strict";
@@ -244,7 +244,7 @@ module.exports = require("url");
 
 /***/ }),
 
-/***/ 7545:
+/***/ 5647:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -281,7 +281,7 @@ const tree = {
         'login',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6059)), "/home/krishna/projects/temp_new/WebPlenty/app/login/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6059)), "/home/shivam/WebPlenty/app/login/page.tsx"],
           
         }]
       },
@@ -298,7 +298,7 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3786)), "/home/krishna/projects/temp_new/WebPlenty/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3786)), "/home/shivam/WebPlenty/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5151, 23)), "next/dist/client/components/not-found-error"],
         metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 226))).default(props))],
@@ -310,7 +310,7 @@ const tree = {
       }
       ]
       }.children;
-const pages = ["/home/krishna/projects/temp_new/WebPlenty/app/login/page.tsx"];
+const pages = ["/home/shivam/WebPlenty/app/login/page.tsx"];
 
 // @ts-expect-error - replaced by webpack/turbopack loader
 
@@ -342,7 +342,7 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 3349:
+/***/ 6740:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 593))
@@ -571,7 +571,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4908);
 
-const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`/home/krishna/projects/temp_new/WebPlenty/app/login/page.tsx`)
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`/home/shivam/WebPlenty/app/login/page.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -592,7 +592,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,815,790], () => (__webpack_exec__(7545)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,815,802], () => (__webpack_exec__(5647)));
 module.exports = __webpack_exports__;
 
 })();

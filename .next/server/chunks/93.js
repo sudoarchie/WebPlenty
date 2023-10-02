@@ -165,7 +165,7 @@ _export(exports, {
 });
 const _requestcookies = __webpack_require__(5496);
 const _headers = __webpack_require__(4405);
-const _cookies = __webpack_require__(4834);
+const _cookies = __webpack_require__(1618);
 const _requestasyncstorage = __webpack_require__(1410);
 const _actionasyncstorage = __webpack_require__(3989);
 const _staticgenerationbailout = __webpack_require__(2655);
@@ -7595,7 +7595,7 @@ Object.defineProperty(exports, "RequestAsyncStorageWrapper", ({
 const _approuterheaders = __webpack_require__(1832);
 const _headers = __webpack_require__(4405);
 const _requestcookies = __webpack_require__(5496);
-const _cookies = __webpack_require__(4834);
+const _cookies = __webpack_require__(1618);
 const _draftmodeprovider = __webpack_require__(4293);
 function getHeaders(headers) {
     const cleaned = _headers.HeadersAdapter.from(headers);
@@ -10029,7 +10029,7 @@ _export(exports, {
         return MutableRequestCookiesAdapter;
     }
 });
-const _cookies = __webpack_require__(4834);
+const _cookies = __webpack_require__(1618);
 const _reflect = __webpack_require__(8757);
 class ReadonlyRequestCookiesError extends Error {
     constructor(){
@@ -10174,7 +10174,7 @@ const _cookies = __webpack_require__(3319); //# sourceMappingURL=cookies.js.map
 
 /***/ }),
 
-/***/ 4834:
+/***/ 1618:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -10254,7 +10254,7 @@ class ImageResponse {
 
 /***/ }),
 
-/***/ 8542:
+/***/ 8231:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -11344,7 +11344,7 @@ function removeTrailingSlash(route) {
 
 
 const serverExports = {
-    NextRequest: (__webpack_require__(8542).NextRequest),
+    NextRequest: (__webpack_require__(8231).NextRequest),
     NextResponse: (__webpack_require__(7436)/* .NextResponse */ .x),
     ImageResponse: (__webpack_require__(6581)/* .ImageResponse */ .E),
     userAgentFromString: (__webpack_require__(9882).userAgentFromString),

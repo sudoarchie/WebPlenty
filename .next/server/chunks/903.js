@@ -156,7 +156,7 @@ function Sidebar() {
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8976);
 
-const baseURL = "http://13.232.29.234:5000/api";
+const baseURL = "http://3.110.162.38:5000/api";
 const api = axios__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z.create({
     baseURL,
     headers: {
