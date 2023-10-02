@@ -29,7 +29,7 @@ exports.modules = {
 function Sidebar() {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("aside", {
-            className: "flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[1440px]:hidden",
+            className: "flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[890px]:hidden",
             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "mt-8 flex flex-1 flex-col justify-between",
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("nav", {

@@ -16,7 +16,7 @@ export function Sidebar() {
   return (
     <>
     
-      <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[1440px]:hidden">
+      <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[890px]:hidden">
         <div className="mt-8 flex flex-1 flex-col justify-between">
           <nav className="-mx-3 space-y-6 ">
             <div className="space-y-3 ">

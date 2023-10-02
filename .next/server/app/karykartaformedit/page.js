@@ -425,11 +425,11 @@ const routeModule = new AppPageRouteModule({
 /***/ 9337:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6353))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7952))
 
 /***/ }),
 
-/***/ 6353:
+/***/ 7952:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -448,8 +448,8 @@ var react_ = __webpack_require__(8038);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/image.js
 var next_image = __webpack_require__(3719);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./images/modiyogi.png
-var modiyogi = __webpack_require__(6296);
+;// CONCATENATED MODULE: ./images/modiyogi.png
+/* harmony default export */ const modiyogi = ({"src":"/_next/static/media/modiyogi.5e706965.png","height":357,"width":698,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAcUlEQVR42mNABzc3LCh6sHXx1V2TygXhgjcmlbXvLo1ZC2JPrcjvWNlU8t+1YpYYXMH+osize9N8roDYFyoDF+ztrPv/Y13Jkg/n1ugy/Fnf6nmrNvj607nFJ35uaF78vsr88/tS+ftfVpT/+/T62TIAwHI3DXhEEaMAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":4});
 // EXTERNAL MODULE: ./app/components/navbarlogout.tsx
 var navbarlogout = __webpack_require__(9133);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react-hook-form@7.46.2_react@18.2.0/node_modules/react-hook-form/dist/index.esm.mjs
@@ -707,7 +707,7 @@ function page() {
                             /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                 alt: "Contact us",
                                 className: "hidden max-h-full w-full rounded-lg object-cover lg:block",
-                                src: modiyogi/* default */.Z
+                                src: modiyogi
                             })
                         ]
                     })
@@ -747,17 +747,6 @@ const __default__ = proxy.default;
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__default__);
-
-/***/ }),
-
-/***/ 6296:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/modiyogi.5e706965.png","height":357,"width":698,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAcUlEQVR42mNABzc3LCh6sHXx1V2TygXhgjcmlbXvLo1ZC2JPrcjvWNlU8t+1YpYYXMH+osize9N8roDYFyoDF+ztrPv/Y13Jkg/n1ugy/Fnf6nmrNvj607nFJ35uaF78vsr88/tS+ftfVpT/+/T62TIAwHI3DXhEEaMAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":4});
 
 /***/ })
 

@@ -403,7 +403,7 @@ var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 function Sidebar() {
     return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
         children: /*#__PURE__*/ jsx_runtime_.jsx("aside", {
-            className: "flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[1440px]:hidden",
+            className: "flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8  max-[890px]:hidden",
             children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "mt-8 flex flex-1 flex-col justify-between",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("nav", {

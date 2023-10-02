@@ -35,9 +35,9 @@ function page() {
     <Sidebar></Sidebar>
       </div>
       </div>
-      <div className="mx-auto max-w-7xl px-4 ">
+      <div className=" sm:mx-0 md:mx-8 lg:mx-16 xl:mx-32 max-w-7xl px-4 mx-auto" style={{ overflowX: 'hidden' }}>
       
-        <div className="mx-auto max-w-7xl py-12 md:py-24">
+        <div className="center max-w-7xl  py-12 md:py-24">
           <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
           
             {/* contact from */}
@@ -49,11 +49,11 @@ function page() {
                 <KarykartaForm onSubmit={handleFormSubmit}></KarykartaForm>
               </div>
             </div>
-            <Image
+            {/* <Image
               alt="Contact us"
               className="hidden max-h-full w-full rounded-lg object-cover lg:block"
               src={modiyogi}
-            />
+            /> */}
           </div>
         </div>
       </div>
