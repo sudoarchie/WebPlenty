@@ -643,7 +643,7 @@ function SignInOne() {
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8976);
 
-const baseURL = "http://3.108.17.52:5000/api";
+const baseURL = "http://localhost:5000/api";
 const api = axios__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z.create({
     baseURL,
     headers: {
@@ -711,7 +711,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,465,251,471], () => (__webpack_exec__(5647)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,465,251,13], () => (__webpack_exec__(5647)));
 module.exports = __webpack_exports__;
 
 })();

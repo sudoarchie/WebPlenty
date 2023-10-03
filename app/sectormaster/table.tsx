@@ -17,6 +17,7 @@ export function Table({ data }: any) {
             color: "#fff",
           },
         });
+        
         setTimeout(() => {
           window.location.reload();
         }, 1000);

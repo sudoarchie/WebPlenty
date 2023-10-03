@@ -278,7 +278,7 @@ const tree = {
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3305)), "/home/shivam/WebPlenty/app/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9475)), "/home/shivam/WebPlenty/app/page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 226))).default(props))],
     apple: [],
@@ -333,21 +333,15 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 8030:
+/***/ 2353:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 167));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2696, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6301));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9209));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2205));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9768));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2270));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8054))
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2696, 23))
 
 /***/ }),
 
-/***/ 3305:
+/***/ 9475:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -388,152 +382,6 @@ function Hero() {
                     alt: "Go Back"
                 })
             })
-        })
-    });
-}
-
-;// CONCATENATED MODULE: ./app/components/writting.tsx
-
-
-
-function Writting() {
-    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-            className: "mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4",
-            children: [
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/12.jpg",
-                            width: 1280,
-                            height: 960,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md bg-gradient-to-t from-gray-900 to-transparent"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute bottom-4 left-4 text-left",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                                className: "text-lg font-semibold text-white",
-                                children: "Kanya Sumangla scheme"
-                            })
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/13.jpg",
-                            width: 1280,
-                            height: 960,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md bg-gradient-to-t from-gray-900 to-transparent"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute bottom-4 left-4 text-left",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                                className: "text-lg font-semibold text-white",
-                                children: "Kanya Sumangla scheme"
-                            })
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/14.jpg",
-                            width: 1280,
-                            height: 960,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md bg-gradient-to-t from-gray-900 to-transparent"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute bottom-4 left-4 text-left",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                                className: "text-lg font-semibold text-white",
-                                children: "Kanya Sumangla scheme"
-                            })
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/15.jpg",
-                            width: 1280,
-                            height: 960,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md bg-gradient-to-t from-gray-900 to-transparent"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute bottom-4 left-4 text-left",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                                className: "text-lg font-semibold text-white",
-                                children: "Kanya Sumangla scheme"
-                            })
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/6.jpg",
-                            width: 960,
-                            height: 720,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md bg-gradient-to-t from-gray-900 to-transparent"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute bottom-4 left-4 text-left",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                                className: "text-lg font-semibold text-white",
-                                children: "Kanya Sumangla scheme"
-                            })
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/7.jpg",
-                            width: 1024,
-                            height: 768,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md bg-gradient-to-t from-gray-900 to-transparent"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute bottom-4 left-4 text-left",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                                className: "text-lg font-semibold text-white",
-                                children: "Kanya Sumangla scheme"
-                            })
-                        })
-                    ]
-                })
-            ]
         })
     });
 }
@@ -720,116 +568,6 @@ function Footer() {
     });
 }
 
-;// CONCATENATED MODULE: ./images/ev6.jpg
-/* harmony default export */ const ev6 = ({"src":"/_next/static/media/ev6.52b9e9d9.jpg","height":591,"width":1280,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAQACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAALwKf//EABsQAAIDAAMAAAAAAAAAAAAAAAECAwQRABJB/9oACAEBAAE/AEJr2pXQns6ybpPnP//EABYRAAMAAAAAAAAAAAAAAAAAAAABQf/aAAgBAgEBPwBU/8QAGREAAQUAAAAAAAAAAAAAAAAAAQADISJC/9oACAEDAQE/AHAKRkL/2Q==","blurWidth":8,"blurHeight":4});
-;// CONCATENATED MODULE: ./images/ev7.jpg
-/* harmony default export */ const ev7 = ({"src":"/_next/static/media/ev7.84591c3b.jpg","height":591,"width":1280,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAQACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAApwH/AP/EABsQAAEEAwAAAAAAAAAAAAAAAAIBAwQRABMh/9oACAEBAAE/AJGwIMlRecQgFaK+5//EABcRAAMBAAAAAAAAAAAAAAAAAAABIQL/2gAIAQIBAT8AxVT/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAwEBPwCv/9k=","blurWidth":8,"blurHeight":4});
-;// CONCATENATED MODULE: ./images/ev8.jpg
-/* harmony default export */ const ev8 = ({"src":"/_next/static/media/ev8.df8b2c02.jpg","height":1366,"width":2048,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAJgV/8QAGxAAAwACAwAAAAAAAAAAAAAAAgMEAAEFETL/2gAIAQEAAT8AHnaKWrjevTAZIDN9kXrP/8QAGBEAAgMAAAAAAAAAAAAAAAAAASEAAkH/2gAIAQIBAT8AqA1s/8QAGREBAAIDAAAAAAAAAAAAAAAAAQACAyFB/9oACAEDAQE/AMihTfJ//9k=","blurWidth":8,"blurHeight":5});
-;// CONCATENATED MODULE: ./images/ev9.jpg
-/* harmony default export */ const ev9 = ({"src":"/_next/static/media/ev9.d161b538.jpg","height":1366,"width":2048,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAKgv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAgQBAxEAUcH/2gAIAQEAAT8AVZqfsGtlWowMJLOpmN85/8QAGhEAAgIDAAAAAAAAAAAAAAAAAQIAAxEiMf/aAAgBAgEBPwCtVwdR2f/EABsRAAIBBQAAAAAAAAAAAAAAAAECAAMhIzLB/9oACAEDAQE/AK7NiudOmf/Z","blurWidth":8,"blurHeight":5});
-;// CONCATENATED MODULE: ./images/ev12.jpg
-/* harmony default export */ const ev12 = ({"src":"/_next/static/media/ev12.90236224.jpg","height":540,"width":720,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAYACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAAAwEBAAAAAAAAAAAAAAAAAAAABf/aAAwDAQACEAMQAAAAuD1P/8QAHBAAAgICAwAAAAAAAAAAAAAAAQMCEQAhIjFB/9oACAEBAAE/AJuUVO4erMjQvd9Z/8QAFxEBAAMAAAAAAAAAAAAAAAAAAQACMf/aAAgBAgEBPwCymT//xAAYEQEBAAMAAAAAAAAAAAAAAAACAQARQf/aAAgBAwEBPwAAqXc7n//Z","blurWidth":8,"blurHeight":6});
-;// CONCATENATED MODULE: ./images/ev13.jpg
-/* harmony default export */ const ev13 = ({"src":"/_next/static/media/ev13.8e0953b3.jpg","height":540,"width":720,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAYACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABAEBAAAAAAAAAAAAAAAAAAAABP/aAAwDAQACEAMQAAAAoBk//8QAGxAAAgEFAAAAAAAAAAAAAAAAASIhAAMSMWH/2gAIAQEAAT8AyuqVgsN8iv/EABgRAAIDAAAAAAAAAAAAAAAAAAIRAAGR/9oACAECAQE/ACGiTez/xAAYEQEBAAMAAAAAAAAAAAAAAAABAgAxkv/aAAgBAwEBPwAtNE8mf//Z","blurWidth":8,"blurHeight":6});
-;// CONCATENATED MODULE: ./app/components/gallery.tsx
-
-
-
-
-
-
-
-
-
-function Gallery() {
-    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-            className: "mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4",
-            children: [
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[200px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: ev6,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md  to-transparent"
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[200px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: ev7,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md  to-transparent"
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[200px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: ev8,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md  to-transparent"
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[200px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: ev9,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md  to-transparent"
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[200px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: ev12,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md  to-transparent"
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[200px]",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: ev13,
-                            alt: "Kanya Sumangla scheme",
-                            className: "z-0 h-full w-full rounded-md object-cover"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "absolute inset-0 rounded-md  to-transparent"
-                        })
-                    ]
-                })
-            ]
-        })
-    });
-}
-
 ;// CONCATENATED MODULE: ./app/components/maps.tsx
 
 
@@ -853,8 +591,6 @@ function Maps() {
 
 
 
-
-
 function Home() {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
@@ -868,93 +604,12 @@ function Home() {
                     children: "हमारा कार्य"
                 })
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx(Writting, {}),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "flex justify-center",
-                children: /*#__PURE__*/ jsx_runtime_.jsx("h2", {
-                    className: "font-bold text-3xl underline",
-                    children: "Gallery"
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(Gallery, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(maps, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
         ]
     });
 }
 
-
-/***/ }),
-
-/***/ 2270:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/ev12.90236224.jpg","height":540,"width":720,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAYACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAAAwEBAAAAAAAAAAAAAAAAAAAABf/aAAwDAQACEAMQAAAAuD1P/8QAHBAAAgICAwAAAAAAAAAAAAAAAQMCEQAhIjFB/9oACAEBAAE/AJuUVO4erMjQvd9Z/8QAFxEBAAMAAAAAAAAAAAAAAAAAAQACMf/aAAgBAgEBPwCymT//xAAYEQEBAAMAAAAAAAAAAAAAAAACAQARQf/aAAgBAwEBPwAAqXc7n//Z","blurWidth":8,"blurHeight":6});
-
-/***/ }),
-
-/***/ 8054:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/ev13.8e0953b3.jpg","height":540,"width":720,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAYACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABAEBAAAAAAAAAAAAAAAAAAAABP/aAAwDAQACEAMQAAAAoBk//8QAGxAAAgEFAAAAAAAAAAAAAAAAASIhAAMSMWH/2gAIAQEAAT8AyuqVgsN8iv/EABgRAAIDAAAAAAAAAAAAAAAAAAIRAAGR/9oACAECAQE/ACGiTez/xAAYEQEBAAMAAAAAAAAAAAAAAAABAgAxkv/aAAgBAwEBPwAtNE8mf//Z","blurWidth":8,"blurHeight":6});
-
-/***/ }),
-
-/***/ 6301:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/ev6.52b9e9d9.jpg","height":591,"width":1280,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAQACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAALwKf//EABsQAAIDAAMAAAAAAAAAAAAAAAECAwQRABJB/9oACAEBAAE/AEJr2pXQns6ybpPnP//EABYRAAMAAAAAAAAAAAAAAAAAAAABQf/aAAgBAgEBPwBU/8QAGREAAQUAAAAAAAAAAAAAAAAAAQADISJC/9oACAEDAQE/AHAKRkL/2Q==","blurWidth":8,"blurHeight":4});
-
-/***/ }),
-
-/***/ 9209:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/ev7.84591c3b.jpg","height":591,"width":1280,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAQACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAApwH/AP/EABsQAAEEAwAAAAAAAAAAAAAAAAIBAwQRABMh/9oACAEBAAE/AJGwIMlRecQgFaK+5//EABcRAAMBAAAAAAAAAAAAAAAAAAABIQL/2gAIAQIBAT8AxVT/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAwEBPwCv/9k=","blurWidth":8,"blurHeight":4});
-
-/***/ }),
-
-/***/ 2205:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/ev8.df8b2c02.jpg","height":1366,"width":2048,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAJgV/8QAGxAAAwACAwAAAAAAAAAAAAAAAgMEAAEFETL/2gAIAQEAAT8AHnaKWrjevTAZIDN9kXrP/8QAGBEAAgMAAAAAAAAAAAAAAAAAASEAAkH/2gAIAQIBAT8AqA1s/8QAGREBAAIDAAAAAAAAAAAAAAAAAQACAyFB/9oACAEDAQE/AMihTfJ//9k=","blurWidth":8,"blurHeight":5});
-
-/***/ }),
-
-/***/ 9768:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/ev9.d161b538.jpg","height":1366,"width":2048,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAKgv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAgQBAxEAUcH/2gAIAQEAAT8AVZqfsGtlWowMJLOpmN85/8QAGhEAAgIDAAAAAAAAAAAAAAAAAQIAAxEiMf/aAAgBAgEBPwCtVwdR2f/EABsRAAIBBQAAAAAAAAAAAAAAAAECAAMhIzLB/9oACAEDAQE/AK7NiudOmf/Z","blurWidth":8,"blurHeight":5});
 
 /***/ })
 
@@ -965,7 +620,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,426,471,435], () => (__webpack_exec__(4965)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,426,13,435], () => (__webpack_exec__(4965)));
 module.exports = __webpack_exports__;
 
 })();

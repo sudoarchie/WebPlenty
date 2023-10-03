@@ -16,11 +16,11 @@ export default function Home() {
       <div className="flex justify-center">
         <h2 className="font-bold text-3xl underline">हमारा कार्य</h2>
       </div>
-      <Writting></Writting>
+      {/* <Writting></Writting>
       <div className="flex justify-center">
         <h2 className="font-bold text-3xl underline">Gallery</h2>
-      </div>
-      <Gallery></Gallery>
+      </div> */}
+      {/* <Gallery></Gallery> */}
       <Maps></Maps>
       <Footer></Footer>
     </>

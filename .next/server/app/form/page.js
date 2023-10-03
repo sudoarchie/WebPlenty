@@ -445,6 +445,11 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(6786);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(8038);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/image.js
+var next_image = __webpack_require__(3719);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+// EXTERNAL MODULE: ./images/modiyogi.png
+var modiyogi = __webpack_require__(6296);
 // EXTERNAL MODULE: ./app/components/navbarlogout.tsx
 var navbarlogout = __webpack_require__(9133);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react-hook-form@7.46.2_react@18.2.0/node_modules/react-hook-form/dist/index.esm.mjs
@@ -489,6 +494,9 @@ const KarykartaForm = ()=>{
                     color: "#fff"
                 }
             });
+            setTimeout(()=>{
+                window.location.reload();
+            }, 1000);
         }).catch(function(error) {
             react_hot_toast_dist/* default */.ZP.error(error.response.data.message);
         });
@@ -723,6 +731,8 @@ var sidebar = __webpack_require__(1236);
 
 
 
+
+
 function page() {
     // const [isMenuOpen, setIsMenuOpen] = React.useState(false)
     const toggleMenu = ()=>{
@@ -752,23 +762,30 @@ function page() {
                 },
                 children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
                     className: "center max-w-7xl  py-12 md:py-24",
-                    children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                         className: "grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "flex items-center justify-center",
-                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                className: "px-2 md:px-12",
-                                children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                                        className: "text-2xl mt-2 font-bold text-gray-900 md:text-4xl",
-                                        children: "कार्यकर्त्ता प्रपत्र"
-                                    }),
-                                    /*#__PURE__*/ jsx_runtime_.jsx(form_KarykartaForm, {
-                                        onSubmit: handleFormSubmit
-                                    })
-                                ]
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "flex items-center justify-center",
+                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    className: "px-2 md:px-12",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                            className: "text-2xl mt-2 font-bold text-gray-900 md:text-4xl",
+                                            children: "कार्यकर्त्ता प्रपत्र"
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx(form_KarykartaForm, {
+                                            onSubmit: handleFormSubmit
+                                        })
+                                    ]
+                                })
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                alt: "Contact us",
+                                className: "hidden max-h-full w-full rounded-lg object-cover lg:block",
+                                src: modiyogi/* default */.Z
                             })
-                        })
+                        ]
                     })
                 })
             }),
@@ -807,6 +824,17 @@ const __default__ = proxy.default;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__default__);
 
+/***/ }),
+
+/***/ 6296:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/modiyogi.5e706965.png","height":357,"width":698,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAcUlEQVR42mNABzc3LCh6sHXx1V2TygXhgjcmlbXvLo1ZC2JPrcjvWNlU8t+1YpYYXMH+osize9N8roDYFyoDF+ztrPv/Y13Jkg/n1ugy/Fnf6nmrNvj607nFJ35uaF78vsr88/tS+ftfVpT/+/T62TIAwHI3DXhEEaMAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":4});
+
 /***/ })
 
 };
@@ -816,7 +844,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,815,465,251,734,471,133,903], () => (__webpack_exec__(30)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,815,465,251,734,13,133,903], () => (__webpack_exec__(30)));
 module.exports = __webpack_exports__;
 
 })();

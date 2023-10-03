@@ -49,11 +49,11 @@ function page() {
                 <KarykartaForm onSubmit={handleFormSubmit}></KarykartaForm>
               </div>
             </div>
-            {/* <Image
+            <Image
               alt="Contact us"
               className="hidden max-h-full w-full rounded-lg object-cover lg:block"
               src={modiyogi}
-            /> */}
+            />
           </div>
         </div>
       </div>
