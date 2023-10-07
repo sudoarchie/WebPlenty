@@ -1,4 +1,4 @@
-// File: /home/shivam/WebPlenty/app/karykartaformedit/page.tsx
+// File: /home/krishna/projects/WebPlenty/app/karykartaformedit/page.tsx
 import * as entry from '../../../../app/karykartaformedit/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

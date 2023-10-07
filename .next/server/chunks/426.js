@@ -57,7 +57,7 @@ const X = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
 
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(4908);
-module.exports = createProxy("/home/shivam/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/image-component.js");
+module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/image-component.js");
  //# sourceMappingURL=image-component.js.map
 
 

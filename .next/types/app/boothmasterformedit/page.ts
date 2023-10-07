@@ -1,4 +1,4 @@
-// File: /home/shivam/WebPlenty/app/boothmasterformedit/page.tsx
+// File: /home/krishna/projects/WebPlenty/app/boothmasterformedit/page.tsx
 import * as entry from '../../../../app/boothmasterformedit/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

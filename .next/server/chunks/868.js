@@ -1,23 +1,23 @@
-exports.id = 13;
-exports.ids = [13];
+exports.id = 868;
+exports.ids = [868];
 exports.modules = {
 
-/***/ 4794:
+/***/ 8515:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1960))
 
 /***/ }),
 
-/***/ 8534:
+/***/ 3849:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6787, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6990, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9868, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5958, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 933, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2594, 23))
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2594, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6787, 23))
 
 /***/ }),
 
@@ -80,7 +80,7 @@ var jsx_runtime_ = __webpack_require__(6786);
 var module_proxy = __webpack_require__(4908);
 ;// CONCATENATED MODULE: ./app/utlis/provider.tsx
 
-const proxy = (0,module_proxy.createProxy)(String.raw`/home/shivam/WebPlenty/app/utlis/provider.tsx`)
+const proxy = (0,module_proxy.createProxy)(String.raw`/home/krishna/projects/WebPlenty/app/utlis/provider.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
