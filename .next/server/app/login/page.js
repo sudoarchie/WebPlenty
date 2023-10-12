@@ -324,7 +324,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 9373:
+/***/ 3184:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -361,7 +361,7 @@ const tree = {
         'login',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6059)), "/home/krishna/projects/WebPlenty/app/login/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6059)), "/home/shivam/Projects/WebPlenty/app/login/page.tsx"],
           
         }]
       },
@@ -378,7 +378,7 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3786)), "/home/krishna/projects/WebPlenty/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3786)), "/home/shivam/Projects/WebPlenty/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5151, 23)), "next/dist/client/components/not-found-error"],
         metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 226))).default(props))],
@@ -390,7 +390,7 @@ const tree = {
       }
       ]
       }.children;
-const pages = ["/home/krishna/projects/WebPlenty/app/login/page.tsx"];
+const pages = ["/home/shivam/Projects/WebPlenty/app/login/page.tsx"];
 
 // @ts-expect-error - replaced by webpack/turbopack loader
 
@@ -422,7 +422,7 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 8791:
+/***/ 5033:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 593))
@@ -519,114 +519,127 @@ function SignInOne() {
             });
         });
     };
-    return /*#__PURE__*/ jsx_runtime_.jsx("section", {
-        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-            className: "flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24",
-            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: "xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md",
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                        href: "/",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "flex justify-end",
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("section", {
+        className: "grid lg:grid-cols-2 md:grid-cols-1",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24",
+                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                    src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/modiyogi.png",
+                    width: 698,
+                    height: 357,
+                    alt: "Leader Image",
+                    className: ""
+                })
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24",
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                            href: "/",
                             children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                    src: backbutton,
-                                    alt: "Go Back",
-                                    className: "w-4 md:w-7 lg:7"
+                                className: "flex justify-end",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                        src: backbutton,
+                                        alt: "Go Back",
+                                        className: "w-4 md:w-7 lg:7"
+                                    })
                                 })
                             })
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        className: "mb-2 flex justify-center",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: bjplogo/* default */.Z,
-                            className: " w-[50px] h-[50px]",
-                            alt: "BJP"
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("h2", {
-                        className: "text-center text-2xl font-bold leading-tight text-black",
-                        children: "Login to your account"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("form", {
-                        onSubmit: handleSubmit(handleFormSubmit),
-                        className: "mt-8",
-                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                            className: "space-y-5",
-                            children: [
-                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                    children: [
-                                        /*#__PURE__*/ jsx_runtime_.jsx("label", {
-                                            htmlFor: "email",
-                                            className: "text-base font-medium text-gray-900",
-                                            children: "Email address"
-                                        }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                            className: "mt-2",
-                                            children: /*#__PURE__*/ jsx_runtime_.jsx(index_esm/* Controller */.Qr, {
-                                                name: "email",
-                                                control: control,
-                                                defaultValue: "",
-                                                render: ({ field })=>/*#__PURE__*/ jsx_runtime_.jsx("input", {
-                                                        ...field,
-                                                        className: "flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50",
-                                                        type: "email",
-                                                        placeholder: "Email"
-                                                    })
-                                            })
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                    children: [
-                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                            className: "flex items-center justify-between",
-                                            children: /*#__PURE__*/ jsx_runtime_.jsx("label", {
-                                                htmlFor: "password",
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: "mb-2 flex justify-center",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                src: bjplogo/* default */.Z,
+                                className: " w-[50px] h-[50px]",
+                                alt: "BJP"
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("h2", {
+                            className: "text-center text-2xl font-bold leading-tight text-black",
+                            children: "Login to your account"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("form", {
+                            onSubmit: handleSubmit(handleFormSubmit),
+                            className: "mt-8",
+                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                className: "space-y-5",
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                        children: [
+                                            /*#__PURE__*/ jsx_runtime_.jsx("label", {
+                                                htmlFor: "email",
                                                 className: "text-base font-medium text-gray-900",
-                                                children: "Password"
-                                            })
-                                        }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                            className: "mt-2",
-                                            children: /*#__PURE__*/ jsx_runtime_.jsx(index_esm/* Controller */.Qr, {
-                                                name: "password",
-                                                control: control,
-                                                defaultValue: "",
-                                                render: ({ field })=>/*#__PURE__*/ jsx_runtime_.jsx("input", {
-                                                        ...field,
-                                                        className: "flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50",
-                                                        type: "password",
-                                                        placeholder: "Password"
-                                                    })
-                                            })
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("button", {
-                                            type: "submit",
-                                            className: "inline-flex w-full items-center justify-center rounded-md bg-orange-600 px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-orange-500",
-                                            children: [
-                                                "Log In",
-                                                /*#__PURE__*/ jsx_runtime_.jsx(ArrowRight, {
-                                                    className: "ml-2",
-                                                    size: 16
+                                                children: "Email address"
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "mt-2",
+                                                children: /*#__PURE__*/ jsx_runtime_.jsx(index_esm/* Controller */.Qr, {
+                                                    name: "email",
+                                                    control: control,
+                                                    defaultValue: "",
+                                                    render: ({ field })=>/*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                                            ...field,
+                                                            className: "flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50",
+                                                            type: "email",
+                                                            placeholder: "Email"
+                                                        })
                                                 })
-                                            ]
-                                        }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx(dist/* Toaster */.x7, {})
-                                    ]
-                                })
-                            ]
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                        children: [
+                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "flex items-center justify-between",
+                                                children: /*#__PURE__*/ jsx_runtime_.jsx("label", {
+                                                    htmlFor: "password",
+                                                    className: "text-base font-medium text-gray-900",
+                                                    children: "Password"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "mt-2",
+                                                children: /*#__PURE__*/ jsx_runtime_.jsx(index_esm/* Controller */.Qr, {
+                                                    name: "password",
+                                                    control: control,
+                                                    defaultValue: "",
+                                                    render: ({ field })=>/*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                                            ...field,
+                                                            className: "flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50",
+                                                            type: "password",
+                                                            placeholder: "Password"
+                                                        })
+                                                })
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("button", {
+                                                type: "submit",
+                                                className: "inline-flex w-full items-center justify-center rounded-md bg-orange-600 px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-orange-500",
+                                                children: [
+                                                    "Log In",
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(ArrowRight, {
+                                                        className: "ml-2",
+                                                        size: 16
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx(dist/* Toaster */.x7, {})
+                                        ]
+                                    })
+                                ]
+                            })
                         })
-                    })
-                ]
+                    ]
+                })
             })
-        })
+        ]
     });
 }
 
@@ -645,7 +658,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4908);
 
-const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`/home/krishna/projects/WebPlenty/app/login/page.tsx`)
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`/home/shivam/Projects/WebPlenty/app/login/page.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -677,7 +690,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,465,251,868,393], () => (__webpack_exec__(9373)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,465,251,753,393], () => (__webpack_exec__(3184)));
 module.exports = __webpack_exports__;
 
 })();

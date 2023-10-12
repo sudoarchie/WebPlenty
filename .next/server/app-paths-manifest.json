@@ -1,9 +1,9 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
+  "/adminpanel/page": "app/adminpanel/page.js",
   "/blog/page": "app/blog/page.js",
   "/boothmaster/page": "app/boothmaster/page.js",
-  "/boothmasterform/page": "app/boothmasterform/page.js",
   "/boothmasterformedit/page": "app/boothmasterformedit/page.js",
   "/form/page": "app/form/page.js",
   "/karykarta/page": "app/karykarta/page.js",
@@ -15,5 +15,6 @@
   "/mundalmasterformedit/page": "app/mundalmasterformedit/page.js",
   "/sectormaster/page": "app/sectormaster/page.js",
   "/sectormasterform/page": "app/sectormasterform/page.js",
-  "/sectormasterformedit/page": "app/sectormasterformedit/page.js"
+  "/sectormasterformedit/page": "app/sectormasterformedit/page.js",
+  "/boothmasterform/page": "app/boothmasterform/page.js"
 }

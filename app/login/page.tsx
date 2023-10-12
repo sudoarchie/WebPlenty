@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import backbuttonimg from '../icons/backbutton.png'
 import bjplogo from '../../images/bjplogo.jpg'
+import modiyogi from 'https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/modiyogi.png'
 import toast, { Toaster } from 'react-hot-toast'
 import { useForm, Controller } from 'react-hook-form';
 import { api } from '../pages/api'
@@ -42,7 +43,18 @@ export default function SignInOne() {
   };
 
   return (
-    <section>
+    <section className='grid lg:grid-cols-2 md:grid-cols-1'>
+
+      <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+      <Image
+          src="https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/modiyogi.png"
+          width={698}
+          height={357}
+            alt="Leader Image"
+            className=""
+            
+          />
+      </div>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
         <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
           <Link href="/">

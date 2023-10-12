@@ -1,9 +1,9 @@
 {
   "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
+  "/adminpanel/page": "/adminpanel",
   "/blog/page": "/blog",
   "/boothmaster/page": "/boothmaster",
-  "/boothmasterform/page": "/boothmasterform",
   "/boothmasterformedit/page": "/boothmasterformedit",
   "/form/page": "/form",
   "/karykarta/page": "/karykarta",
@@ -15,5 +15,6 @@
   "/mundalmasterformedit/page": "/mundalmasterformedit",
   "/sectormaster/page": "/sectormaster",
   "/sectormasterform/page": "/sectormasterform",
-  "/sectormasterformedit/page": "/sectormasterformedit"
+  "/sectormasterformedit/page": "/sectormasterformedit",
+  "/boothmasterform/page": "/boothmasterform"
 }

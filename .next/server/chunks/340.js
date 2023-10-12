@@ -5735,7 +5735,7 @@ const createProxy = _serveredge.createClientModuleProxy; //# sourceMappingURL=mo
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(4908);
-module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/app-router.js");
+module.exports = createProxy("/home/shivam/Projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/app-router.js");
  //# sourceMappingURL=app-router.js.map
 
 
@@ -5747,7 +5747,7 @@ module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnp
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(4908);
-module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/error-boundary.js");
+module.exports = createProxy("/home/shivam/Projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/error-boundary.js");
  //# sourceMappingURL=error-boundary.js.map
 
 
@@ -5759,7 +5759,7 @@ module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnp
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(4908);
-module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/layout-router.js");
+module.exports = createProxy("/home/shivam/Projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/layout-router.js");
  //# sourceMappingURL=layout-router.js.map
 
 
@@ -5771,7 +5771,7 @@ module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnp
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(4908);
-module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/not-found-boundary.js");
+module.exports = createProxy("/home/shivam/Projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/not-found-boundary.js");
  //# sourceMappingURL=not-found-boundary.js.map
 
 
@@ -5868,7 +5868,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(4908);
-module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/render-from-template-context.js");
+module.exports = createProxy("/home/shivam/Projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/render-from-template-context.js");
  //# sourceMappingURL=render-from-template-context.js.map
 
 
@@ -5916,7 +5916,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(4908);
-module.exports = createProxy("/home/krishna/projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js");
+module.exports = createProxy("/home/shivam/Projects/WebPlenty/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js");
  //# sourceMappingURL=static-generation-searchparams-bailout-provider.js.map
 
 
