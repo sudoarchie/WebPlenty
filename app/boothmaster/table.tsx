@@ -17,6 +17,9 @@ export function Table({ data }: any) {
   //           color: "#fff",
   //         },
   //       });
+  // setTimeout(() => {
+    // window.location.reload();
+  // }, 1000);
   //     }) // Close the then block here
   //     .catch((error) => {
   //       // Handle errors here if needed
@@ -90,7 +93,7 @@ export function Table({ data }: any) {
                     href="#"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
-                    Edit
+                    Update
                   </a>
                 </td>
                 <td className="px-6 py-4">

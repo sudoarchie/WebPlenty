@@ -24,7 +24,12 @@ function Page() {
             background: "#333",
             color: "#fff",
           },
+          
         });
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+        
       })
       .catch(function (error) {
         toast.error(error.response.data.message);

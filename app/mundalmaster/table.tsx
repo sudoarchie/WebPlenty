@@ -18,6 +18,8 @@ export function Table({ data }: any) {
   color: "#fff",
   },
   });
+  
+  
   }) // Close the then block here
   .catch((error) => {
   // Handle errors here if needed
@@ -98,7 +100,7 @@ export function Table({ data }: any) {
                     href="../mundalmasterformedit"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
-                    Edit
+                    Update
                   </Link>
                 </td>
                 <td className="px-6 py-4">
