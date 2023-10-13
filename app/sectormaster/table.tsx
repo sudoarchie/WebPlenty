@@ -113,7 +113,7 @@ export function Table({ data }: any) {
                     href="../sectormasterformedit"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
-                    Edit
+                    Update
                   </Link>
                 </td>
                 <td className="px-6 py-4">
