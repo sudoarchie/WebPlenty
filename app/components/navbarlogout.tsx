@@ -116,7 +116,7 @@ export function NavbarLogout() {
                 href="../karykarta"
               >
                 <User className="h-5 w-5" aria-hidden="true" />
-                <span className="mx-2 text-sm font-medium">Karyakarta</span>
+                <span className="mx-2 text-sm font-medium">कार्यकर्ता</span>
               </Link>
              
               

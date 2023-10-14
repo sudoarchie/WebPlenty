@@ -132,9 +132,9 @@ const KarykartaForm: React.FC<KarykartaFormProps> = () => {
       <label className="block mb-2 font-bold text-gray-700">
         Mobile Number:
       </label>
-      <input
-        type="text"
-        {...register("mobileNumber", { required: true })}
+      <input 
+      type="text"
+        {...register("mobileNumber", { required: true, maxLength:10  },)}
         className="w-full p-2 mb-4 border rounded-md"
       />
 

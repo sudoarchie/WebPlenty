@@ -140,7 +140,7 @@ export function TableData({ data, url }: { data: any; url: string }) {
               <th className="px-6 py-3">Previous Party</th>
               <th className="px-6 py-3">Mundal ID</th>
               <th className="px-6 py-3">Role</th>
-              <th className="px-6 py-3">Edit</th>
+              <th className="px-6 py-3">Update</th>
               <th className="px-6 py-3">Delete</th>
             </tr>
           </thead>
@@ -174,7 +174,7 @@ export function TableData({ data, url }: { data: any; url: string }) {
   }}
 >
   <button className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-    Edit
+    Update
   </button>
 </Link>
                 </td>
