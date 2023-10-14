@@ -1,6 +1,6 @@
 "use strict";
-exports.id = 498;
-exports.ids = [498];
+exports.id = 116;
+exports.ids = [116];
 exports.modules = {
 
 /***/ 157:
@@ -162,6 +162,30 @@ const MessageSquare = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["d
     ]
 ]);
  //# sourceMappingURL=message-square.js.map
+
+
+/***/ }),
+
+/***/ 9492:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (/* binding */ Shield)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(157);
+/**
+ * lucide-react v0.274.0 - ISC
+ */ 
+const Shield = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)("Shield", [
+    [
+        "path",
+        {
+            d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10",
+            key: "1irkt0"
+        }
+    ]
+]);
+ //# sourceMappingURL=shield.js.map
 
 
 /***/ }),

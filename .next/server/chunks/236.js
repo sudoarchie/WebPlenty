@@ -13,12 +13,14 @@ exports.modules = {
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8038);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var modularize_import_loader_name_BarChart_from_default_as_default_join_esm_icons_bar_chart_lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4315);
-/* harmony import */ var modularize_import_loader_name_MessageSquare_from_default_as_default_join_esm_icons_message_square_lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6521);
-/* harmony import */ var modularize_import_loader_name_User_from_default_as_default_join_esm_icons_user_lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(93);
-/* harmony import */ var modularize_import_loader_name_MapPin_from_default_as_default_join_esm_icons_map_pin_lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(2611);
+/* harmony import */ var modularize_import_loader_name_BarChart_from_default_as_default_join_esm_icons_bar_chart_lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4315);
+/* harmony import */ var modularize_import_loader_name_Shield_from_default_as_default_join_esm_icons_shield_lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5080);
+/* harmony import */ var modularize_import_loader_name_MessageSquare_from_default_as_default_join_esm_icons_message_square_lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(6521);
+/* harmony import */ var modularize_import_loader_name_User_from_default_as_default_join_esm_icons_user_lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(93);
+/* harmony import */ var modularize_import_loader_name_MapPin_from_default_as_default_join_esm_icons_map_pin_lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2611);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1378);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -44,9 +46,23 @@ function Sidebar() {
                                 }),
                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                                     className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
+                                    href: "../adminpanel",
+                                    children: [
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_Shield_from_default_as_default_join_esm_icons_shield_lucide_react__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
+                                            className: "h-5 w-5",
+                                            "aria-hidden": "true"
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                            className: "mx-2 text-sm font-medium",
+                                            children: "Admin Panel"
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                    className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
                                     href: "../form",
                                     children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_BarChart_from_default_as_default_join_esm_icons_bar_chart_lucide_react__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_BarChart_from_default_as_default_join_esm_icons_bar_chart_lucide_react__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                                             className: "h-5 w-5",
                                             "aria-hidden": "true"
                                         }),
@@ -60,7 +76,7 @@ function Sidebar() {
                                     className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
                                     href: "../karykarta",
                                     children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_User_from_default_as_default_join_esm_icons_user_lucide_react__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_User_from_default_as_default_join_esm_icons_user_lucide_react__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
                                             className: "h-5 w-5",
                                             "aria-hidden": "true"
                                         }),
@@ -74,7 +90,7 @@ function Sidebar() {
                                     className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
                                     href: "../mundalmaster",
                                     children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_MapPin_from_default_as_default_join_esm_icons_map_pin_lucide_react__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_MapPin_from_default_as_default_join_esm_icons_map_pin_lucide_react__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
                                             className: "h-5 w-5",
                                             "aria-hidden": "true"
                                         }),
@@ -88,7 +104,7 @@ function Sidebar() {
                                     className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
                                     href: "/sectormaster",
                                     children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_MapPin_from_default_as_default_join_esm_icons_map_pin_lucide_react__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_MapPin_from_default_as_default_join_esm_icons_map_pin_lucide_react__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
                                             className: "h-5 w-5",
                                             "aria-hidden": "true"
                                         }),
@@ -102,7 +118,7 @@ function Sidebar() {
                                     className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
                                     href: "../boothmaster",
                                     children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_MapPin_from_default_as_default_join_esm_icons_map_pin_lucide_react__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_MapPin_from_default_as_default_join_esm_icons_map_pin_lucide_react__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
                                             className: "h-5 w-5",
                                             "aria-hidden": "true"
                                         }),
@@ -125,7 +141,7 @@ function Sidebar() {
                                     className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
                                     href: "#",
                                     children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_MessageSquare_from_default_as_default_join_esm_icons_message_square_lucide_react__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_MessageSquare_from_default_as_default_join_esm_icons_message_square_lucide_react__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
                                             className: "h-5 w-5",
                                             "aria-hidden": "true"
                                         }),

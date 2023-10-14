@@ -2541,7 +2541,7 @@ function normalizeCookie(cookie = {
 
 /***/ }),
 
-/***/ 361:
+/***/ 4868:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
@@ -7328,7 +7328,7 @@ Object.defineProperty(exports, "default", ({
 }));
 let chalk;
 if (false) {} else {
-    chalk = __webpack_require__(361);
+    chalk = __webpack_require__(4868);
 }
 const _default = chalk; //# sourceMappingURL=chalk.js.map
 
@@ -10254,7 +10254,7 @@ class ImageResponse {
 
 /***/ }),
 
-/***/ 8231:
+/***/ 8542:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -11344,7 +11344,7 @@ function removeTrailingSlash(route) {
 
 
 const serverExports = {
-    NextRequest: (__webpack_require__(8231).NextRequest),
+    NextRequest: (__webpack_require__(8542).NextRequest),
     NextResponse: (__webpack_require__(7436)/* .NextResponse */ .x),
     ImageResponse: (__webpack_require__(6581)/* .ImageResponse */ .E),
     userAgentFromString: (__webpack_require__(9882).userAgentFromString),

@@ -172,7 +172,7 @@ module.exports = require("next/dist/shared/lib/router/utils/is-local-url");
 
 /***/ }),
 
-/***/ 162:
+/***/ 8231:
 /***/ ((module) => {
 
 "use strict";
@@ -321,6 +321,30 @@ module.exports = require("util");
 
 "use strict";
 module.exports = require("zlib");
+
+/***/ }),
+
+/***/ 5080:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (/* binding */ Shield)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2419);
+/**
+ * lucide-react v0.274.0 - ISC
+ */
+
+
+
+const Shield = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)("Shield", [
+  ["path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10", key: "1irkt0" }]
+]);
+
+
+//# sourceMappingURL=shield.js.map
+
 
 /***/ }),
 
@@ -692,7 +716,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,815,465,753,133,393,236], () => (__webpack_exec__(9106)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,815,465,686,133,393,236], () => (__webpack_exec__(9106)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,7 +1,30 @@
 "use strict";
-exports.id = 734;
-exports.ids = [734];
+exports.id = 856;
+exports.ids = [856];
 exports.modules = {
+
+/***/ 5080:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (/* binding */ Shield)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2419);
+/**
+ * lucide-react v0.274.0 - ISC
+ */
+
+
+
+const Shield = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)("Shield", [
+  ["path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10", key: "1irkt0" }]
+]);
+
+
+//# sourceMappingURL=shield.js.map
+
+
+/***/ }),
 
 /***/ 5106:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {

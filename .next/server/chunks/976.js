@@ -1059,7 +1059,7 @@ function coerce(val) {
 
 /***/ }),
 
-/***/ 7743:
+/***/ 361:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -1454,7 +1454,7 @@ module.exports = function () {
   if (!debug) {
     try {
       /* eslint global-require: off */
-      debug = __webpack_require__(7743)("follow-redirects");
+      debug = __webpack_require__(361)("follow-redirects");
     }
     catch (error) { /* */ }
     if (typeof debug !== "function") {

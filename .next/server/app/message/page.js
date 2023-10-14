@@ -172,7 +172,7 @@ module.exports = require("next/dist/shared/lib/router/utils/is-local-url");
 
 /***/ }),
 
-/***/ 162:
+/***/ 8231:
 /***/ ((module) => {
 
 "use strict";
@@ -383,6 +383,8 @@ const e0 = proxy["NavbarLogout"];
 var react_shared_subset = __webpack_require__(5420);
 // EXTERNAL MODULE: ./node_modules/.pnpm/lucide-react@0.274.0_react@18.2.0/node_modules/lucide-react/dist/esm/icons/bar-chart.js
 var bar_chart = __webpack_require__(8156);
+// EXTERNAL MODULE: ./node_modules/.pnpm/lucide-react@0.274.0_react@18.2.0/node_modules/lucide-react/dist/esm/icons/shield.js
+var shield = __webpack_require__(9492);
 // EXTERNAL MODULE: ./node_modules/.pnpm/lucide-react@0.274.0_react@18.2.0/node_modules/lucide-react/dist/esm/icons/message-square.js
 var message_square = __webpack_require__(9413);
 // EXTERNAL MODULE: ./node_modules/.pnpm/lucide-react@0.274.0_react@18.2.0/node_modules/lucide-react/dist/esm/icons/user.js
@@ -393,6 +395,7 @@ var map_pin = __webpack_require__(115);
 var next_link = __webpack_require__(2649);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 ;// CONCATENATED MODULE: ./app/components/sidebar.tsx
+
 
 
 
@@ -415,6 +418,20 @@ function Sidebar() {
                                 /*#__PURE__*/ jsx_runtime_.jsx("label", {
                                     className: "px-3 text-xs font-semibold uppercase text-gray-900",
                                     children: "Navigate"
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)((link_default()), {
+                                    className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
+                                    href: "../adminpanel",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx(shield/* default */.Z, {
+                                            className: "h-5 w-5",
+                                            "aria-hidden": "true"
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                            className: "mx-2 text-sm font-medium",
+                                            children: "Admin Panel"
+                                        })
+                                    ]
                                 }),
                                 /*#__PURE__*/ (0,jsx_runtime_.jsxs)((link_default()), {
                                     className: "flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
@@ -551,7 +568,7 @@ function Page() {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,815,498,753,133], () => (__webpack_exec__(4114)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,815,116,686,133], () => (__webpack_exec__(4114)));
 module.exports = __webpack_exports__;
 
 })();

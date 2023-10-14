@@ -172,7 +172,7 @@ module.exports = require("next/dist/shared/lib/router/utils/is-local-url");
 
 /***/ }),
 
-/***/ 162:
+/***/ 8231:
 /***/ ((module) => {
 
 "use strict";
@@ -233,6 +233,14 @@ module.exports = require("next/dist/shared/lib/utils/warn-once");
 
 "use strict";
 module.exports = require("assert");
+
+/***/ }),
+
+/***/ 6113:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("crypto");
 
 /***/ }),
 
@@ -321,6 +329,30 @@ module.exports = require("util");
 
 "use strict";
 module.exports = require("zlib");
+
+/***/ }),
+
+/***/ 5080:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (/* binding */ Shield)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2419);
+/**
+ * lucide-react v0.274.0 - ISC
+ */
+
+
+
+const Shield = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)("Shield", [
+  ["path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10", key: "1irkt0" }]
+]);
+
+
+//# sourceMappingURL=shield.js.map
+
 
 /***/ }),
 
@@ -456,13 +488,16 @@ var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 var dist = __webpack_require__(1815);
 // EXTERNAL MODULE: ./app/pages/api/index.ts
 var api = __webpack_require__(6393);
+// EXTERNAL MODULE: ./node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/v4.js + 3 modules
+var v4 = __webpack_require__(5995);
 ;// CONCATENATED MODULE: ./app/mundalmaster/table.tsx
 
 
 
 
 
-function Table({ data }) {
+
+function Table({ data, url }) {
     function del(id) {
         if (confirm("यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं")) {
             const del = api/* api */.hi.delete(`mundal/${id}`).then((response)=>{
@@ -481,18 +516,60 @@ function Table({ data }) {
             });
         }
     }
+    function download(type) {
+        console.log(type);
+        const apiUrl = url === "/mundal" ? `${url}?download=true&&type=${type}` : `${url}&&download=true&&type=${type}`;
+        api/* api */.hi.get(apiUrl, {
+            responseType: "blob"
+        }).then((response)=>{
+            const disposition = response.headers["content-disposition"];
+            let filename = `bjp__karykarta__${(0,v4/* default */.Z)()}`;
+            if (disposition && disposition.indexOf("attachment") !== -1) {
+                const matches = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/.exec(disposition);
+                if (matches != null && matches[1]) {
+                    filename = matches[1].replace(/['"]/g, "");
+                }
+            }
+            const blob = new Blob([
+                response.data
+            ], {
+                type: response.headers["content-type"]
+            });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        }).catch((error)=>{
+            console.error(error);
+        });
+    }
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                 className: "flex justify-center",
-                children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                    className: "px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400",
-                    children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                        className: "w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
-                        href: "../mundalmasterform",
-                        children: "Add New Mundal"
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                        onClick: ()=>download("pdf"),
+                        className: "px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400 text-sm",
+                        children: "PDF"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                        onClick: ()=>download("Excel"),
+                        className: "px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400 text-sm",
+                        children: "Excel"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                        className: "px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400",
+                        children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                            className: "w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
+                            href: "../mundalmasterform",
+                            children: "Add New Mundal"
+                        })
                     })
-                })
+                ]
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "relative overflow-x-auto shadow-md sm:rounded-lg",
@@ -694,7 +771,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,815,465,753,133,393,236], () => (__webpack_exec__(4200)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,815,465,995,686,133,393,236], () => (__webpack_exec__(4200)));
 module.exports = __webpack_exports__;
 
 })();
