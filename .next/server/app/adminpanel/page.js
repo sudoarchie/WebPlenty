@@ -513,7 +513,7 @@ function Table({ data }) {
                     className: "px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400",
                     children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
                         className: "w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700",
-                        href: "../mundalmasterform",
+                        href: "../adminpanelsignup",
                         children: "Add New Admin"
                     })
                 })
@@ -574,9 +574,9 @@ function Table({ data }) {
                                         /*#__PURE__*/ jsx_runtime_.jsx("td", {
                                             className: "px-6 py-4",
                                             children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                                href: "../mundalmasterformedit",
+                                                href: "../adminpaneledit",
                                                 className: "font-medium text-blue-600 dark:text-blue-500 hover:underline",
-                                                children: "Edit"
+                                                children: "Update"
                                             })
                                         }),
                                         /*#__PURE__*/ jsx_runtime_.jsx("td", {
@@ -694,7 +694,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,815,465,753,133,903], () => (__webpack_exec__(7914)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,465,815,686,538,133,236], () => (__webpack_exec__(7914)));
 module.exports = __webpack_exports__;
 
 })();

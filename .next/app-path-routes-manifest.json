@@ -2,6 +2,8 @@
   "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
   "/adminpanel/page": "/adminpanel",
+  "/adminpaneledit/page": "/adminpaneledit",
+  "/adminpanelsignup/page": "/adminpanelsignup",
   "/blog/page": "/blog",
   "/boothmaster/page": "/boothmaster",
   "/boothmasterform/page": "/boothmasterform",

@@ -324,6 +324,31 @@ module.exports = require("zlib");
 
 /***/ }),
 
+/***/ 1025:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (/* binding */ ArrowRight)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2419);
+/**
+ * lucide-react v0.274.0 - ISC
+ */
+
+
+
+const ArrowRight = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)("ArrowRight", [
+  ["path", { d: "M5 12h14", key: "1ays0h" }],
+  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+]);
+
+
+//# sourceMappingURL=arrow-right.js.map
+
+
+/***/ }),
+
 /***/ 3184:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -425,60 +450,32 @@ const routeModule = new AppPageRouteModule({
 /***/ 5033:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 593))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4613))
 
 /***/ }),
 
-/***/ 593:
+/***/ 4613:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ SignInOne)
-});
-
-// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(6786);
-// EXTERNAL MODULE: external "next/dist/compiled/react"
-var react_ = __webpack_require__(8038);
-// EXTERNAL MODULE: ./node_modules/.pnpm/lucide-react@0.274.0_react@18.2.0/node_modules/lucide-react/dist/esm/createLucideIcon.js + 1 modules
-var createLucideIcon = __webpack_require__(2419);
-;// CONCATENATED MODULE: ./node_modules/.pnpm/lucide-react@0.274.0_react@18.2.0/node_modules/lucide-react/dist/esm/icons/arrow-right.js
-/**
- * lucide-react v0.274.0 - ISC
- */
-
-
-
-const ArrowRight = (0,createLucideIcon/* default */.Z)("ArrowRight", [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
-]);
-
-
-//# sourceMappingURL=arrow-right.js.map
-
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/link.js
-var next_link = __webpack_require__(1378);
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/image.js
-var next_image = __webpack_require__(3719);
-var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-;// CONCATENATED MODULE: ./app/icons/backbutton.png
-/* harmony default export */ const backbutton = ({"src":"/_next/static/media/backbutton.edd91ff5.png","height":344,"width":344,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAASklEQVR42lXNIQ5AYBgA0OeTJGajSAjOQxMchmD2S26s2aQXHwHiE5sejFagltQalwoCucctQxDo7A4tAianUEgGYFGCxgzZv30B2tgG7A9sQaEAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
-// EXTERNAL MODULE: ./images/bjplogo.jpg
-var bjplogo = __webpack_require__(2585);
-// EXTERNAL MODULE: ./node_modules/.pnpm/react-hot-toast@2.4.1_csstype@3.1.2_react-dom@18.2.0_react@18.2.0/node_modules/react-hot-toast/dist/index.mjs + 1 modules
-var dist = __webpack_require__(1815);
-// EXTERNAL MODULE: ./node_modules/.pnpm/react-hook-form@7.46.2_react@18.2.0/node_modules/react-hook-form/dist/index.esm.mjs
-var index_esm = __webpack_require__(6251);
-// EXTERNAL MODULE: ./app/pages/api/index.ts
-var api = __webpack_require__(6393);
-;// CONCATENATED MODULE: ./app/login/page.tsx
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SignInOne)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6786);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8038);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var modularize_import_loader_name_ArrowRight_from_default_as_default_join_esm_icons_arrow_right_lucide_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(1025);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1378);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3719);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _icons_backbutton_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8012);
+/* harmony import */ var _images_bjplogo_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(2585);
+/* harmony import */ var react_hot_toast__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1815);
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6251);
+/* harmony import */ var _pages_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(6393);
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -490,16 +487,16 @@ var api = __webpack_require__(6393);
 
 
 function SignInOne() {
-    const { handleSubmit, control } = (0,index_esm/* useForm */.cI)();
+    const { handleSubmit, control } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_8__/* .useForm */ .cI)();
     const handleFormSubmit = async (data)=>{
         console.log(data);
-        api/* api */.hi.post("/user/login", {
+        _pages_api__WEBPACK_IMPORTED_MODULE_7__/* .api */ .hi.post("/user/login", {
             ...data
         }, {
             withCredentials: true
         }).then((info)=>{
             localStorage.setItem("accessToken", info.data.data);
-            (0,dist/* default */.ZP)(info.data.message, {
+            (0,react_hot_toast__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .ZP)(info.data.message, {
                 icon: "\uD83D\uDE0E",
                 style: {
                     borderRadius: "10px",
@@ -509,7 +506,7 @@ function SignInOne() {
             });
         }).catch((error)=>{
             console.log(error);
-            (0,dist/* default */.ZP)(error.response.data.message, {
+            (0,react_hot_toast__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .ZP)(error.response.data.message, {
                 icon: "\uD83D\uDE25",
                 style: {
                     borderRadius: "10px",
@@ -519,12 +516,12 @@ function SignInOne() {
             });
         });
     };
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("section", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("section", {
         className: "grid lg:grid-cols-2 md:grid-cols-1",
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24",
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
                     src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/modiyogi.png",
                     width: 698,
                     height: 357,
@@ -532,56 +529,56 @@ function SignInOne() {
                     className: ""
                 })
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24",
-                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                     className: "xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md",
                     children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                             href: "/",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                 className: "flex justify-end",
-                                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                        src: backbutton,
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                        src: _icons_backbutton_png__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z,
                                         alt: "Go Back",
                                         className: "w-4 md:w-7 lg:7"
                                     })
                                 })
                             })
                         }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             className: "mb-2 flex justify-center",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                src: bjplogo/* default */.Z,
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                src: _images_bjplogo_jpg__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z,
                                 className: " w-[50px] h-[50px]",
                                 alt: "BJP"
                             })
                         }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("h2", {
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
                             className: "text-center text-2xl font-bold leading-tight text-black",
                             children: "Login to your account"
                         }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("form", {
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("form", {
                             onSubmit: handleSubmit(handleFormSubmit),
                             className: "mt-8",
-                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                 className: "space-y-5",
                                 children: [
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                         children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx("label", {
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
                                                 htmlFor: "email",
                                                 className: "text-base font-medium text-gray-900",
                                                 children: "Email address"
                                             }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                                 className: "mt-2",
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(index_esm/* Controller */.Qr, {
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_hook_form__WEBPACK_IMPORTED_MODULE_8__/* .Controller */ .Qr, {
                                                     name: "email",
                                                     control: control,
                                                     defaultValue: "",
-                                                    render: ({ field })=>/*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                                    render: ({ field })=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                                                             ...field,
                                                             className: "flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50",
                                                             type: "email",
@@ -591,23 +588,23 @@ function SignInOne() {
                                             })
                                         ]
                                     }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                         children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                                 className: "flex items-center justify-between",
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx("label", {
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
                                                     htmlFor: "password",
                                                     className: "text-base font-medium text-gray-900",
                                                     children: "Password"
                                                 })
                                             }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                                 className: "mt-2",
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(index_esm/* Controller */.Qr, {
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_hook_form__WEBPACK_IMPORTED_MODULE_8__/* .Controller */ .Qr, {
                                                     name: "password",
                                                     control: control,
                                                     defaultValue: "",
-                                                    render: ({ field })=>/*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                                    render: ({ field })=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                                                             ...field,
                                                             className: "flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50",
                                                             type: "password",
@@ -617,20 +614,20 @@ function SignInOne() {
                                             })
                                         ]
                                     }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                         children: [
-                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("button", {
+                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
                                                 type: "submit",
                                                 className: "inline-flex w-full items-center justify-center rounded-md bg-orange-600 px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-orange-500",
                                                 children: [
                                                     "Log In",
-                                                    /*#__PURE__*/ jsx_runtime_.jsx(ArrowRight, {
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(modularize_import_loader_name_ArrowRight_from_default_as_default_join_esm_icons_arrow_right_lucide_react__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {
                                                         className: "ml-2",
                                                         size: 16
                                                     })
                                                 ]
                                             }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(dist/* Toaster */.x7, {})
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_hot_toast__WEBPACK_IMPORTED_MODULE_6__/* .Toaster */ .x7, {})
                                         ]
                                     })
                                 ]
@@ -642,40 +639,6 @@ function SignInOne() {
         ]
     });
 }
-
-
-/***/ }),
-
-/***/ 6393:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   hi: () => (/* binding */ api),
-/* harmony export */   v2: () => (/* binding */ baseURL)
-/* harmony export */ });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8976);
-
-const baseURL = "http://3.108.17.52:5000/api";
-const api = axios__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z.create({
-    baseURL,
-    headers: {
-        "Content-Type": "application/json"
-    }
-});
-function getTokenFromLocalStorage() {
-    return localStorage.getItem("accessToken");
-}
-api.interceptors.request.use((config)=>{
-    const token = getTokenFromLocalStorage();
-    if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-}, (error)=>{
-    return Promise.reject(error);
-});
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
 
 
 /***/ }),
@@ -706,14 +669,14 @@ const __default__ = proxy.default;
 
 /***/ }),
 
-/***/ 2585:
+/***/ 8012:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/bjplogo.274d306e.jpg","height":80,"width":80,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAgACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABgEBAQAAAAAAAAAAAAAAAAAAAwT/2gAMAwEAAhADEAAAAKgRL//EAB4QAAEBCQAAAAAAAAAAAAAAABITAAMEERQVQVJy/9oACAEBAAE/AKiIVBJ9c1hzItuW/8QAHREAAQIHAAAAAAAAAAAAAAAAEQECAAMSEyIjYf/aAAgBAgEBPwBkq4dj20qMVB6sf//EAB0RAAEEAgMAAAAAAAAAAAAAAAMBAhESAAUTImH/2gAIAQMBAT8ADsCryWEF3dYs2Y8TP//Z","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/backbutton.edd91ff5.png","height":344,"width":344,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAASklEQVR42lXNIQ5AYBgA0OeTJGajSAjOQxMchmD2S26s2aQXHwHiE5sejFagltQalwoCucctQxDo7A4tAianUEgGYFGCxgzZv30B2tgG7A9sQaEAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 
 /***/ })
 
@@ -724,7 +687,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,465,251,753], () => (__webpack_exec__(3184)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,465,251,686,538], () => (__webpack_exec__(3184)));
 module.exports = __webpack_exports__;
 
 })();

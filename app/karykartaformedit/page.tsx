@@ -29,13 +29,13 @@ function page() {
       <div className='w-[100vw] fixed z-10'>
     <NavbarLogout></NavbarLogout>  
     </div>
-      <div className='flex'>
+      
       <div className='fixed'>
 
     <Sidebar></Sidebar>
+      
       </div>
-      </div>
-      <div className="mx-auto max-w-7xl px-4 ">
+      <div className="mx-auto max-w-7xl px-4 md:mx-64">
       
         <div className="mx-auto max-w-7xl py-12 md:py-24">
           <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">

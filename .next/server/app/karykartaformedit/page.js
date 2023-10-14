@@ -700,14 +700,11 @@ function page() {
                 children: /*#__PURE__*/ jsx_runtime_.jsx(navbarlogout.NavbarLogout, {})
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "flex",
-                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                    className: "fixed",
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(sidebar/* Sidebar */.Y, {})
-                })
+                className: "fixed",
+                children: /*#__PURE__*/ jsx_runtime_.jsx(sidebar/* Sidebar */.Y, {})
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "mx-auto max-w-7xl px-4 ",
+                className: "mx-auto max-w-7xl px-4 md:mx-64",
                 children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
                     className: "mx-auto max-w-7xl py-12 md:py-24",
                     children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
@@ -792,7 +789,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,815,465,251,753,133,903], () => (__webpack_exec__(9962)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,976,465,815,251,686,538,133,236], () => (__webpack_exec__(9962)));
 module.exports = __webpack_exports__;
 
 })();

@@ -2,6 +2,8 @@
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
   "/adminpanel/page": "app/adminpanel/page.js",
+  "/adminpaneledit/page": "app/adminpaneledit/page.js",
+  "/adminpanelsignup/page": "app/adminpanelsignup/page.js",
   "/blog/page": "app/blog/page.js",
   "/boothmaster/page": "app/boothmaster/page.js",
   "/boothmasterform/page": "app/boothmasterform/page.js",

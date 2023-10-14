@@ -559,6 +559,17 @@ function Page() {
 /* harmony default export */ const page = (Page);
 
 
+/***/ }),
+
+/***/ 2585:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/bjplogo.274d306e.jpg","height":80,"width":80,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAgACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABgEBAQAAAAAAAAAAAAAAAAAAAwT/2gAMAwEAAhADEAAAAKgRL//EAB4QAAEBCQAAAAAAAAAAAAAAABITAAMEERQVQVJy/9oACAEBAAE/AKiIVBJ9c1hzItuW/8QAHREAAQIHAAAAAAAAAAAAAAAAEQECAAMSEyIjYf/aAAgBAgEBPwBkq4dj20qMVB6sf//EAB0RAAEEAgMAAAAAAAAAAAAAAAMBAhESAAUTImH/2gAIAQMBAT8ADsCryWEF3dYs2Y8TP//Z","blurWidth":8,"blurHeight":8});
+
 /***/ })
 
 };
@@ -568,7 +579,7 @@ function Page() {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,815,116,753,133], () => (__webpack_exec__(4114)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,815,116,686,133], () => (__webpack_exec__(4114)));
 module.exports = __webpack_exports__;
 
 })();
