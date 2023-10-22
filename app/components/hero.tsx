@@ -1,64 +1,66 @@
-import { url } from 'inspector'
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { ChevronLeft } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from 'react-responsive-carousel';
 // import Heroimg from 'https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png'
 
 export function Hero() {
+  const slides =[
+    {
+      url: 'https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png'
+    },
+    {
+      url: 'https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/ketaki-singh.jpg'
+    }
+  ]
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length -1 : currentIndex -1;
+    setCurrentIndex(newIndex);
+  }
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length -1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  }
+  const updateIndexEvery5Seconds = () => {
+    const interval = setInterval(() => {
+      nextSlide(); // Go to the next slide
+    }, 5000); // 5000 milliseconds = 5 seconds
+
+    return () => {
+      clearInterval(interval); // Clean up the interval when the component unmounts
+    };
+  };
+
+  useEffect(() => {
+    const cleanUpInterval = updateIndexEvery5Seconds();
+    return () => {
+      cleanUpInterval(); // Clean up the interval when the component unmounts
+    };
+  }, []);
+
   return (
     <div className="relative w-full bg-white mt-10">
       <div className="mx-auto max-w-7xl lg:px-8">
-        {/* <div className="flex flex-col justify-center px-4 py-10 lg:px-6">
-          <div className="inline-flex items-center">
-            <svg
-              width="40"
-              height="46"
-              viewBox="0 0 50 56"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M23.2732 0.2528C20.8078 1.18964 2.12023 12.2346 1.08477 13.3686C0 14.552 0 14.7493 0 27.7665C0 39.6496 0.0986153 41.1289 0.83823 42.0164C2.12023 43.5449 23.2239 55.4774 24.6538 55.5267C25.9358 55.576 46.1027 44.3832 48.2229 42.4602C49.3077 41.474 49.3077 41.3261 49.3077 27.8158C49.3077 14.3055 49.3077 14.1576 48.2229 13.1714C46.6451 11.7415 27.1192 0.450027 25.64 0.104874C24.9497 -0.0923538 23.9142 0.00625992 23.2732 0.2528ZM20.2161 21.8989C20.2161 22.4906 18.9835 23.8219 17.0111 25.3997C15.2361 26.7803 13.8061 27.9637 13.8061 28.0623C13.8061 28.1116 15.2361 29.0978 16.9618 30.2319C18.6876 31.3659 20.2655 32.6479 20.4134 33.0917C20.8078 34.0286 19.871 35.2119 18.8355 35.2119C17.8001 35.2119 9.0233 29.3936 8.67815 28.5061C8.333 27.6186 9.36846 26.5338 14.3485 22.885C17.6521 20.4196 18.4904 20.0252 19.2793 20.4196C19.7724 20.7155 20.2161 21.3565 20.2161 21.8989ZM25.6893 27.6679C23.4211 34.9161 23.0267 35.7543 22.1391 34.8668C21.7447 34.4723 22.1391 32.6479 23.6677 27.9637C26.2317 20.321 26.5275 19.6307 27.2671 20.3703C27.6123 20.7155 27.1685 22.7864 25.6893 27.6679ZM36.0932 23.2302C40.6788 26.2379 41.3198 27.0269 40.3337 28.1609C39.1503 29.5909 31.6555 35.2119 30.9159 35.2119C29.9298 35.2119 28.9436 33.8806 29.2394 33.0424C29.3874 32.6479 30.9652 31.218 32.7403 29.8867L35.9946 27.4706L32.5431 25.1532C30.6201 23.9205 29.0915 22.7371 29.0915 22.5892C29.0915 21.7509 30.2256 20.4196 30.9159 20.4196C31.3597 20.4196 33.6771 21.7016 36.0932 23.2302Z"
-                fill="black"
-              />
-            </svg>
-            <span className="ml-4 text-2xl font-bold">DevUI</span>
-          </div>
-          <div className="mt-10 flex max-w-max items-center space-x-2 rounded-full border p-2">
-            <p className="text-xs font-medium md:text-sm">
-              Lorem ipsum dolor sit amet consectetur.
-              <span className="ml-2 cursor-pointer font-bold">Read More &rarr;</span>
-            </p>
-          </div>
-          <h1 className="mt-8 max-w-4xl text-3xl font-bold tracking-tight text-black md:text-4xl lg:text-6xl">
-            People who really cares about your business
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam nulla aperiam quo
-            possimus, nihil molestiae modi tenetur esse qui repudiandae cum fuga aspernatur ea?
-          </p>
-          <div className="mt-8">
-            <button
-              type="button"
-              className="rounded-md bg-black px-3 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-            >
-              Subscribe
-            </button>
-          </div>
-        </div> */}
-        <div className="rounded-lg bg-gray-200 p-4">
-          {/* <img
-            
-            src={"../images/ev9.jpg"}
-            alt=""
-          /> */}
+       
+        
+        <div className="rounded-lg bg-gray-200 py-4 flex items-center group justify-center">
+          <div className='cursor-pointer' onClick={prevSlide}><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="hidden  group-hover:block"><path d="m15 18-6-6 6-6"/></svg></div>
+           
           <Image
-                  src="https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png"
-                  className="aspect-[3/2] w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[400px]"
+                  src={slides[currentIndex].url}
+                  className="aspect-[3/2] w-[80%] md:w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[400px] duration-500 "
                   width={1026} // Replace 'yourWidth' with the actual width of your image
         height={412} // Replace 'yourHeight' with the actual height of your image
                   alt="Go Back"
                 />
-          
+           <div className='cursor-pointer' onClick={nextSlide}><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="hidden group-hover:block"><path d="m9 18 6-6-6-6"/></svg></div>
         </div>
       </div>
     </div>

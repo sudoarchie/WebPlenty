@@ -333,10 +333,11 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 1130:
+/***/ 3213:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 167));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2531));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2696, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1570))
 
@@ -449,6 +450,121 @@ function Gallery() {
 
 /***/ }),
 
+/***/ 2531:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Hero: () => (/* binding */ Hero)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6786);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8038);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3719);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
+/* __next_internal_client_entry_do_not_use__ Hero auto */ 
+
+
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from 'react-responsive-carousel';
+// import Heroimg from 'https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png'
+function Hero() {
+    const slides = [
+        {
+            url: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png"
+        },
+        {
+            url: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/ketaki-singh.jpg"
+        }
+    ];
+    const [currentIndex, setCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);
+    const prevSlide = ()=>{
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    };
+    const nextSlide = ()=>{
+        const isLastSlide = currentIndex === slides.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+    const updateIndexEvery5Seconds = ()=>{
+        const interval = setInterval(()=>{
+            nextSlide(); // Go to the next slide
+        }, 5000); // 5000 milliseconds = 5 seconds
+        return ()=>{
+            clearInterval(interval); // Clean up the interval when the component unmounts
+        };
+    };
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
+        const cleanUpInterval = updateIndexEvery5Seconds();
+        return ()=>{
+            cleanUpInterval(); // Clean up the interval when the component unmounts
+        };
+    }, []);
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        className: "relative w-full bg-white mt-10",
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+            className: "mx-auto max-w-7xl lg:px-8",
+            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "rounded-lg bg-gray-200 py-4 flex items-center group justify-center",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "cursor-pointer",
+                        onClick: prevSlide,
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            width: "40",
+                            height: "40",
+                            viewBox: "0 0 24 24",
+                            fill: "none",
+                            stroke: "currentColor",
+                            "stroke-width": "2",
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                            className: "hidden  group-hover:block",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
+                                d: "m15 18-6-6 6-6"
+                            })
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                        src: slides[currentIndex].url,
+                        className: "aspect-[3/2] w-[80%] md:w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[400px] duration-500 ",
+                        width: 1026,
+                        height: 412,
+                        alt: "Go Back"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "cursor-pointer",
+                        onClick: nextSlide,
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            width: "40",
+                            height: "40",
+                            viewBox: "0 0 24 24",
+                            fill: "none",
+                            stroke: "currentColor",
+                            "stroke-width": "2",
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                            className: "hidden group-hover:block",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
+                                d: "m9 18 6-6-6-6"
+                            })
+                        })
+                    })
+                ]
+            })
+        })
+    });
+}
+
+
+/***/ }),
+
 /***/ 7025:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -465,35 +581,26 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(6786);
 // EXTERNAL MODULE: ./app/components/navbar.tsx
 var navbar = __webpack_require__(9480);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
+var module_proxy = __webpack_require__(4908);
+;// CONCATENATED MODULE: ./app/components/hero.tsx
+
+const proxy = (0,module_proxy.createProxy)(String.raw`/home/shivam/Projects/WebPlenty/app/components/hero.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+const __default__ = proxy.default;
+
+const e0 = proxy["Hero"];
+
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/react/react.shared-subset.js
 var react_shared_subset = __webpack_require__(5420);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/image.js
 var next_image = __webpack_require__(274);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-;// CONCATENATED MODULE: ./app/components/hero.tsx
-
-
-
-// import Heroimg from 'https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png'
-function Hero() {
-    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
-        className: "relative w-full bg-white mt-10",
-        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-            className: "mx-auto max-w-7xl lg:px-8",
-            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "rounded-lg bg-gray-200 p-4",
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/h.png",
-                    className: "aspect-[3/2] w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[400px]",
-                    width: 1026,
-                    height: 412,
-                    alt: "Go Back"
-                })
-            })
-        })
-    });
-}
-
 ;// CONCATENATED MODULE: ./app/components/leadabout.tsx
 
 
@@ -676,20 +783,18 @@ function Footer() {
     });
 }
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
-var module_proxy = __webpack_require__(4908);
 ;// CONCATENATED MODULE: ./app/components/gallery.tsx
 
-const proxy = (0,module_proxy.createProxy)(String.raw`/home/shivam/Projects/WebPlenty/app/components/gallery.tsx`)
+const gallery_proxy = (0,module_proxy.createProxy)(String.raw`/home/shivam/Projects/WebPlenty/app/components/gallery.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
 // and the $$typeof value is for rendering logic to determine if the module
 // is a client boundary.
-const { __esModule, $$typeof } = proxy;
-const __default__ = proxy.default;
+const { __esModule: gallery_esModule, $$typeof: gallery_$$typeof } = gallery_proxy;
+const gallery_default_ = gallery_proxy.default;
 
-const e0 = proxy["Gallery"];
+const gallery_e0 = gallery_proxy["Gallery"];
 
 ;// CONCATENATED MODULE: ./app/components/maps.tsx
 
@@ -719,9 +824,9 @@ function Home() {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(navbar/* Navbar */.w, {}),
-            /*#__PURE__*/ jsx_runtime_.jsx(Hero, {}),
-            /*#__PURE__*/ jsx_runtime_.jsx(Leadabout, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(e0, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx(Leadabout, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx(gallery_e0, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(maps, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
         ]
@@ -738,7 +843,7 @@ function Home() {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,340,426,686,435], () => (__webpack_exec__(327)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,340,426,753,435], () => (__webpack_exec__(327)));
 module.exports = __webpack_exports__;
 
 })();
