@@ -278,7 +278,7 @@ const tree = {
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9475)), "/home/shivam/Projects/WebPlenty/app/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7025)), "/home/shivam/Projects/WebPlenty/app/page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 226))).default(props))],
     apple: [],
@@ -333,15 +333,123 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 9646:
+/***/ 1130:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 167));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2696, 23))
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2696, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1570))
 
 /***/ }),
 
-/***/ 9475:
+/***/ 1570:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  Gallery: () => (/* binding */ Gallery)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(6786);
+// EXTERNAL MODULE: external "next/dist/compiled/react"
+var react_ = __webpack_require__(8038);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/image.js
+var next_image = __webpack_require__(3719);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+;// CONCATENATED MODULE: ./images/ev6.jpg
+/* harmony default export */ const ev6 = ({"src":"/_next/static/media/ev6.52b9e9d9.jpg","height":591,"width":1280,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAQACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAALwKf//EABsQAAIDAAMAAAAAAAAAAAAAAAECAwQRABJB/9oACAEBAAE/AEJr2pXQns6ybpPnP//EABYRAAMAAAAAAAAAAAAAAAAAAAABQf/aAAgBAgEBPwBU/8QAGREAAQUAAAAAAAAAAAAAAAAAAQADISJC/9oACAEDAQE/AHAKRkL/2Q==","blurWidth":8,"blurHeight":4});
+;// CONCATENATED MODULE: ./images/ev7.jpg
+/* harmony default export */ const ev7 = ({"src":"/_next/static/media/ev7.84591c3b.jpg","height":591,"width":1280,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAQACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAApwH/AP/EABsQAAEEAwAAAAAAAAAAAAAAAAIBAwQRABMh/9oACAEBAAE/AJGwIMlRecQgFaK+5//EABcRAAMBAAAAAAAAAAAAAAAAAAABIQL/2gAIAQIBAT8AxVT/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAwEBPwCv/9k=","blurWidth":8,"blurHeight":4});
+;// CONCATENATED MODULE: ./images/ev8.jpg
+/* harmony default export */ const ev8 = ({"src":"/_next/static/media/ev8.df8b2c02.jpg","height":1366,"width":2048,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAJgV/8QAGxAAAwACAwAAAAAAAAAAAAAAAgMEAAEFETL/2gAIAQEAAT8AHnaKWrjevTAZIDN9kXrP/8QAGBEAAgMAAAAAAAAAAAAAAAAAASEAAkH/2gAIAQIBAT8AqA1s/8QAGREBAAIDAAAAAAAAAAAAAAAAAQACAyFB/9oACAEDAQE/AMihTfJ//9k=","blurWidth":8,"blurHeight":5});
+;// CONCATENATED MODULE: ./images/ev9.jpg
+/* harmony default export */ const ev9 = ({"src":"/_next/static/media/ev9.d161b538.jpg","height":1366,"width":2048,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABAEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAKgv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAgQBAxEAUcH/2gAIAQEAAT8AVZqfsGtlWowMJLOpmN85/8QAGhEAAgIDAAAAAAAAAAAAAAAAAQIAAxEiMf/aAAgBAgEBPwCtVwdR2f/EABsRAAIBBQAAAAAAAAAAAAAAAAECAAMhIzLB/9oACAEDAQE/AK7NiudOmf/Z","blurWidth":8,"blurHeight":5});
+;// CONCATENATED MODULE: ./images/ev12.jpg
+/* harmony default export */ const ev12 = ({"src":"/_next/static/media/ev12.90236224.jpg","height":540,"width":720,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAYACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAAAwEBAAAAAAAAAAAAAAAAAAAABf/aAAwDAQACEAMQAAAAuD1P/8QAHBAAAgICAwAAAAAAAAAAAAAAAQMCEQAhIjFB/9oACAEBAAE/AJuUVO4erMjQvd9Z/8QAFxEBAAMAAAAAAAAAAAAAAAAAAQACMf/aAAgBAgEBPwCymT//xAAYEQEBAAMAAAAAAAAAAAAAAAACAQARQf/aAAgBAwEBPwAAqXc7n//Z","blurWidth":8,"blurHeight":6});
+;// CONCATENATED MODULE: ./images/ev13.jpg
+/* harmony default export */ const ev13 = ({"src":"/_next/static/media/ev13.8e0953b3.jpg","height":540,"width":720,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAYACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABAEBAAAAAAAAAAAAAAAAAAAABP/aAAwDAQACEAMQAAAAoBk//8QAGxAAAgEFAAAAAAAAAAAAAAAAASIhAAMSMWH/2gAIAQEAAT8AyuqVgsN8iv/EABgRAAIDAAAAAAAAAAAAAAAAAAIRAAGR/9oACAECAQE/ACGiTez/xAAYEQEBAAMAAAAAAAAAAAAAAAABAgAxkv/aAAgBAwEBPwAtNE8mf//Z","blurWidth":8,"blurHeight":6});
+;// CONCATENATED MODULE: ./app/components/gallery.tsx
+/* __next_internal_client_entry_do_not_use__ Gallery auto */ 
+
+
+
+
+
+
+
+
+
+// Define an array of photos
+const photos = [
+    {
+        src: ev6,
+        alt: "6"
+    },
+    {
+        src: ev7,
+        alt: "7"
+    },
+    {
+        src: ev8,
+        alt: "8"
+    },
+    {
+        src: ev9,
+        alt: "9"
+    },
+    {
+        src: ev12,
+        alt: "12"
+    },
+    {
+        src: ev13,
+        alt: "13"
+    }
+];
+function Gallery() {
+    const [enlargedIndex, setEnlargedIndex] = (0,react_.useState)(-1);
+    const toggleImageSize = (index)=>{
+        setEnlargedIndex(index === enlargedIndex ? -1 : index);
+    };
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("h1", {
+                className: "text-3xl text-center font-bold",
+                children: "Gallery"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4",
+                children: photos.map((pic, index)=>/*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                        src: pic.src,
+                        // height={600}
+                        // width={400}
+                        className: "relative    rounded-md md:aspect-auto md:w-[400px] md:h-[200px] object-cover",
+                        alt: pic.alt,
+                        onClick: ()=>toggleImageSize(index),
+                        style: {
+                            cursor: "pointer",
+                            transform: enlargedIndex === index ? "scale(2)" : "scale(1)",
+                            transition: "transform 0.5s",
+                            zIndex: enlargedIndex === index ? 1 : "auto",
+                            position: enlargedIndex === index ? "absolute" : "relative",
+                            left: enlargedIndex === index ? "40%" : "auto",
+                            border: "4px solid #cfcecc"
+                        }
+                    }, index))
+            })
+        ]
+    });
+}
+
+
+/***/ }),
+
+/***/ 7025:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -568,6 +676,21 @@ function Footer() {
     });
 }
 
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
+var module_proxy = __webpack_require__(4908);
+;// CONCATENATED MODULE: ./app/components/gallery.tsx
+
+const proxy = (0,module_proxy.createProxy)(String.raw`/home/shivam/Projects/WebPlenty/app/components/gallery.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+const __default__ = proxy.default;
+
+const e0 = proxy["Gallery"];
+
 ;// CONCATENATED MODULE: ./app/components/maps.tsx
 
 
@@ -591,12 +714,14 @@ function Maps() {
 
 
 
+
 function Home() {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(navbar/* Navbar */.w, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(Hero, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(Leadabout, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx(e0, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(maps, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
         ]

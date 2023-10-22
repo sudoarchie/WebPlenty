@@ -20,7 +20,7 @@ export default function Home() {
       <div className="flex justify-center">
         <h2 className="font-bold text-3xl underline">Gallery</h2>
       </div> */}
-      {/* <Gallery></Gallery> */}
+      <Gallery></Gallery>
       <Maps></Maps>
       <Footer></Footer>
     </>
