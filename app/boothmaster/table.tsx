@@ -5,27 +5,27 @@ import toast, { Toaster } from "react-hot-toast";
 import { api } from "../pages/api";
 
 export function Table({ data }: any) {
-  // function onClickDelete(id: number) {
-  //   const del = api
-  //     .delete(`karykarta/${id}`)
-  //     .then((response) => {
-  //       toast(response.data.message, {
-  //         icon: "👏",
-  //         style: {
-  //           borderRadius: "10px",
-  //           background: "#333",
-  //           color: "#fff",
-  //         },
-  //       });
-  // setTimeout(() => {
-    // window.location.reload();
-  // }, 1000);
-  //     }) // Close the then block here
-  //     .catch((error) => {
-  //       // Handle errors here if needed
-  //       console.error(error);
-  //     });
-  // }
+  function onClickDelete(id: number) {
+    const del = api
+      .delete(`poolingBooth/${id}`)
+      .then((response) => {
+        toast(response.data.message, {
+          icon: "👏",
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
+      }) // Close the then block here
+      .catch((error) => {
+        // Handle errors here if needed
+        console.error(error);
+      });
+  }
 
   return (
     <>
@@ -65,6 +65,9 @@ export function Table({ data }: any) {
                 Total Karyakarta
               </th>
               <th scope="col" className="px-6 py-3">
+                Open
+              </th>
+              <th scope="col" className="px-6 py-3">
                 Action
               </th>
               <th scope="col" className="px-6 py-3">
@@ -85,19 +88,49 @@ export function Table({ data }: any) {
                   {index + 1}
                 </th>
                 <td className="px-6 py-4">{info.name}</td>
-                <td className="px-6 py-4">{info.sectorId!==null?info.sectorId:"None"}</td>
-                <td className="px-6 py-4">{info.sectorId!==null?info.sectorId:"None"}</td>
-                <td className="px-6 py-4">{info.karykarta!== null?info.karykarta.length:"No data available"}</td>
                 <td className="px-6 py-4">
-                  <a
-                    href="#"
+                  {info.villageId !== null ? info.villageId : "None"}
+                </td>
+                <td className="px-6 py-4">
+                  {info.village.name !== null ? info.village.name : "None"}
+                </td>
+                <td className="px-6 py-4">
+                  {info.karykarta !== null
+                    ? info.karykarta.length
+                    : "No data available"}
+                </td>
+                <td className="px-6 py-4">
+                  <Link
+                    href={{
+                      pathname: "../boothmasterdetails",
+                      query: {
+                        data: JSON.stringify(info),
+                      },
+                    }}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
+                    Open
+                  </Link>
+                </td>
+                <td className="px-6 py-4">
+                  <Link
+                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href={{
+                      pathname: "../boothmasterformedit",
+                      query: {
+                        data: JSON.stringify({
+                          id: info.id,
+                          name: info.name,
+                        }),
+                      },
+                    }}
+                  >
                     Update
-                  </a>
+                  </Link>
                 </td>
                 <td className="px-6 py-4">
                   <button
+                    onClick={() => onClickDelete(info.id)}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete

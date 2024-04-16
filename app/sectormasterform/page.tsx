@@ -7,6 +7,8 @@ import useSWR from "swr";
 import { api } from "../pages/api";
 import { useForm, Controller } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
+import Spinner from "../components/spinner";
+import Oops from "../components/error";
 function page() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -89,8 +91,8 @@ function page() {
   }, [selectedMundal]);
   console.log(dataForKarykarta);
   if(secondError) return <div>Error fuck us</div>;
-  if (error) return <div>error !!!!!</div>;
-  if (loading) return <div>Loading !!!</div>;
+  if (error) return <div><Oops></Oops></div>;
+  if (loading) return <div><Spinner></Spinner></div>;
   return (
     <>
       <div className="w-[100vw]  z-10">

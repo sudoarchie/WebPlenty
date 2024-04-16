@@ -1,43 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Pencil, Trash2 } from "lucide-react";
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
 import { api } from "../pages/api";
+import Spinner from "../components/spinner";
+import Oops from "../components/error";
 
-export function Table({ data }: any) {
-  function del(id: number) {
-  if(confirm('यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं')){
-      const del = api
-  .delete(`mundal/${id}`)
-  .then((response) => {
-  toast(response.data.message, {
-  icon: "👏",
-  style: {
-  borderRadius: "10px",
-  background: "#333",
-  color: "#fff",
-  },
-  });
-  }) // Close the then block here
-  .catch((error) => {
-  // Handle errors here if needed
-  console.error(error);
-  });
+export function Table() {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState<any>(null); // Changed to null to represent no error
+  const [loading, setLoading] = useState(true);
+
+  async function fetchData() {
+    try {
+      const response = await api.get("/user");
+      setData(response.data.data);
+      setLoading(false);
+    } catch (error:any) {
+      setError(error);
+    }
   }
-   
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (error) return <div><Oops></Oops></div>;
+
+  if (loading) return <div><Spinner></Spinner></div>;
+
+  function del(id: any) {
+    if (window.confirm("क्या आप एडमिन को हटाना चाहते हैं?")) {
+      api
+        .delete(`user/${id}`)
+        .then((response) => {
+          toast(response.data.message, {
+            icon: "👏",
+            style: {
+              borderRadius: "10px",
+              background: "#333",
+              color: "#fff",
+            },
+          });
+          fetchData(); // Reload data after successful deletion
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
   }
 
   return (
     <>
       <div className="flex justify-center">
-        
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
-          <Link
-            className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-            href="../adminpanelsignup"
-          >
-            Add New Admin
-          </Link>
+          <Link href="../adminpanelsignup">Add New Admin</Link>
         </button>
       </div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -51,10 +68,8 @@ export function Table({ data }: any) {
                 Email
               </th>
               <th scope="col" className="px-6 py-3">
-                Password
+                Name
               </th>
-
-             
               <th scope="col" className="px-6 py-3">
                 Action
               </th>
@@ -64,49 +79,44 @@ export function Table({ data }: any) {
             </tr>
           </thead>
           <tbody>
-            
+            {data&&data.map((info:any , index:any) => (
               <tr
-                // key={info.id}
+                key={info.id}
                 className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
               >
                 <th
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  {/* {index + 1} */}
+                  {index + 1}
                 </th>
-                <td className="px-6 py-4">
-                  {/* {info.id} */}
-                  </td>
-                <td className="px-6 py-4">
-                  {/* {info.name} */}
-                  </td>
-                {/* <td className="px-6 py-4">
-                  {info.sector != null ? info.sector.length : "0"}
-                </td>
-                <td className="px-6 py-4">
-                  {info.karyakarta != null ? info.karyakarta.length : "0"}
-                </td> */}
+                <td className="px-6 py-4">{info.email}</td>
+                <td className="px-6 py-4">{info.name}</td>
                 <td className="px-6 py-4">
                   <Link
-                    href="../adminpaneledit"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href={{
+                      pathname: "../adminpaneledit",
+                      query: {
+                        data: JSON.stringify(info),
+                      },
+                    }}
                   >
                     Update
                   </Link>
                 </td>
                 <td className="px-6 py-4">
                   <button
-                    // onClick={() => del(info.id)}
+                    onClick={() => del(info.id)}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
-                  </button  >
+                  </button>
                 </td>
               </tr>
-            <Toaster />
+            ))}
           </tbody>
         </table>
+        <Toaster />
       </div>
     </>
   );

@@ -1,34 +1,82 @@
-import React from 'react'
-import { Navbar } from '../components/navbar'
-import Image from 'next/image'
-import Heroimg from '../../images/2.jpg'
+'use client'
+import React, { useState, useEffect } from 'react';
+import { Navbar } from '../components/navbar';
+import Image from 'next/image';
+import Heroimg from '../../images/2.jpg';
+import api from '../pages/api';
+import { useRouter, useSearchParams } from 'next/navigation';
+import toast from 'react-hot-toast';
 
-function page() {
+function Page() {
+  const [info, setInfo] = useState<any>(null);
+  const [load, setLoad] = useState(true);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const dataParam = searchParams.get("data");
+    if (dataParam) {
+      setInfo(JSON.parse(dataParam));
+      setLoad(false);
+    }
+  }, []);
+
+  const handleFormSubmit = async (data: any) => {
+    try {
+      const response = await api.put(`/user/${info?.id}`, data);
+      toast.success(response.data.message, {
+        icon: "😎",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+      setTimeout(() => {
+        router.push("../adminpanel");
+      }, 500);
+    } catch (error: any) {
+      console.log(error);
+      toast.error(error.response?.data?.message || "An error occurred", {
+        icon: "😥",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    }
+  };
+
   return (
-    <div><Navbar></Navbar>
-    <div className="relative w-full bg-white mt-10">
+    <div>
+      <Navbar />
+      <div className="relative w-full bg-white mt-10">
+        <div className="mx-auto sm:w-full md:max-w-[90%] lg:max-w-[80%]">
+          <div className="rounded-lg bg-gray-200 p-4">
+            <Image
+              src={info?.image.startsWith("https://webplentybackend.s3.ap-south-1.amazonaws.com/")
+                ? info?.image
+                : info?.image.replace(
+                    "https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/",
+                    "https://webplentybackend.s3.ap-south-1.amazonaws.com/"
+                  )}
+              alt="Go Back"
+              width={1200}
+              height={800}
+              className="rounded-lg bg-gray-50 object-cover w-full h-[400px]"
+            />
+          </div>
+        </div>
+      </div>
       <div className="mx-auto sm:w-full md:max-w-[90%] lg:max-w-[80%]">
-        
-        <div className="rounded-lg bg-gray-200 p-4">  
-          <Image
-                  src={Heroimg}
-                  className="aspect-[3/2] w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[400px]"
-                  alt="Go Back"
-                />
-          
+        <div className="mx-auto p-4">
+          <h1 className="text-4xl font-bold">{info ? info.title : "use Client"}</h1>
+          <p className="py-4">{info ? info.content : ""}</p>
         </div>
       </div>
     </div>
-    <div className='mx-auto sm:w-full md:max-w-[90%] lg:max-w-[80%]'>
-        <div className=' mx-auto p-4'>
-            <h1 className='text-4xl font-bold'>Headline</h1>
-            <p className='py-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error consequatur obcaecati praesentium laboriosam quam inventore ipsa eius ducimus repellendus laborum sequi enim expedita, maiores, beatae, sapiente architecto sint saepe minus. Error facilis nam harum accusamus magni magnam, cumque quisquam sint doloremque excepturi molestiae consectetur eaque, perspiciatis laboriosam ab sed, quos sunt vitae optio eos dolorum. Labore voluptatem repudiandae accusamus non facere voluptatibus hic, assumenda dolor tempore? Aut, in velit! Repellat amet ipsam, sit perferendis recusandae omnis praesentium, assumenda ipsa magnam deserunt harum sequi vel exercitationem modi consequatur architecto! Laudantium fuga unde quas quibusdam voluptas nobis vitae recusandae id dolores autem odio deserunt minima ut modi, repellat a at vero. Sit cum, nihil aspernatur fugiat maiores quia nam corporis quod expedita dolore inventore tempore neque natus voluptatem necessitatibus at quo non esse modi. Reiciendis excepturi odit ex facere ab error, labore eius natus eaque maxime exercitationem, voluptatem illo neque iusto sapiente. Distinctio eos fuga debitis accusantium soluta adipisci ab sit fugit obcaecati, eveniet minus praesentium? Praesentium culpa inventore consequuntur illo quibusdam corporis, qui, rem labore omnis accusamus quae deleniti fugiat, ullam molestias officia. Maiores accusantium quod labore nesciunt totam earum voluptatem fuga nemo neque. Consequuntur rem cupiditate officiis incidunt labore. Quibusdam! </p>
-        </div>
-    </div>
-
-    </div>
-    
-  )
+  );
 }
 
-export default page
+export default Page;

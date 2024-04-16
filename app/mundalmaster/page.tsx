@@ -4,12 +4,15 @@ import { NavbarLogout } from "../components/navbarlogout";
 import { Sidebar } from "../components/sidebar";
 import { Table } from "./table";
 import { api } from "../pages/api";
+import { useRouter } from "next/navigation";
+import Spinner from "../components/spinner";
+import Oops from "../components/error";
 
 function Page() {
   const [data, setData] = useState({});
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const router = useRouter();
   async function fetchData() {
     await api
       .get("/mundal")
@@ -22,11 +25,16 @@ function Page() {
       });
   }
   useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+    if (!token) {
+      router.push("/login");
+    }
+
     fetchData();
   }, []);
   console.log(data);
-  if (error) return <div>error..... !!!!!</div>;
-  if (loading) return <div>loading....</div>;
+  if (error) return <div><Oops></Oops></div>;
+  if (loading) return <div><Spinner></Spinner></div>;
   return (
     <>
       <div className="w-[100vw]  z-10">

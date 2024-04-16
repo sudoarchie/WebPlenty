@@ -33,18 +33,7 @@ type FormValue = {
   role: string;
 };
 
-async function PostKarykarta(data: KarykartaFormData) {
-  return api
-    .post("/karykarta", {
-      ...data,
-    })
-    .then(function (response) {})
-    .catch(function (error) {
-      toast.error(error.response.data.message);
 
-      console.log(error.response.data.message);
-    });
-}
 
 const KarykartaForm: React.FC<KarykartaFormProps> = (props) => {
   const [info, setInfo] = useState<KarykartaData>();

@@ -28,7 +28,7 @@ function Page() {
         });
         setTimeout(() => {
           window.location.reload();
-        }, 1000);
+        }, 500);
         
       })
       .catch(function (error) {

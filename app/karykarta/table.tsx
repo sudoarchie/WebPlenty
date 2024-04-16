@@ -13,8 +13,8 @@ export function TableData({ data, url }: { data: any; url: string }) {
   const [editData, setEditData] = useState<any>(null);
 
   const {
-    register,
-    handleSubmit,
+    // register,
+    // handleSubmit,
     formState: { errors },
   } = useForm<FormValue>();
   const onSubmit: SubmitHandler<FormValue> = (data: any) => {
@@ -135,7 +135,7 @@ export function TableData({ data, url }: { data: any; url: string }) {
               <th className="px-6 py-3">Address</th>
               <th className="px-6 py-3">Mobile Number</th>
               <th className="px-6 py-3">Date of Birth</th>
-              <th className="px-6 py-3">Religion</th>
+              <th className="px-6 py-3">Category</th>
               <th className="px-6 py-3">Gender</th>
               <th className="px-6 py-3">Previous Party</th>
               <th className="px-6 py-3">Mundal ID</th>
@@ -166,17 +166,17 @@ export function TableData({ data, url }: { data: any; url: string }) {
                 <td className="px-6 py-4 ">
                   {/* Change the anchor to a Link */}
                   <Link
-  href={{
-    pathname: "../karykartaformedit",
-    query: {
-      data: JSON.stringify(info),
-    },
-  }}
->
-  <button className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-    Update
-  </button>
-</Link>
+                    href={{
+                      pathname: "../karykartaformedit",
+                      query: {
+                        data: JSON.stringify(info),
+                      },
+                    }}
+                  >
+                    <button className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      Update
+                    </button>
+                  </Link>
                 </td>
                 <td className="px-6 py-4 ">
                   <button

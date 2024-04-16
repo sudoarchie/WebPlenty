@@ -1,26 +1,37 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
-import { useEffect, useState } from "react";
 import { NavbarLogout } from "../components/navbarlogout";
 import { Sidebar } from "../components/sidebar";
-import useSWR from "swr";
+import { Controller, useForm } from "react-hook-form";
 import { api } from "../pages/api";
-import { useForm, Controller } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
-function page() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [dataForKarykarta, setdataForKarykarta] = useState(null);
-  const [secondLoader, setsecondLoader] = useState(true);
-  const [secondError, setsecondError] = useState(false);
-  const { control, handleSubmit, watch } = useForm();
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
-  function onSubmit(data: any) {
-    console.log(data)
+
+function Page() {
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const [info, setInfo] = useState();
+  const [load, setLoad] = useState(true);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  useEffect(() => {
+    const dataParam = searchParams.get("data");
+    if (dataParam) {
+      console.log(dataParam);
+      setInfo(JSON.parse(dataParam));
+      setLoad(false);
+    }
+  }, []);
+
+  const onSubmit = (data: any) => {
     return api
-      .post("/sector", {
-        ...data,
+      .put(`sector/${info.id}`, {
+        name:data.name,
+
       })
       .then(function (response) {
         toast(response.data.message, {
@@ -31,66 +42,16 @@ function page() {
             color: "#fff",
           },
         });
+        
         setTimeout(() => {
-          window.location.reload();
-        }, 1000);
+          router.push("../sectormaster");
+        }, 500);
       })
       .catch(function (error) {
         toast.error(error.response.data.message);
       });
-  }
-  const selectedMundal = watch("mundalId");
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        setLoading(true);
-        await api
-          .get("/mundal")
-          .then((info) => {
-            console.log(info.data.data);
-            setData(info.data.data);
-            setLoading(false);
-          })
-          .catch((error) => {
-            setError(error);
-          });
-      } catch (err: any) {
-        setError(err);
-        setLoading(false);
-      }
-    }
-
-    fetchData();
-  }, []);
-  useEffect(() => {
-    async function fetchData(id: number) {
-      try {
-        setLoading(true);
-        await api
-          .get(`/karykarta?mundalId=${id}&&role=karyakarta`)
-          .then((info) => {
-            console.log(info.data.data);
-            setdataForKarykarta(info.data.data);
-            setsecondLoader(false);
-            setLoading(false);
-          })
-          .catch((error) => {
-            setsecondError(error);
-          });
-      } catch (err: any) {
-        setsecondError(err);
-        setsecondLoader(false);
-        setLoading(false);
-      }
-    }
-    if (selectedMundal) {
-      fetchData(selectedMundal);
-    }
-  }, [selectedMundal]);
-  console.log(dataForKarykarta);
-  if(secondError) return <div>Error fuck us</div>;
-  if (error) return <div>error !!!!!</div>;
-  if (loading) return <div>Loading !!!</div>;
+  };
+  if (load) return <div>loading ....</div>;
   return (
     <>
       <div className="w-[100vw]  z-10">
@@ -100,122 +61,46 @@ function page() {
         <div>
           <Sidebar />
         </div>
+        <Toaster />
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <form className="w-full max-w-lg" onSubmit={handleSubmit(onSubmit)}>
-            <h1 className="text-2xl">Sector Master Form</h1>
+            <h1 className="text-2xl">Sector Master Update</h1>
             <div className="flex flex-wrap -mx-3 mb-6 mt-5">
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <div className="w-full px-3">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  Sector Name
+                 Name
                 </label>
                 <Controller
                   name="name"
                   control={control}
+                  defaultValue={info.name}
                   render={({ field }) => (
                     <input
                       {...field}
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       type="text"
-                      placeholder="Jane"
+                      placeholder="Name"
                     />
                   )}
                 />
-              </div>
-              <div className="w-full md:w-1/2 px-3">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  Mundal
-                </label>
-                <Controller
-                  name="mundalId"
-                  control={control}
-                  render={({ field }) => (
-                    <select
-                      {...field}
-                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    >
-                      <option value="">Select mandal </option>
-                      {!loading ? (
-                        (data as any).map((info: any) => (
-                          <option key={info.id} value={info.id}>
-                            {info.name}
-                          </option>
-                        ))
-                      ) : (
-                        <div>LOading ......</div>
-                      )}
-                    </select>
-                  )}
-                />
+                {errors.mundalName && (
+                  <p className="text-red-500 text-xs italic">
+                    This field is required
+                  </p>
+                )}
               </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  SECTOR SANYOJAK
-                </label>
-                <Controller
-                  name="sanyojakId"
-                  control={control}
-                  render={({ field }) => (
-                    <select
-                      {...field}
-                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      disabled={!selectedMundal}
-                    >
-                      <option value="">Select Karykarta </option>
-                      {!secondLoader ? (
-                        (dataForKarykarta as any).map((info: any) => (
-                          <option key={info.id} value={info.id}>
-                            {info.name}
-                          </option>
-                        ))
-                      ) : (
-                        <div>LOading ......</div>
-                      )}
-                    </select>
-                  )}
-                />
-              </div>
-              <div className="w-full px-3">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  SECTOR PRABHARI
-                </label>
-                <Controller
-                  name="prabhariID"
-                  control={control}
-                  render={({ field }) => (
-                    <select
-                      {...field}
-                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      disabled={!selectedMundal}
-                    >
-                      <option value="">Select Karykarta </option>
-                      {!secondLoader ? (
-                        (dataForKarykarta as any).map((info: any) => (
-                          <option key={info.id} value={info.id}>
-                            {info.name}
-                          </option>
-                        ))
-                      ) : (
-                        <div>LOading ......</div>
-                      )}
-                    </select>
-                  )}
-                />
-              </div>
-            </div>
+
             <button
-              className="appearance-none block w-full bg-orange-600 text-white border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               type="submit"
-              disabled={!selectedMundal}
+              className="appearance-none block w-full bg-orange-600 text-white border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             >
               Submit
             </button>
-            <Toaster/>
           </form>
         </div>
       </div>
     </>
   );
 }
-export default page;
+export default Page;

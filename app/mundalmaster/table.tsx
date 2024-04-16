@@ -7,44 +7,40 @@ import { v4 as uuidv4 } from "uuid";
 
 export function Table({ data, url }: any) {
   function del(id: number) {
-  if(confirm('यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं')){
+    if (confirm("यदि आप मंडल को हटाते हैं तो मंडल से संबंधित सभी डेटा हटा दिए जाते हैं")) {
       const del = api
-  .delete(`mundal/${id}`)
-  .then((response) => {
-  toast(response.data.message, {
-  icon: "👏",
-  style: {
-  borderRadius: "10px",
-  background: "#333",
-  color: "#fff",
-  },
-  });
-  
-  
-  }) // Close the then block here
-  .catch((error) => {
-  // Handle errors here if needed
-  console.error(error);
-  });
-  }
-   
+        .delete(`mundal/${id}`)
+        .then((response) => {
+          toast(response.data.message, {
+            icon: "👏",
+            style: {
+              borderRadius: "10px",
+              background: "#333",
+              color: "#fff",
+            },
+          });
+        }) // Close the then block here
+        .catch((error) => {
+          // Handle errors here if needed
+          console.error(error);
+        });
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
+    }
   }
   function download(type: string) {
     console.log(type);
-    const apiUrl =
-      url === "/mundal"
-        ? `${url}?download=true&&type=${type}`
-        : `${url}&&download=true&&type=${type}`;
-
+    const apiUrl = `mundal?download=true&type=${type}`;
     api
       .get(apiUrl, { responseType: "blob" })
       .then((response) => {
         const disposition = response.headers["content-disposition"];
-        let filename = `bjp__karykarta__${uuidv4()}`;
+        let filename = `bjp__mandal__${uuidv4()}`;
 
         if (disposition && disposition.indexOf("attachment") !== -1) {
           const matches = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/.exec(
-            disposition
+            disposition,
           );
           if (matches != null && matches[1]) {
             filename = matches[1].replace(/['"]/g, "");
@@ -66,23 +62,22 @@ export function Table({ data, url }: any) {
         console.error(error);
       });
   }
-
+  console.log(data);
   return (
     <>
       <div className="flex justify-center">
-        
         <button
-            onClick={() => download("pdf")}
-            className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400 text-sm"
-          >
-            PDF
-          </button>
-          <button
-            onClick={() => download("Excel")}
-            className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400 text-sm"
-          >
-            Excel
-          </button>
+          onClick={() => download("pdf")}
+          className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400 text-sm"
+        >
+          PDF
+        </button>
+        <button
+          onClick={() => download("Excel")}
+          className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400 text-sm"
+        >
+          Excel
+        </button>
         <button className="px-4 py-2 border-2 mb-5 mx-2 rounded-lg border-gray-400">
           <Link
             className="w-full h-full text-black transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
@@ -113,6 +108,9 @@ export function Table({ data, url }: any) {
                 Total Karykarta
               </th>
               <th scope="col" className="px-6 py-3">
+                Details
+              </th>
+              <th scope="col" className="px-6 py-3">
                 Action
               </th>
               <th scope="col" className="px-6 py-3">
@@ -135,14 +133,36 @@ export function Table({ data, url }: any) {
                 <td className="px-6 py-4">{info.id}</td>
                 <td className="px-6 py-4">{info.name}</td>
                 <td className="px-6 py-4">
-                  {info.sector != null ? info.sector.length : "0"}
+                  {info.Sector != null ? info.Sector.length : "0"}
                 </td>
                 <td className="px-6 py-4">
                   {info.karyakarta != null ? info.karyakarta.length : "0"}
                 </td>
+
                 <td className="px-6 py-4">
                   <Link
-                    href="../mundalmasterformedit"
+                    href={{
+                      pathname: "../mundalmasterdetails",
+                      query: {
+                        data: JSON.stringify(info.id),
+                      },
+                    }}
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    Open
+                  </Link>
+                </td>
+                <td className="px-6 py-4">
+                  <Link
+                    href={{
+                      pathname: "../mundalmasterformedit",
+                      query: {
+                        data: JSON.stringify({
+                          id: info.id,
+                          name: info.name,
+                        }),
+                      },
+                    }}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Update
@@ -154,7 +174,7 @@ export function Table({ data, url }: any) {
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
-                  </button  >
+                  </button>
                 </td>
               </tr>
             ))}

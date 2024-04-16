@@ -4,11 +4,11 @@ import Image from 'next/image'
 // import leaderimage from '../../images/ketaki-singh.jpg'
 export const Leadabout = () => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden" id='about'>
       <div className="mx-auto max-w-5xl px-5 py-24">
         <div className="mx-auto flex flex-wrap items-center lg:w-4/5">
           <Image
-          src="https://shivam-practics-bucket.s3.ap-south-1.amazonaws.com/ketaki-singh.jpg"
+          src="https://webplentybackend.s3.ap-south-1.amazonaws.com/ketaki-singh.jpg"
           width={700}
           height={366}
             alt="Leader Image"

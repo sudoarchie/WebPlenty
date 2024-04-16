@@ -5,9 +5,11 @@ import { Sidebar } from "../components/sidebar";
 import { useForm, Controller } from "react-hook-form";
 import { api } from "../pages/api";
 import toast, { Toaster } from "react-hot-toast";
+import Spinner from "../components/spinner";
+import Oops from "../components/error";
 function Page() {
   const { handleSubmit, control, watch } = useForm();
-  const selectedSector = watch("sectorId");
+  const selectedSector = watch("villageId");
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,7 +46,7 @@ function Page() {
     async function fetchData() {
       try {
         setLoading(true);
-        const response = await api.get("/sector");
+        const response = await api.get("/village");
         setData(response.data.data);
         setLoading(false);
       } catch (err:any) {
@@ -59,13 +61,15 @@ function Page() {
   useEffect(() => {
     async function fetchData(id: any) {
       api
-        .get(`/sector/${id}`)
+        .get(`/village/${id}`)
         .then((response) => {
+          console.log("id",response)
           api
             .get(
-              `/karykarta?mundalId=${response.data.data.mundalId}&&role=karyakarta`
+              `/karykarta?mundalId=${response.data.data[0].mundalId}&&role=karyakarta`
             )
             .then((response) => {
+              console.log(response)
               setdataForKarykarta(response.data.data);
               setsecondLoader(false);
               setLoading(false);
@@ -87,9 +91,9 @@ function Page() {
     }
   }, [selectedSector]);
 
-  if (secondError) return <div>Error occurred</div>;
-  if (error) return <div>Error occurred</div>;
-  if (loading) return <div>Loading...</div>;
+  if (secondError) return <div><Oops></Oops></div>;
+  if (error) return <div><Oops></Oops></div>;
+  if (loading) return <div><Spinner></Spinner></div>;
   // if ( secondLoader) return <div>LOading ......</div>
 
   return (
@@ -123,10 +127,10 @@ function Page() {
                   )}
                 />
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  Sector Name
+                  Village Name
                 </label>
                 <Controller
-                  name="sectorId"
+                  name="villageId"
                   control={control}
                   defaultValue=""
                   render={({ field }) => (
@@ -135,7 +139,7 @@ function Page() {
                       className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     >
                       <option value="" disabled>
-                        Select a sector
+                        Select a Village
                       </option>
                       {data.map((info: any) => (
                         <option key={info.id} value={info.id}>
@@ -146,7 +150,7 @@ function Page() {
                   )}
                 />
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  Karykarta
+                adhyaksha
                 </label>
                 <Controller
                   name="karykartadId"

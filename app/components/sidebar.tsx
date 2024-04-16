@@ -2,10 +2,10 @@ import React from "react";
 import {
   BarChart,
   Shield,
-  MessageSquare,
+  GalleryHorizontal,
   User,
   MapPin,
-  MoreVertical
+  FileEdit
   
 } from "lucide-react";
 import Link from "next/link";
@@ -45,7 +45,7 @@ export function Sidebar() {
                 <User className="h-5 w-5" aria-hidden="true" />
                 <span className="mx-2 text-sm font-medium">कार्यकर्ता</span>
               </Link>
-             
+            
               {/* <Link
                 className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
                 href="../sector"
@@ -86,17 +86,39 @@ export function Sidebar() {
                 <span className="mx-2 text-sm font-medium">बूथ मास्टर</span>
               </Link> 
             </div>
+            <Link
+                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                href="../villagemaster"
+              >
+                <MapPin className="h-5 w-5" aria-hidden="true" />
+                <span className="mx-2 text-sm font-medium">गाँव मास्टर</span>
+              </Link>
+             
             <div className="space-y-3 ">
               <label className="px-3 text-xs font-semibold uppercase text-gray-900">
                 content
               </label>
 
-              <Link
+              {/* <Link
                 className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
                 href="#"
               >
                 <MessageSquare className="h-5 w-5" aria-hidden="true" />
                 <span className="mx-2 text-sm font-medium">Send SMS</span>
+              </Link> */}
+              <Link
+                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                href="../blogcontroller"
+              >
+                <FileEdit className="h-5 w-5" aria-hidden="true" />
+                <span className="mx-2 text-sm font-medium">Blog</span>
+              </Link>
+              <Link
+                className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                href="../gallery"
+              >
+                <GalleryHorizontal className="h-5 w-5" aria-hidden="true" />
+                <span className="mx-2 text-sm font-medium">Gallery</span>
               </Link>
             </div>
           </nav>

@@ -5,92 +5,59 @@ import { Sidebar } from "../components/sidebar";
 import { useForm, Controller } from "react-hook-form";
 import { api } from "../pages/api";
 import toast, { Toaster } from "react-hot-toast";
+import { useRouter, useSearchParams } from "next/navigation";
+import Spinner from "../components/spinner";
+import Oops from "../components/error";
 function Page() {
-  const { handleSubmit, control, watch } = useForm();
-  const selectedSector = watch("sectorId");
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [dataForKarykarta, setdataForKarykarta] = useState([]);
   const [secondLoader, setsecondLoader] = useState(true);
   const [secondError, setsecondError] = useState(false);
-
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const [info, setInfo] = useState();
+  const [load, setLoad] = useState(true);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  useEffect(() => {
+    const dataParam = searchParams.get("data");
+    if (dataParam) {
+      console.log(dataParam);
+      setInfo(JSON.parse(dataParam));
+      setLoad(false);
+    }
+  }, []);
   const onSubmit = (data: any) => {
     console.log(data);
     return api
-    .post("/poolingBooth", {
-      ...data,
-    })
-    .then(function (response) {
-      toast(response.data.message, {
-        icon: "👏",
-        style: {
-          borderRadius: "10px",
-          background: "#333",
-          color: "#fff",
-        },
+      .put(`/poolingBooth/${info.id}`, {
+        ...data,
+      })
+      .then(function (response) {
+        toast(response.data.message, {
+          icon: "👏",
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+        setTimeout(() => {
+          router.push("../boothmaster");
+        }, 500);
+      })
+      .catch(function (error) {
+        console.log(error);
+        toast.error(error.response.data.message);
       });
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
-    })
-    .catch(function (error) {
-      console.log(error)
-      toast.error(error.response.data.message);
-    });
   };
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        setLoading(true);
-        const response = await api.get("/sector");
-        setData(response.data.data);
-        setLoading(false);
-      } catch (err:any) {
-        setError(err);
-        setLoading(false);
-      }
-    }
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    async function fetchData(id: any) {
-      api
-        .get(`/sector/${id}`)
-        .then((response) => {
-          api
-            .get(
-              `/karykarta?mundalId=${response.data.data.mundalId}&&role=karyakarta`
-            )
-            .then((response) => {
-              setdataForKarykarta(response.data.data);
-              setsecondLoader(false);
-              setLoading(false);
-            })
-            .catch((err) => {
-              setsecondError(err);
-              setsecondLoader(false);
-              setLoading(false);
-            });
-        })
-        .catch((err) => {
-          setsecondError(err);
-          setsecondLoader(false);
-          setLoading(false);
-        });
-    }
-    if (selectedSector) {
-      fetchData(selectedSector);
-    }
-  }, [selectedSector]);
-
-  if (secondError) return <div>Error occurred</div>;
-  if (error) return <div>Error occurred</div>;
-  if (loading) return <div>Loading...</div>;
-  // if ( secondLoader) return <div>LOading ......</div>
+  if (error) return <div><Oops></Oops></div>;
+  if (load) return <div><Spinner></Spinner></div>;
 
   return (
     <>
@@ -112,7 +79,7 @@ function Page() {
                 <Controller
                   name="name"
                   control={control}
-                  defaultValue=""
+                  defaultValue={info.name}
                   render={({ field }) => (
                     <input
                       {...field}
@@ -122,59 +89,11 @@ function Page() {
                     />
                   )}
                 />
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  Sector Name
-                </label>
-                <Controller
-                  name="sectorId"
-                  control={control}
-                  defaultValue=""
-                  render={({ field }) => (
-                    <select
-                      {...field}
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    >
-                      <option value="" disabled>
-                        Select a sector
-                      </option>
-                      {data.map((info: any) => (
-                        <option key={info.id} value={info.id}>
-                          {info.name}
-                        </option>
-                      ))}
-                    </select>
-                  )}
-                />
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  Karykarta
-                </label>
-                <Controller
-                  name="karykartadId"
-                  control={control}
-                  defaultValue=""
-                  render={({ field }) => (
-                    <select
-                      {...field}
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      disabled={!selectedSector}
-                    >
-                      <option value="" disabled>
-                        Select a Karykarta
-                      </option>
-                      {dataForKarykarta.map((info: any) => (
-                        <option key={info.id} value={info.id}>
-                          {info.name}
-                        </option>
-                      ))}
-                    </select>
-                  )}
-                />
               </div>
             </div>
             <button
               type="submit"
               className="appearance-none block w-full bg-orange-600 text-white border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              disabled={!selectedSector}
             >
               Submit
             </button>

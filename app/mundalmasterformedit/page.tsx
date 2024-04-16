@@ -1,20 +1,34 @@
-'use client'
+"use client";
 import { NavbarLogout } from "../components/navbarlogout";
 import { Sidebar } from "../components/sidebar";
-import { useForm, Controller } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { api } from "../pages/api";
 import toast, { Toaster } from "react-hot-toast";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 function Page() {
   const {
     control,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [info, setInfo] = useState();
+  const [load, setLoad] = useState(true);
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const dataParam = searchParams.get("data");
+    if (dataParam) {
+      console.log(dataParam);
+      setInfo(JSON.parse(dataParam));
+      setLoad(false);
+    }
+  }, []);
 
   const onSubmit = (data: any) => {
     return api
-      .post("/mundal", {
-        ...data,
+      .put(`mundal/name/${info.id}`, {
+        name:data.name,
+
       })
       .then(function (response) {
         toast(response.data.message, {
@@ -27,12 +41,13 @@ function Page() {
         });
         setTimeout(() => {
           window.location.reload();
-        }, 1000);
+        }, 500);
       })
       .catch(function (error) {
         toast.error(error.response.data.message);
       });
   };
+  if (load) return <div>loading ....</div>;
   return (
     <>
       <div className="w-[100vw]  z-10">
@@ -42,7 +57,7 @@ function Page() {
         <div>
           <Sidebar />
         </div>
-        <Toaster/>
+        <Toaster />
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <form className="w-full max-w-lg" onSubmit={handleSubmit(onSubmit)}>
             <h1 className="text-2xl">Mundal Master Form</h1>
@@ -54,7 +69,7 @@ function Page() {
                 <Controller
                   name="name"
                   control={control}
-                  defaultValue=""
+                  defaultValue={info.name}
                   render={({ field }) => (
                     <input
                       {...field}

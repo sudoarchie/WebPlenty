@@ -12,11 +12,12 @@ export default function Home() {
     <>
       <Navbar></Navbar>
       <Hero></Hero>
-      <Leadabout></Leadabout>
-      {/* <div className="flex justify-center">
-         <h2 className="font-bold text-3xl underline">हमारा कार्य</h2> 
-      </div> */}
-      {/* <Writting></Writting>
+      {/* <Leadabout></Leadabout> */}
+      <div className="flex justify-center">
+         <h2 className="font-bold text-3xl  mt-10 underline" id='blogs'>हमारा कार्य</h2> 
+      </div>
+       <Writting></Writting>
+       {/*
       <div className="flex justify-center">
         <h2 className="font-bold text-3xl underline">Gallery</h2>
       </div> */}

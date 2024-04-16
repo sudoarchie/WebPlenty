@@ -8,14 +8,17 @@ import { api, baseURL } from "../pages/api";
 import { ArrowLeft } from "lucide-react";
 import useSWR from "swr";
 import { useForm, Controller } from "react-hook-form";
-
+import { useRouter } from "next/navigation";
+import Spinner from "../components/spinner";
+import Oops from "../components/error";
 
 const Page = () => {
   const [madal, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [infoError, setInfoError] = useState(null);
   const [url, seturl] = useState("/karykarta");
-
+  const [token, setToken] = useState(true);
+  const router = useRouter();
   const fetchData = async () => {
     try {
       const response = await api.get(url);
@@ -32,6 +35,12 @@ const Page = () => {
   };
 
   useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+    if (!token) {
+      router.push("/login");
+    } else {
+      setToken(false);
+    }
     fetchData();
   }, [url]);
   const fetcher = (...args: any) => fetch(args).then((res) => res.json());
@@ -70,52 +79,12 @@ const Page = () => {
     // Use finalURL as needed
     console.log(finalURL);
   };
+  if (token) {
+    return <div>authenticating</div>;
+  }
 
-  if (error)
-    return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-        }}
-      >
-        <div className="text-center">
-          <p className="text-base font-semibold text-black">404</p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-black sm:text-5xl">
-            Data cannot load !!!!
-          </h1>
-          <p className="mt-4 text-base leading-7 text-gray-600">
-            Sorry, we could not fetch data at this moment
-          </p>
-        </div>
-      </div>
-    );
-  if (isLoading)
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <div role="status">
-          <svg
-            aria-hidden="true"
-            className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
-            viewBox="0 0 100 101"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-              fill="currentColor"
-            />
-            <path
-              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-              fill="currentFill"
-            />
-          </svg>
-          <span className="sr-only">Loading...</span>
-        </div>
-      </div>
-    );
+  if (error) return <Oops></Oops>;
+  if (isLoading) return <Spinner></Spinner>;
   console.log(data.data);
   return (
     <>
@@ -123,13 +92,15 @@ const Page = () => {
         <NavbarLogout />
       </div>
       <div className="flex">
-        <div className="min-[1440px]:fixed">
+        <div className="">
           <Sidebar />
         </div>
-        <div className="w-[80vw] relative top-10 min-[1440px]:left-64">
+        <div className="w-[80vw] relative top-10">
           {loading ? (
             <div className="text-center">
-              <p>Loading...</p>
+              <p>
+                <Spinner></Spinner>
+              </p>
             </div>
           ) : infoError ? (
             <div
@@ -151,15 +122,12 @@ const Page = () => {
               </div>
             </div>
           ) : (
-            <>
+            <div className=" w-[100vw] lg:w-auto">
               <div className="flex justify-center">
                 <h1 className="text-2xl font-extrabold mt-10">
                   कार्यकर्ता विवरण
                 </h1>
               </div>
-              {
-
-              }
               <form
                 className="w-full text-center mt-12"
                 onSubmit={handleSubmit(onSubmit)}
@@ -171,16 +139,19 @@ const Page = () => {
                   render={({ field }) => (
                     <select
                       {...field}
-                      className="w-auto mx-5 my-2 bg-black text-white p-2 mb-4 border rounded-lg"
+                      className="w-auto mx-5 my-2 bg-orange-600 text-white p-2 mb-4 border rounded-lg"
                     >
-                      <option value="None">Religion select</option>
-                      <option value="hindu">Hindu</option>
-                      <option value="muslim">Muslim</option>
-                      <option value="christian">Christian</option>
-                      <option value="sikh">Sikh</option>
-                      <option value="jain">Jain</option>
-                      <option value="jews">Jews</option>
-                      <option value="Other">Other</option>
+                      <option value="None">Category</option>
+                      <option value="General">General</option>
+                      <option value="Other Backward Class">
+                        Other Backward Class (O.B.C)
+                      </option>
+                      <option value="Scheduled Castes">
+                        Scheduled Castes (S.C)
+                      </option>
+                      <option value="Scheduled Tribes">
+                        Scheduled Tribes (S.T)
+                      </option>
                     </select>
                   )}
                 />
@@ -191,7 +162,7 @@ const Page = () => {
                   render={({ field }) => (
                     <select
                       {...field}
-                      className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg"
+                      className="w-auto mx-5 bg-orange-600 text-white p-2 mb-4 border rounded-lg"
                     >
                       <option value="None">Gender Select</option>
                       <option value="Male">Male</option>
@@ -208,7 +179,7 @@ const Page = () => {
                     render={({ field }) => (
                       <select
                         {...field}
-                        className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg"
+                        className="w-auto mx-5 bg-orange-600 text-white p-2 mb-4 border rounded-lg"
                       >
                         <option value="None">Choose Party</option>
                         {!isLoading ? (
@@ -235,7 +206,7 @@ const Page = () => {
                   render={({ field }) => (
                     <select
                       {...field}
-                      className="w-auto mx-5 bg-black text-white p-2 mb-4 border rounded-lg"
+                      className="w-auto mx-5 bg-orange-600 text-white p-2 mb-4 border rounded-lg"
                     >
                       <option value="None">Mundal Select</option>
                       {data.data.info.map((info: any) => (
@@ -253,35 +224,34 @@ const Page = () => {
                   render={({ field }) => (
                     <select
                       {...field}
-                      className="w-auto mx-5 my-2 bg-black text-white p-2 mb-4 border rounded-lg"
+                      className="w-auto mx-5 my-2 bg-orange-600 text-white p-2 mb-4 border rounded-lg"
                     >
-                      <option value = "None">Select role</option>
+                      <option value="None">Select role</option>
                       <option value="karyakarta">karyakarta</option>
                       <option value="adhyaksha">adhyaksha</option>
                       <option value="koshadhyaksha">koshadhyaksha</option>
                       <option value="mahamantri">mahamantri</option>
                       <option value="mantri">mantri</option>
                       <option value="upaadhyaksha">upaadhyaksha</option>
-                     
                     </select>
                   )}
                 />
                 <button
                   type="submit"
-                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-orange-600 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
                 >
                   Submit
                 </button>
               </form>
-              <div className="w-full">
+              <div className="w-[90vw] h-[90vh] overflow-x-scroll">
                 <div className="">
-                  <h1 className="text-2xl font-extrabold mt-10">
-                    Mundal Master
-                  </h1>
+                  {/* <h1 className="text-2xl font-extrabold mt-10">
+                  Mundal Master
+                </h1> */}
                   <TableData data={madal} url={url} />
-                </div>  
+                </div>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>
